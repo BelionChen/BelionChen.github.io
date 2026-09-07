@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>沛爷 · 投资仪表盘</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;background:#0f0f1a;color:#e0e0e0;min-height:100vh;-webkit-font-smoothing:antialiased;}
+.header{text-align:center;padding:40px 20px 20px;}
+.header h1{font-size:24px;font-weight:700;color:#fff;margin-bottom:4px;}
+.header p{font-size:14px;color:#8888aa;}
+.date{font-size:13px;color:#555;margin-top:8px;}
+.grid{max-width:600px;margin:0 auto;padding:20px 16px 40px;display:flex;flex-direction:column;gap:16px;}
+.card{background:#1a1a2e;border-radius:16px;padding:24px;text-decoration:none;color:#e0e0e0;border:1px solid rgba(255,255,255,0.05);transition:all 0.2s;position:relative;overflow:hidden;}
+.card:active{transform:scale(0.98);background:#222240;}
+.card-icon{font-size:32px;margin-bottom:12px;}
+.card-title{font-size:18px;font-weight:600;color:#fff;margin-bottom:6px;}
+.card-desc{font-size:13px;color:#8888aa;line-height:1.5;}
+.card-tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:4px;margin-top:10px;font-weight:500;}
+.tag-briefing{background:rgba(67,97,238,0.15);color:#4361ee;}
+.tag-strategy{background:rgba(78,204,163,0.15);color:#4ecca3;}
+.tag-valuation{background:rgba(233,69,96,0.15);color:#e94560;}
+.card-arrow{position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:20px;color:#555;}
+.footer{text-align:center;padding:20px;color:#333;font-size:12px;}
+</style></head>
+<body>
+<div class="header"><h1>📊 投资仪表盘</h1><p>沛爷 · 全自动量化投资系统</p><div class="date" id="today"></div></div>
+<div class="grid">
+<a class="card" href="https://belionchen.github.io/briefing-ob/" target="_blank" rel="noopener">
+<div class="card-icon">🌅</div><div class="card-title">投资简报</div>
+<div class="card-desc">早间 · 午间 · 收盘复盘 · 周/月预测追踪 · 情绪评分 · 关税评分卡</div>
+<span class="card-tag tag-briefing">每日 07:00 更新</span><div class="card-arrow">›</div></a>
+<a class="card" href="https://belionchen.github.io/valuation-score/" target="_blank" rel="noopener">
+<div class="card-icon">📊</div><div class="card-title">每日估值评分</div>
+<div class="card-desc">ERP股权风险溢价 · 板块估值 · 宏观环境 · 仓位分配建议 · 趋势熔断器</div>
+<span class="card-tag tag-valuation">交易日 15:45 更新</span><div class="card-arrow">›</div></a>
+<a class="card" href="https://belionchen.github.io/etf-rs246-v3-backtest/" target="_blank" rel="noopener">
+<div class="card-icon">📈</div><div class="card-title">RS246 策略回测</div>
+<div class="card-desc">52-ETF 跨资产动量轮动 · 收益/波动比横截面排名 · ATR自适应止损</div>
+<span class="card-tag tag-strategy">交易日 15:05 更新</span><div class="card-arrow">›</div></a>
+<a class="card" href="https://belionchen.github.io/etf-3factor/" target="_blank" rel="noopener">
+<div class="card-icon">🎯</div><div class="card-title">ETF三因子轮动策略</div>
+<div class="card-desc">lowvol60 + mom20_ra + mom60_ra · Top3等权 · 月中间调仓 · 48只ETF跨赛道</div>
+<span class="card-tag tag-strategy">每月中旬调仓</span><div class="card-arrow">›</div></a>
+<a class="card" href="https://belionchen.github.io/etf-rotation-compare/" target="_blank" rel="noopener">
+<div class="card-icon">🧠</div><div class="card-title">ETF轮动策略对比</div>
+<div class="card-desc">Top3+Top10缓冲 vs Top1+Top7缓冲 · 48只ETF · 净值/回撤/Sharpe/成本敏感性对比</div>
+<span class="card-tag tag-strategy">每日更新</span><div class="card-arrow">›</div></a>
+<a class="card" href="https://belionchen.github.io/etf-rotation-regime/" target="_blank" rel="noopener">
+<div class="card-icon">🛡️</div><div class="card-title">ETF轮动 · 宽度择时结合版</div>
+<div class="card-desc">宽度信号（20日Sharpe>0占比）平滑+滞后带择时 · Top1/Top3自适应切换 · 三曲线对比</div>
+<span class="card-tag tag-strategy">每日更新</span><div class="card-arrow">›</div></a>
+<a class="card" href="https://belionchen.github.io/etf-v2-strategy/" target="_blank" rel="noopener">
+<div class="card-icon">📊</div><div class="card-title">多资产跨赛道ETF轮动 v2</div>
+<div class="card-desc">4因子轮动 · 持有2只 · 掉出前7才卖 · 趋势动量+波动率+相对强弱+反转</div>
+<span class="card-tag tag-strategy">每日更新</span><div class="card-arrow">›</div></a>
+</div>
+<div class="footer">阿策 📊 · 持仓周期 3天~1年 · 低频量化</div>
+<script>document.getElementById('today').textContent = new Date().toLocaleDateString('zh-CN', {year:'numeric',month:'long',day:'numeric',weekday:'long'});</script>
+</body></html>

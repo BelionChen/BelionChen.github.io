@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三驱轮动 · 策略面板</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f1117; color: #e0e0e0; padding: 20px; }
+.container { max-width: 1400px; margin: 0 auto; }
+
+.header { background: linear-gradient(135deg, #1a1d2e 0%, #252840 100%); border-radius: 16px; padding: 28px 32px; margin-bottom: 24px; border: 1px solid #2a2d45; }
+.header h1 { font-size: 28px; font-weight: 700; color: #fff; letter-spacing: 1px; }
+.header .subtitle { color: #8888aa; font-size: 14px; margin-top: 6px; }
+
+.metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; margin-bottom: 24px; }
+.metric-card { background: #1a1d2e; border: 1px solid #2a2d45; border-radius: 12px; padding: 16px; text-align: center; }
+.metric-card .label { color: #666; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+.metric-card .value { font-size: 26px; font-weight: 700; margin-top: 6px; }
+.metric-card .value.green { color: #4ade80; }
+.metric-card .value.red { color: #f87171; }
+.metric-card .value.blue { color: #60a5fa; }
+.metric-card .value.yellow { color: #fbbf24; }
+
+.section { background: #1a1d2e; border: 1px solid #2a2d45; border-radius: 16px; padding: 24px; margin-bottom: 24px; }
+.section h2 { font-size: 18px; font-weight: 600; margin-bottom: 16px; color: #c0c0e0; }
+
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { text-align: left; padding: 10px 12px; color: #666; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #2a2d45; }
+td { padding: 10px 12px; border-bottom: 1px solid #222; }
+tr:hover { background: #1e2240; }
+.selected-row { background: #1a2e1a !important; }
+.selected-row:hover { background: #1e351e !important; }
+
+.tabs { display: flex; gap: 4px; margin-bottom: 16px; background: #111; border-radius: 8px; padding: 3px; width: fit-content; }
+.tab-btn { padding: 8px 20px; border: none; background: transparent; color: #666; cursor: pointer; border-radius: 6px; font-size: 13px; transition: all 0.2s; }
+.tab-btn.active { background: #2a2d45; color: #fff; }
+.tab-btn:hover { color: #aaa; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #1a1d2e; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+
+.score-bar { height: 6px; border-radius: 3px; background: #222; }
+.score-bar-fill { height: 100%; border-radius: 3px; transition: width 0.5s; }
+
+.badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.badge-buy { background: #1a3a1a; color: #4ade80; }
+.badge-sell { background: #3a1a1a; color: #f87171; }
+.badge-stop { background: #3a1a1a; color: #fb923c; }
+
+.loading { color: #666; text-align: center; padding: 40px; font-size: 14px; }
+
+/* Strategy description */
+.strategy-desc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.strategy-desc .desc-card { background: #14162a; border: 1px solid #2a2d45; border-radius: 12px; padding: 16px; }
+.strategy-desc .desc-card h3 { color: #8888cc; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.strategy-desc .desc-card p { color: #c0c0d0; font-size: 13px; line-height: 1.6; }
+.strategy-desc .desc-card ul { color: #c0c0d0; font-size: 13px; line-height: 1.8; padding-left: 16px; margin-top: 4px; }
+.strategy-desc .desc-card .highlight { color: #fbbf24; font-weight: 600; }
+.strategy-desc .desc-card .num { color: #60a5fa; font-weight: 600; }
+@media (max-width: 768px) { .strategy-desc { grid-template-columns: 1fr; } }
+
+.chart-wrapper { position: relative; height: 400px; width: 100%; margin: 16px 0; }
+.nav-up { color: #4ade80; }
+.nav-down { color: #f87171; }
+.nav-flat { color: #888; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>⚡ 三驱轮动</h1>
+    <div class="subtitle">3因子动量轮动策略 · 月中再平衡 · 等权持有3只行业ETF</div>
+  </div>
+
+  <!-- Strategy Description -->
+  <div class="section">
+    <h2>📋 策略描述</h2>
+    <div class="strategy-desc">
+      <div class="desc-card">
+        <h3>⚙️ 核心机制</h3>
+        <p>
+          <span class="highlight">三驱轮动</span> 是一个多因子行业ETF轮动策略，每月15日左右进行再平衡。
+          每个持仓周期从全库 ETF 中选出综合评分最高的 <span class="num">3</span> 只标的，等权持有。
+        </p>
+        <p style="margin-top:8px;">三个驱动因子等权合成综合评分：</p>
+        <ul>
+          <li><span style="color:#4ade80;">📈 动量因子</span> — 20日价格动量 z-score</li>
+          <li><span style="color:#60a5fa;">💰 资金流因子</span> — 主力资金净流入 z-score</li>
+          <li><span style="color:#fbbf24;">🛡️ 风险调整动量</span> — 波动率调整后的动量 z-score</li>
+        </ul>
+      </div>
+      <div class="desc-card">
+        <h3>🛡️ 风控规则</h3>
+        <p>持仓期间，任一标的同时满足以下条件则触发止损出局：</p>
+        <ul>
+          <li><span style="color:#f87171;">🔴 MA20 破位</span> — 收盘价跌破20日均线</li>
+          <li><span style="color:#f87171;">🔴 最大回撤</span> — 从建仓价下跌超过 <span class="num">-8%</span></li>
+        </ul>
+        <p style="margin-top:8px;color:#8888aa;font-size:12px;">
+          出局后释放的资金不再买入新标的，等下次再平衡时重新选股。
+          空仓期资金闲置，等待下个再平衡窗口。
+        </p>
+      </div>
+      <div class="desc-card" style="grid-column:1/-1;">
+        <h3>📊 回测表现（2023-05-17 ~ 2026-09-01）</h3>
+        <p>
+          全样本回测覆盖 <span class="num">3.2</span> 年（<span class="num">798</span> 个交易日），共执行 <span class="num">221</span> 笔交易。
+          年化收益 <span class="highlight">8.44%</span>，夏普比率 <span class="num">0.40</span>，卡玛比率 <span class="num">0.38</span>。最大回撤 <span style="color:#f87171;">-22.31%</span></p>
+        <p style="margin-top:6px;color:#8888aa;font-size:12px;">
+          ⚠️ 回测结果不代表未来收益。策略依赖因子有效性，存在因子失效和风格切换风险。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV Chart -->
+  <div class="section">
+    <h2>📈 策略净值曲线</h2>
+    <p style="color:#666;font-size:12px;margin-bottom:12px;">基于交易明细的累积净值（最终值对齐全样本总收益）</p>
+    <div class="chart-wrapper">
+      <canvas id="navChart"></canvas>
+    </div>
+  </div>
+
+  <div class="metrics" id="metricsGrid"></div>
+
+  <div class="section">
+    <h2>📌 当前持仓</h2>
+    <div id="emptyHoldings" style="display:none">
+      <div style="text-align:center;padding:40px 20px;color:#666;">
+        <div style="font-size:48px;margin-bottom:12px;">🛌</div>
+        <div style="font-size:18px;font-weight:600;color:#888;margin-bottom:8px;">当前空仓</div>
+        <div style="font-size:13px;color:#555;">持仓标的均因跌破MA20或触及-8%止损先后出局</div>
+        <div style="font-size:13px;color:#555;margin-top:4px;">等待下次再平衡（2026年9月15日左右）根据新信号建仓</div>
+      </div>
+    </div>
+    <table id="holdingsTable">
+      <thead><tr><th>代码</th><th>名称</th><th>行业</th><th>收盘价</th><th>权重</th><th>建仓日</th><th>建仓价</th><th>盈亏%</th><th>状态</th></tr></thead>
+      <tbody id="holdingsBody"></tbody>
+    </table>
+  </div>
+
+  <div class="section" style="background:#1a1a2e;">
+    <h2>📋 最近再平衡信号（2026-08-14）</h2>
+    <p style="color:#666;font-size:12px;margin-bottom:12px;">上个月中选出的3只标的，已在持有期间因风控规则陆续出局。以下为当时的因子评分。</p>
+    <table>
+      <thead><tr><th>代码</th><th>名称</th><th>行业</th><th>收盘价</th><th>动量(z)</th><th>动量%</th><th>资金流(z)</th><th>资金流(倍)</th><th>风险调整(z)</th><th>综合分</th><th>当前状态</th></tr></thead>
+      <tbody id="signalBody"></tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>📊 ETF 评分排行</h2>
+    <p style="color:#666;font-size:12px;margin-bottom:12px;">基于最新再平衡日（2026-08-14）的全库因子z-score，按综合分降序</p>
+    <div style="max-height:800px;overflow-y:auto;">
+      <table>
+        <thead><tr><th>#</th><th>代码</th><th>名称</th><th>行业</th><th>收盘价</th><th>动量(z)</th><th>动量%</th><th>资金流(z)</th><th>资金流(倍)</th><th>风险调整(z)</th><th>综合分</th><th>评分条</th><th>入选</th></tr></thead>
+        <tbody id="scoreBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📜 交易明细</h2>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('all','全部')">全部</button>
+      <button class="tab-btn" onclick="switchTab('buy','再平衡调入')">调入</button>
+      <button class="tab-btn" onclick="switchTab('sell','再平衡调出')">调出</button>
+      <button class="tab-btn" onclick="switchTab('stop','止损')">止损/出局</button>
+    </div>
+    <div style="max-height:600px;overflow-y:auto;">
+      <table>
+        <thead><tr><th>时间</th><th>类型</th><th>代码</th><th>名称</th><th>行业</th><th>买入价</th><th>卖出价</th><th>盈亏%</th><th>权重%</th><th>策略净值</th><th>净值涨跌幅</th></tr></thead>
+        <tbody id="tradeBody"></tbody>
+      </table>
+    </div>
+    <div id="tradeLoading" class="loading">加载交易数据中...</div>
+  </div>
+</div>
+
+<script>
+const BASIC = {"name": "三驱轮动", "metrics": {"total_return": 29.25, "ann_return": 8.44, "mdd": -22.31, "sharpe": 0.4, "calmar": 0.38, "years": 3.2, "n_days": 798, "n_trades": 221, "latest_date": "2026-09-01", "last_rebalance": "2026-08-17", "n_holdings": 0}, "current_holdings": [], "latest_signal": [{"code": "512980", "name": "传媒ETF", "industry": "传媒", "close": 0.86, "momentum_z": 1.052, "momentum": 9.97, "money_flow_z": 2.484, "money_flow": 0.41, "risk_adj_mom_z": 0.745, "composite": 1.427, "weight": 33.3}, {"code": "512400", "name": "有色金属ETF", "industry": "有色金属", "close": 1.89, "momentum_z": 2.337, "momentum": 15.53, "money_flow_z": 0.088, "money_flow": -0.0, "risk_adj_mom_z": 1.276, "composite": 1.234, "weight": 33.3}, {"code": "515230", "name": "软件ETF", "industry": "计算机", "close": 0.721, "momentum_z": 1.115, "momentum": 10.24, "money_flow_z": 1.498, "money_flow": 0.24, "risk_adj_mom_z": 0.873, "composite": 1.162, "weight": 33.3}], "all_scores": [{"code": "512980", "name": "传媒ETF", "industry": "传媒", "close": 0.86, "momentum_z": 1.052, "momentum": 9.97, "money_flow_z": 2.484, "money_flow": 0.41, "risk_adj_mom_z": 0.745, "composite": 1.427, "selected": "✅"}, {"code": "512400", "name": "有色金属ETF", "industry": "有色金属", "close": 1.89, "momentum_z": 2.337, "momentum": 15.53, "money_flow_z": 0.088, "money_flow": -0.0, "risk_adj_mom_z": 1.276, "composite": 1.234, "selected": "✅"}, {"code": "515230", "name": "软件ETF", "industry": "计算机", "close": 0.721, "momentum_z": 1.115, "momentum": 10.24, "money_flow_z": 1.498, "money_flow": 0.24, "risk_adj_mom_z": 0.873, "composite": 1.162, "selected": "✅"}, {"code": "516780", "name": "稀土ETF", "industry": "有色金属", "close": 0.885, "momentum_z": 2.063, "momentum": 14.34, "money_flow_z": -1.004, "money_flow": -0.19, "risk_adj_mom_z": 1.506, "composite": 0.855, "selected": ""}, {"code": "561160", "name": "电池ETF", "industry": "电力设备", "close": 0.767, "momentum_z": 1.178, "momentum": 10.52, "money_flow_z": -0.109, "money_flow": -0.04, "risk_adj_mom_z": 1.107, "composite": 0.725, "selected": ""}, {"code": "512660", "name": "军工ETF", "industry": "国防军工", "close": 1.152, "momentum_z": 0.705, "momentum": 8.47, "money_flow_z": 0.018, "money_flow": -0.02, "risk_adj_mom_z": 1.166, "composite": 0.63, "selected": ""}, {"code": "516160", "name": "新能源ETF", "industry": "电力设备", "close": 2.577, "momentum_z": 0.979, "momentum": 9.66, "money_flow_z": -0.188, "money_flow": -0.05, "risk_adj_mom_z": 1.097, "composite": 0.629, "selected": ""}, {"code": "516010", "name": "游戏ETF", "industry": "传媒", "close": 1.139, "momentum_z": 0.563, "momentum": 7.86, "money_flow_z": 0.926, "money_flow": 0.14, "risk_adj_mom_z": 0.203, "composite": 0.564, "selected": ""}, {"code": "515220", "name": "煤炭ETF", "industry": "煤炭", "close": 1.26, "momentum_z": 1.225, "momentum": 10.72, "money_flow_z": -0.418, "money_flow": -0.09, "risk_adj_mom_z": 0.737, "composite": 0.515, "selected": ""}, {"code": "512710", "name": "军工龙头ETF", "industry": "国防军工", "close": 0.629, "momentum_z": 0.484, "momentum": 7.52, "money_flow_z": -0.516, "money_flow": -0.11, "risk_adj_mom_z": 1.331, "composite": 0.433, "selected": ""}, {"code": "159929", "name": "医药ETF", "industry": "医药生物", "close": 1.382, "momentum_z": 0.279, "momentum": 6.64, "money_flow_z": 0.279, "money_flow": 0.03, "risk_adj_mom_z": 0.568, "composite": 0.375, "selected": ""}, {"code": "512010", "name": "医药ETF", "industry": "医药生物", "close": 0.395, "momentum_z": 0.715, "momentum": 8.52, "money_flow_z": -0.588, "money_flow": -0.12, "risk_adj_mom_z": 0.988, "composite": 0.372, "selected": ""}, {"code": "515880", "name": "通信ETF", "industry": "通信", "close": 0.69, "momentum_z": -0.168, "momentum": 4.7, "money_flow_z": 2.124, "money_flow": 0.35, "risk_adj_mom_z": -0.938, "composite": 0.339, "selected": ""}, {"code": "515790", "name": "光伏ETF", "industry": "电力设备", "close": 0.865, "momentum_z": 0.718, "momentum": 8.53, "money_flow_z": -0.619, "money_flow": -0.13, "risk_adj_mom_z": 0.902, "composite": 0.334, "selected": ""}, {"code": "512690", "name": "酒ETF", "industry": "食品饮料", "close": 0.441, "momentum_z": 0.313, "momentum": 6.78, "money_flow_z": 0.233, "money_flow": 0.02, "risk_adj_mom_z": 0.43, "composite": 0.325, "selected": ""}, {"code": "515700", "name": "新能车ETF", "industry": "电力设备", "close": 2.234, "momentum_z": 0.565, "momentum": 7.87, "money_flow_z": -0.349, "money_flow": -0.08, "risk_adj_mom_z": 0.59, "composite": 0.269, "selected": ""}, {"code": "515210", "name": "钢铁ETF", "industry": "钢铁", "close": 1.16, "momentum_z": -0.366, "momentum": 3.85, "money_flow_z": 0.591, "money_flow": 0.08, "risk_adj_mom_z": 0.005, "composite": 0.077, "selected": ""}, {"code": "515030", "name": "新能源车ETF", "industry": "电力设备", "close": 1.67, "momentum_z": 0.487, "momentum": 7.53, "money_flow_z": -0.931, "money_flow": -0.18, "risk_adj_mom_z": 0.566, "composite": 0.041, "selected": ""}, {"code": "515080", "name": "中证红利ETF", "industry": "红利策略", "close": 1.555, "momentum_z": -0.295, "momentum": 4.15, "money_flow_z": -0.109, "money_flow": -0.04, "risk_adj_mom_z": 0.501, "composite": 0.032, "selected": ""}, {"code": "512200", "name": "房地产ETF", "industry": "房地产", "close": 1.225, "momentum_z": 0.104, "momentum": 5.88, "money_flow_z": -0.495, "money_flow": -0.1, "risk_adj_mom_z": 0.42, "composite": 0.01, "selected": ""}, {"code": "512480", "name": "半导体ETF", "industry": "电子", "close": 1.077, "momentum_z": -1.105, "momentum": 0.65, "money_flow_z": 2.364, "money_flow": 0.39, "risk_adj_mom_z": -1.378, "composite": -0.04, "selected": ""}, {"code": "159928", "name": "消费ETF", "industry": "主要消费", "close": 0.673, "momentum_z": -0.548, "momentum": 3.06, "money_flow_z": 0.818, "money_flow": 0.12, "risk_adj_mom_z": -0.443, "composite": -0.058, "selected": ""}, {"code": "159870", "name": "化工ETF", "industry": "基础化工", "close": 0.802, "momentum_z": 0.381, "momentum": 7.08, "money_flow_z": -1.659, "money_flow": -0.31, "risk_adj_mom_z": 0.598, "composite": -0.227, "selected": ""}, {"code": "159766", "name": "旅游ETF", "industry": "社会服务", "close": 0.56, "momentum_z": -0.532, "momentum": 3.13, "money_flow_z": -0.051, "money_flow": -0.03, "risk_adj_mom_z": -0.295, "composite": -0.293, "selected": ""}, {"code": "516950", "name": "基建ETF", "industry": "建筑装饰", "close": 1.037, "momentum_z": -0.567, "momentum": 2.98, "money_flow_z": -0.777, "money_flow": -0.15, "risk_adj_mom_z": 0.034, "composite": -0.437, "selected": ""}, {"code": "159745", "name": "建材ETF", "industry": "建筑材料", "close": 0.529, "momentum_z": -0.765, "momentum": 2.12, "money_flow_z": 0.13, "money_flow": 0.0, "risk_adj_mom_z": -0.726, "composite": -0.454, "selected": ""}, {"code": "512800", "name": "银行ETF", "industry": "银行", "close": 0.797, "momentum_z": -1.022, "momentum": 1.01, "money_flow_z": 0.552, "money_flow": 0.08, "risk_adj_mom_z": -1.045, "composite": -0.505, "selected": ""}, {"code": "516110", "name": "汽车ETF", "industry": "汽车", "close": 1.118, "momentum_z": -0.878, "momentum": 1.64, "money_flow_z": -0.175, "money_flow": -0.05, "risk_adj_mom_z": -0.755, "composite": -0.603, "selected": ""}, {"code": "159995", "name": "芯片ETF", "industry": "电子", "close": 1.203, "momentum_z": -1.579, "momentum": -1.39, "money_flow_z": 1.297, "money_flow": 0.21, "risk_adj_mom_z": -1.617, "composite": -0.633, "selected": ""}, {"code": "159996", "name": "家电ETF", "industry": "家用电器", "close": 1.422, "momentum_z": -0.758, "momentum": 2.16, "money_flow_z": -0.735, "money_flow": -0.15, "risk_adj_mom_z": -0.464, "composite": -0.652, "selected": ""}, {"code": "562500", "name": "机器人ETF", "industry": "机械设备", "close": 1.001, "momentum_z": -0.443, "momentum": 3.52, "money_flow_z": -1.062, "money_flow": -0.2, "risk_adj_mom_z": -0.728, "composite": -0.744, "selected": ""}, {"code": "159865", "name": "养殖ETF", "industry": "农林牧渔", "close": 0.533, "momentum_z": -1.037, "momentum": 0.95, "money_flow_z": -0.235, "money_flow": -0.06, "risk_adj_mom_z": -1.103, "composite": -0.792, "selected": ""}, {"code": "513180", "name": "恒生科技ETF", "industry": "跨境港股", "close": 0.596, "momentum_z": -0.862, "momentum": 1.71, "money_flow_z": -0.706, "money_flow": -0.14, "risk_adj_mom_z": -0.899, "composite": -0.822, "selected": ""}, {"code": "512760", "name": "芯片ETF", "industry": "电子", "close": 1.146, "momentum_z": -1.437, "momentum": -0.78, "money_flow_z": -0.091, "money_flow": -0.03, "risk_adj_mom_z": -1.546, "composite": -1.025, "selected": ""}, {"code": "512880", "name": "证券ETF", "industry": "非银金融", "close": 1.087, "momentum_z": -1.467, "momentum": -0.91, "money_flow_z": -1.16, "money_flow": -0.22, "risk_adj_mom_z": -1.881, "composite": -1.503, "selected": ""}, {"code": "512000", "name": "券商ETF", "industry": "非银金融", "close": 0.52, "momentum_z": -1.433, "momentum": -0.76, "money_flow_z": -1.426, "money_flow": -0.27, "risk_adj_mom_z": -1.825, "composite": -1.561, "selected": ""}]};
+
+// ── Render metrics ──
+const m = BASIC.metrics;
+const metricsHtml = [
+  { label: '年化收益率', value: `${m.ann_return.toFixed(1)}%`, cls: 'green' },
+  { label: '总收益率', value: `${m.total_return.toFixed(0)}%`, cls: 'green' },
+  { label: '最大回撤', value: `${m.mdd.toFixed(1)}%`, cls: 'red' },
+  { label: '夏普比率', value: m.sharpe.toFixed(2), cls: 'blue' },
+  { label: '卡玛比率', value: m.calmar.toFixed(2), cls: 'blue' },
+  { label: '回测天数', value: `${m.n_days}天`, cls: '' },
+  { label: '交易次数', value: m.n_trades, cls: '' },
+  { label: '持仓数', value: (m.n_holdings || 0) + '只', cls: (m.n_holdings || 0) > 0 ? 'green' : '' },
+  { label: '最新再平衡', value: m.last_rebalance || '-', cls: 'yellow' },
+].map(d => `<div class="metric-card"><div class="label">${d.label}</div><div class="value ${d.cls}">${d.value}</div></div>`).join('');
+document.getElementById('metricsGrid').innerHTML = metricsHtml;
+
+// ── Render current holdings ──
+const holdingsBody = document.getElementById('holdingsBody');
+const emptyHoldings = document.getElementById('emptyHoldings');
+if (BASIC.current_holdings && BASIC.current_holdings.length > 0) {
+  document.getElementById('holdingsTable').style.display = '';
+  if (emptyHoldings) emptyHoldings.style.display = 'none';
+  holdingsBody.innerHTML = BASIC.current_holdings.map(h => `
+    <tr class="selected-row">
+      <td>${h.code}</td>
+      <td><strong>${h.name}</strong></td>
+      <td>${h.industry}</td>
+      <td>${h.close.toFixed(3)}</td>
+      <td>${h.weight.toFixed(1)}%</td>
+      <td style="color:#888;font-size:12px">-</td>
+      <td style="color:#888;font-size:12px">-</td>
+      <td style="color:#888;font-size:12px">-</td>
+      <td><span class="badge badge-buy">持有中</span></td>
+    </tr>`).join('');
+} else {
+  document.getElementById('holdingsTable').style.display = 'none';
+  if (emptyHoldings) emptyHoldings.style.display = '';
+}
+
+// ── Render last rebalance signal ──
+const signalBody = document.getElementById('signalBody');
+if (BASIC.latest_signal.length === 0) {
+  signalBody.innerHTML = '<tr><td colspan="11" style="text-align:center;color:#666;">无信号</td></tr>';
+} else {
+  signalBody.innerHTML = BASIC.latest_signal.map(s => `
+    <tr>
+      <td>${s.code}</td>
+      <td><strong>${s.name}</strong></td>
+      <td>${s.industry}</td>
+      <td>${s.close.toFixed(3)}</td>
+      <td style="color:${s.momentum_z>=0?'#4ade80':'#f87171'}">${s.momentum_z.toFixed(2)}</td>
+      <td style="color:${s.momentum>=0?'#4ade80':'#f87171'}">${s.momentum.toFixed(1)}%</td>
+      <td style="color:${s.money_flow_z>=0?'#4ade80':'#f87171'}">${s.money_flow_z.toFixed(2)}</td>
+      <td style="color:${s.money_flow>=0?'#4ade80':'#f87171'}">${s.money_flow.toFixed(2)}x</td>
+      <td style="color:${s.risk_adj_mom_z>=0?'#4ade80':'#f87171'}">${s.risk_adj_mom_z.toFixed(2)}</td>
+      <td style="color:#fbbf24;font-weight:700">${s.composite.toFixed(3)}</td>
+      <td><span class="badge badge-stop">已出局</span></td>
+    </tr>`).join('');
+}
+
+// ── Render all scores ──
+const maxScore = Math.max(...BASIC.all_scores.map(s => Math.abs(s.composite)));
+const scoreBody = document.getElementById('scoreBody');
+scoreBody.innerHTML = BASIC.all_scores.map((s, i) => {
+  const pct = (s.composite / (maxScore || 1)) * 50 + 50;
+  const barColor = s.composite >= 0 ? '#4ade80' : '#f87171';
+  return `<tr class="${s.selected ? 'selected-row' : ''}">
+    <td>${i+1}</td>
+    <td>${s.code}</td>
+    <td><strong>${s.name}</strong></td>
+    <td>${s.industry}</td>
+    <td>${s.close.toFixed(3)}</td>
+    <td style="color:${s.momentum_z>=0?'#4ade80':'#f87171'}">${s.momentum_z.toFixed(2)}</td>
+    <td style="color:${s.momentum>=0?'#4ade80':'#f87171'}">${s.momentum.toFixed(1)}%</td>
+    <td style="color:${s.money_flow_z>=0?'#4ade80':'#f87171'}">${s.money_flow_z.toFixed(2)}</td>
+    <td style="color:${s.money_flow>=0?'#4ade80':'#f87171'}">${s.money_flow.toFixed(2)}x</td>
+    <td style="color:${s.risk_adj_mom_z>=0?'#4ade80':'#f87171'}">${s.risk_adj_mom_z.toFixed(2)}</td>
+    <td style="color:#fbbf24;font-weight:700">${s.composite.toFixed(3)}</td>
+    <td><div class="score-bar"><div class="score-bar-fill" style="width:${pct.toFixed(0)}%;background:${barColor}"></div></div></td>
+    <td>${s.selected}</td>
+  </tr>`;
+}).join('');
+
+// ── NAV Chart ──
+let navChart = null;
+
+function initNavChart() {
+  fetch('nav_data.json')
+    .then(r => r.json())
+    .then(data => {
+      const labels = data.map(d => d.date);
+      const values = data.map(d => d.nav);
+      const ctx = document.getElementById('navChart').getContext('2d');
+      navChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: '策略净值',
+            data: values,
+            borderColor: '#60a5fa',
+            backgroundColor: (ctx) => {
+              const g = ctx.chart.ctx.createLinearGradient(0, 0, 0, 400);
+              g.addColorStop(0, 'rgba(96, 165, 250, 0.15)');
+              g.addColorStop(1, 'rgba(96, 165, 250, 0.01)');
+              return g;
+            },
+            fill: true,
+            tension: 0.1,
+            pointRadius: 0,
+            pointHitRadius: 10,
+            borderWidth: 2,
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: '#1a1d2e',
+              titleColor: '#888',
+              bodyColor: '#fff',
+              borderColor: '#2a2d45',
+              borderWidth: 1,
+              padding: 12,
+              callbacks: {
+                title: (items) => `📅 ${items[0].label}`,
+                label: (ctx) => ` 净值: ${ctx.parsed.y.toFixed(2)}`
+              }
+            }
+          },
+          scales: {
+            x: {
+              grid: { color: '#222', drawBorder: false },
+              ticks: {
+                color: '#555',
+                maxTicksLimit: 15,
+                callback: (val, idx) => {
+                  const d = labels[idx];
+                  if (!d) return '';
+                  const parts = d.split('-');
+                  return parts[0] + '-' + parts[1];
+                }
+              }
+            },
+            y: {
+              grid: { color: '#222', drawBorder: false },
+              ticks: { color: '#555' },
+              position: 'right',
+            }
+          }
+        }
+      });
+    })
+    .catch(err => {
+      document.getElementById('navChart').parentElement.innerHTML = '<div class="loading">⚠️ 净值数据加载失败</div>';
+      console.error(err);
+    });
+}
+
+// ── Trades ──
+let allTrades = [];
+let currentFilter = 'all';
+
+function renderTradesFilter(filter) {
+  const filtered = filter === '全部' ? allTrades : allTrades.filter(t => t.type.includes(filter));
+  // 倒序：最新交易在第一行
+  const sorted = [...filtered].reverse();
+  const tbody = document.getElementById('tradeBody');
+  tbody.innerHTML = sorted.map(t => {
+    const typeBadge = t.type.includes('调入') ? 'badge-buy' : t.type.includes('调出') ? 'badge-sell' : 'badge-stop';
+    const retColor = t.return > 0 ? '#4ade80' : t.return < 0 ? '#f87171' : '#aaa';
+    const navChange = t.nav_change;
+    const navChangeColor = navChange > 0 ? 'nav-up' : navChange < 0 ? 'nav-down' : 'nav-flat';
+    const navChangeStr = navChange === 0 ? '-' : (navChange > 0 ? '+' : '') + navChange.toFixed(2) + '%';
+    return `<tr>
+      <td style="color:#888;font-size:12px">${t.date}</td>
+      <td><span class="badge ${typeBadge}">${t.type}</span></td>
+      <td>${t.code}</td>
+      <td><strong>${t.name}</strong></td>
+      <td>${t.industry || '-'}</td>
+      <td>${t.entry_price ? t.entry_price.toFixed(3) : '-'}</td>
+      <td>${t.exit_price ? t.exit_price.toFixed(3) : '-'}</td>
+      <td style="color:${retColor}">${t.return ? t.return.toFixed(1)+'%' : '-'}</td>
+      <td>${t.weight ? t.weight.toFixed(0) : '-'}</td>
+      <td style="font-weight:600;color:#60a5fa">${t.nav ? t.nav.toFixed(2) : '-'}</td>
+      <td style="color:${navChangeColor};font-weight:600">${navChangeStr}</td>
+    </tr>`;
+  }).join('');
+  document.getElementById('tradeLoading').style.display = 'none';
+}
+
+function switchTab(filter, keyword) {
+  currentFilter = keyword;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  renderTradesFilter(keyword);
+}
+
+// Load all data
+Promise.all([
+  fetch('annotated_trades.json').then(r => r.json()),
+  fetch('nav_data.json').then(r => r.json())
+]).then(([trades, navData]) => {
+  allTrades = trades;
+  renderTradesFilter('全部');
+
+  // Init chart after data is loaded
+  const labels = navData.map(d => d.date);
+  const values = navData.map(d => d.nav);
+  const ctx = document.getElementById('navChart').getContext('2d');
+  navChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: '策略净值',
+        data: values,
+        borderColor: '#60a5fa',
+        backgroundColor: (ctx) => {
+          const g = ctx.chart.ctx.createLinearGradient(0, 0, 0, 400);
+          g.addColorStop(0, 'rgba(96, 165, 250, 0.15)');
+          g.addColorStop(1, 'rgba(96, 165, 250, 0.01)');
+          return g;
+        },
+        fill: true,
+        tension: 0.1,
+        pointRadius: 0,
+        pointHitRadius: 10,
+        borderWidth: 2,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#1a1d2e',
+          titleColor: '#888',
+          bodyColor: '#fff',
+          borderColor: '#2a2d45',
+          borderWidth: 1,
+          padding: 12,
+          callbacks: {
+            title: (items) => `📅 ${items[0].label}`,
+            label: (ctx) => ` 净值: ${ctx.parsed.y.toFixed(2)}`
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: '#222', drawBorder: false },
+          ticks: {
+            color: '#555',
+            maxTicksLimit: 15,
+            callback: (val, idx) => {
+              const d = labels[idx];
+              if (!d) return '';
+              const parts = d.split('-');
+              return parts[0] + '-' + parts[1];
+            }
+          }
+        },
+        y: {
+          grid: { color: '#222', drawBorder: false },
+          ticks: { color: '#555' },
+          position: 'right',
+        }
+      }
+    }
+  });
+}).catch(err => {
+  document.getElementById('tradeLoading').textContent = '⚠️ 数据加载失败';
+  document.getElementById('navChart').parentElement.innerHTML = '<div class="loading">⚠️ 净值数据加载失败</div>';
+  console.error(err);
+});
+</script>
+</body>
+</html>
