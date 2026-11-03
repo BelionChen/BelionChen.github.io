@@ -52,27 +52,27 @@ tr.latest td{background:rgba(56,189,248,0.08);border-color:#38bdf8;font-weight:5
     <a href="https://belionchen.github.io//" class="back-link">← 返回仪表盘</a>
     <h1>📊 多资产跨赛道ETF轮动策略 v2</h1>
     <div class="sub">4因子轮动 · 持有2只 · 掉出前7才卖 · 日频检查</div>
-    <div class="updated">🕐 部署于 2026-11-03 14:47 CST | 数据截止 2026-08-25</div>
+    <div class="updated">🕐 部署于 2026-11-03 16:10 CST | 数据截止 2026-11-03</div>
     <div class="metric-grid">
-      <div class="metric-card"><div class="label">年化收益</div><div class="value up">29.5%</div><div class="sub-value">超额 16.2%</div></div>
-      <div class="metric-card"><div class="label">Sharpe</div><div class="value">1.47</div><div class="sub-value">基准 13.3%</div></div>
-      <div class="metric-card"><div class="label">最大回撤</div><div class="value down">-15.9%</div><div class="sub-value">Calmar 1.86</div></div>
-      <div class="metric-card"><div class="label">年化波动</div><div class="value">18.8%</div><div class="sub-value">胜率 51.1%</div></div>
-      <div class="metric-card"><div class="label">组合实际波动率</div><div class="value">14.9%</div><div class="sub-value">✅ 正常</div></div>
-      <div class="metric-card"><div class="label">回测区间</div><div class="value" style="font-size:0.95rem;">2023-12-29 ~ 2026-08-25</div><div class="sub-value">2.5年 · 48只ETF · 调仓71次</div></div>
+      <div class="metric-card"><div class="label">年化收益</div><div class="value up">18.0%</div><div class="sub-value">超额 11.8%</div></div>
+      <div class="metric-card"><div class="label">Sharpe</div><div class="value">1.02</div><div class="sub-value">基准 6.2%</div></div>
+      <div class="metric-card"><div class="label">最大回撤</div><div class="value down">-23.6%</div><div class="sub-value">Calmar 0.76</div></div>
+      <div class="metric-card"><div class="label">年化波动</div><div class="value">17.8%</div><div class="sub-value">胜率 48.8%</div></div>
+      <div class="metric-card"><div class="label">组合实际波动率</div><div class="value">16.3%</div><div class="sub-value">⚠️ 超过目标15%</div></div>
+      <div class="metric-card"><div class="label">回测区间</div><div class="value" style="font-size:0.95rem;">2023-07-14 ~ 2026-11-03</div><div class="sub-value">3.2年 · 48只ETF · 调仓94次</div></div>
     </div>
     <div class="metric-grid" style="margin-top:12px;">
-      <div class="metric-card"><div class="label">市场状态</div><div class="value state-osc">🟡 震荡</div><div class="sub-value">分数: -5.1 · 动量+反转，降低仓位</div></div>
-      <div class="metric-card"><div class="label">创业板指</div><div class="value">2459</div><div class="sub-value">80日趋势线: 2876 · 偏离: <span class="down">-14.52%</span></div></div>
-      <div class="metric-card"><div class="label">创业板指趋势线20日变化</div><div class="value" class="down">-9.67%</div><div class="sub-value">创业板指80日低延迟趋势线过去20日变化率 向下</div></div>
-      <div class="metric-card"><div class="label">当前持仓</div><div class="value" style="font-size:0.9rem;">医疗, 家电</div><div class="sub-value">2只 / 2只</div></div>
+      <div class="metric-card"><div class="label">市场状态</div><div class="value state-osc">🟡 震荡</div><div class="sub-value">分数: -6.1 · 动量+反转，降低仓位</div></div>
+      <div class="metric-card"><div class="label">创业板指</div><div class="value">2392</div><div class="sub-value">80日趋势线: 2851 · 偏离: <span class="down">-16.11%</span></div></div>
+      <div class="metric-card"><div class="label">创业板指趋势线20日变化</div><div class="value" class="down">-10.58%</div><div class="sub-value">创业板指80日低延迟趋势线过去20日变化率 向下</div></div>
+      <div class="metric-card"><div class="label">当前持仓</div><div class="value" style="font-size:0.9rem;">恒生消费, 印度</div><div class="sub-value">2只 / 2只</div></div>
     </div>
   </div>
 </div>
 <div class="container">
   <div class="tabs">
     <div class="tab active" data-tab="nav" onclick="switchTab('nav')">📈 净值曲线</div>
-    <div class="tab" data-tab="trades" onclick="switchTab('trades')">📋 交易明细 (71笔)</div>
+    <div class="tab" data-tab="trades" onclick="switchTab('trades')">📋 交易明细 (94笔)</div>
     <div class="tab" data-tab="scores" onclick="switchTab('scores')">🎯 ETF评分榜</div>
     <div class="tab" data-tab="config" onclick="switchTab('config')">⚙️ 策略配置</div>
   </div>
@@ -89,65 +89,161 @@ tr.latest td{background:rgba(56,189,248,0.08);border-color:#38bdf8;font-weight:5
         </tr></thead>
         <tbody>
 <tr class="latest">
-<td style="white-space:nowrap">2026-08-21</td><td><span class='badge'>医疗</span></td><td><span class='badge'>钢铁</span></td>
-<td style="font-size:12px"><span class='badge'>家电</span>, <span class='badge'>医疗</span></td>
-<td style="text-align:right">1.9295</td>
-<td style="text-align:right;color:#f87171">-1.49%</td>
+<td style="white-space:nowrap">2026-10-29</td><td><span class='badge'>印度</span></td><td><span class='badge'>巴西</span></td>
+<td style="font-size:12px"><span class='badge'>恒生消费</span>, <span class='badge'>印度</span></td>
+<td style="text-align:right">1.6039</td>
+<td style="text-align:right;color:#f87171">-1.82%</td>
 <td style="text-align:right">50.0%</td>
-<td style="font-size:11px;color:#8892a8">钢铁掉出前7</td>
+<td style="font-size:11px;color:#8892a8">巴西掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2026-08-18</td><td><span class='badge'>家电</span></td><td><span class='badge'>沙特</span></td>
-<td style="font-size:12px"><span class='badge'>家电</span>, <span class='badge'>钢铁</span></td>
-<td style="text-align:right">1.9586</td>
-<td style="text-align:right;color:#4ade80">+1.04%</td>
+<td style="white-space:nowrap">2026-10-28</td><td><span class='badge'>巴西</span></td><td><span class='badge'>银行</span></td>
+<td style="font-size:12px"><span class='badge'>恒生消费</span>, <span class='badge'>巴西</span></td>
+<td style="text-align:right">1.6336</td>
+<td style="text-align:right;color:#f87171">-0.43%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">银行掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-10-26</td><td><span class='badge'>恒生消费</span></td><td><span class='badge'>纳指科技</span></td>
+<td style="font-size:12px"><span class='badge'>银行</span>, <span class='badge'>恒生消费</span></td>
+<td style="text-align:right">1.6407</td>
+<td style="text-align:right;color:#f87171">-5.36%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">纳指科技掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-10-14</td><td><span class='badge'>纳指科技</span></td><td><span class='badge'>标普500</span></td>
+<td style="font-size:12px"><span class='badge'>银行</span>, <span class='badge'>纳指科技</span></td>
+<td style="text-align:right">1.7336</td>
+<td style="text-align:right;color:#4ade80">+1.42%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">标普500掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-09-21</td><td><span class='badge'>银行</span></td><td><span class='badge'>农业</span></td>
+<td style="font-size:12px"><span class='badge'>银行</span>, <span class='badge'>标普500</span></td>
+<td style="text-align:right">1.7094</td>
+<td style="text-align:right;color:#4ade80">+1.59%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">农业掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-09-15</td><td><span class='badge'>农业</span></td><td><span class='badge'>德国</span></td>
+<td style="font-size:12px"><span class='badge'>农业</span>, <span class='badge'>标普500</span></td>
+<td style="text-align:right">1.6825</td>
+<td style="text-align:right;color:#f87171">-1.33%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">德国掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-09-08</td><td><span class='badge'>德国</span></td><td><span class='badge'>医疗</span></td>
+<td style="font-size:12px"><span class='badge'>标普500</span>, <span class='badge'>德国</span></td>
+<td style="text-align:right">1.7052</td>
+<td style="text-align:right;color:#f87171">-1.17%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">医疗掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-08-27</td><td><span class='badge'>标普500</span></td><td><span class='badge'>家电</span></td>
+<td style="font-size:12px"><span class='badge'>医疗</span>, <span class='badge'>标普500</span></td>
+<td style="text-align:right">1.7253</td>
+<td style="text-align:right;color:#4ade80">+2.32%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">家电掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-08-24</td><td><span class='badge'>医疗</span></td><td><span class='badge'>光伏</span></td>
+<td style="font-size:12px"><span class='badge'>家电</span>, <span class='badge'>医疗</span></td>
+<td style="text-align:right">1.6861</td>
+<td style="text-align:right;color:#f87171">-3.48%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">光伏掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-08-17</td><td><span class='badge'>光伏</span></td><td><span class='badge'>沙特</span></td>
+<td style="font-size:12px"><span class='badge'>家电</span>, <span class='badge'>光伏</span></td>
+<td style="text-align:right">1.7470</td>
+<td style="text-align:right;color:#4ade80">+1.94%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">沙特掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2026-07-29</td><td><span class='badge'>钢铁</span></td><td><span class='badge'>酒</span></td>
-<td style="font-size:12px"><span class='badge'>钢铁</span>, <span class='badge'>沙特</span></td>
-<td style="text-align:right">1.9384</td>
-<td style="text-align:right;color:#4ade80">+2.16%</td>
+<td style="white-space:nowrap">2026-08-03</td><td><span class='badge'>家电</span></td><td><span class='badge'>教育</span></td>
+<td style="font-size:12px"><span class='badge'>家电</span>, <span class='badge'>沙特</span></td>
+<td style="text-align:right">1.7138</td>
+<td style="text-align:right;color:#4ade80">+5.85%</td>
 <td style="text-align:right">50.0%</td>
-<td style="font-size:11px;color:#8892a8">酒掉出前7</td>
+<td style="font-size:11px;color:#8892a8">教育掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2026-07-02</td><td><span class='badge'>沙特</span></td><td><span class='badge'>中药</span></td>
-<td style="font-size:12px"><span class='badge'>酒</span>, <span class='badge'>沙特</span></td>
-<td style="text-align:right">1.8974</td>
-<td style="text-align:right;color:#f87171">-9.01%</td>
+<td style="white-space:nowrap">2026-07-22</td><td><span class='badge'>教育</span></td><td><span class='badge'>自由现金流</span></td>
+<td style="font-size:12px"><span class='badge'>教育</span>, <span class='badge'>沙特</span></td>
+<td style="text-align:right">1.6191</td>
+<td style="text-align:right;color:#4ade80">+1.81%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">自由现金流掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-07-03</td><td><span class='badge'>自由现金流</span></td><td><span class='badge'>中药</span></td>
+<td style="font-size:12px"><span class='badge'>自由现金流</span>, <span class='badge'>沙特</span></td>
+<td style="text-align:right">1.5903</td>
+<td style="text-align:right;color:#4ade80">+0.92%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">中药掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2026-04-22</td><td><span class='badge'>中药</span></td><td><span class='badge'>汽车</span></td>
-<td style="font-size:12px"><span class='badge'>酒</span>, <span class='badge'>中药</span></td>
-<td style="text-align:right">2.0853</td>
-<td style="text-align:right;color:#4ade80">+0.95%</td>
+<td style="white-space:nowrap">2026-07-01</td><td><span class='badge'>沙特</span></td><td><span class='badge'>标普500</span></td>
+<td style="font-size:12px"><span class='badge'>中药</span>, <span class='badge'>沙特</span></td>
+<td style="text-align:right">1.5759</td>
+<td style="text-align:right;color:#f87171">-0.59%</td>
 <td style="text-align:right">50.0%</td>
-<td style="font-size:11px;color:#8892a8">汽车掉出前7</td>
+<td style="font-size:11px;color:#8892a8">标普500掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2026-04-09</td><td><span class='badge'>酒</span>, <span class='badge'>汽车</span></td><td><span class='badge'>电力</span>, <span class='badge'>豆粕</span></td>
-<td style="font-size:12px"><span class='badge'>酒</span>, <span class='badge'>汽车</span></td>
-<td style="text-align:right">2.0656</td>
-<td style="text-align:right;color:#f87171">-0.38%</td>
-<td style="text-align:right">100.0%</td>
-<td style="font-size:11px;color:#8892a8">电力掉出前7; 豆粕掉出前7</td>
+<td style="white-space:nowrap">2026-06-09</td><td><span class='badge'>标普500</span></td><td><span class='badge'>教育</span></td>
+<td style="font-size:12px"><span class='badge'>中药</span>, <span class='badge'>标普500</span></td>
+<td style="text-align:right">1.5852</td>
+<td style="text-align:right;color:#f87171">-4.55%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">教育掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2026-04-01</td><td><span class='badge'>电力</span></td><td><span class='badge'>标普消费</span></td>
-<td style="font-size:12px"><span class='badge'>电力</span>, <span class='badge'>豆粕</span></td>
-<td style="text-align:right">2.0736</td>
-<td style="text-align:right;color:#f87171">-2.06%</td>
+<td style="white-space:nowrap">2026-06-02</td><td><span class='badge'>教育</span></td><td><span class='badge'>恒生消费</span></td>
+<td style="font-size:12px"><span class='badge'>中药</span>, <span class='badge'>教育</span></td>
+<td style="text-align:right">1.6608</td>
+<td style="text-align:right;color:#f87171">-3.44%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">恒生消费掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-05-06</td><td><span class='badge'>恒生消费</span></td><td><span class='badge'>标普消费</span></td>
+<td style="font-size:12px"><span class='badge'>中药</span>, <span class='badge'>恒生消费</span></td>
+<td style="text-align:right">1.7200</td>
+<td style="text-align:right;color:#4ade80">+0.78%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">标普消费掉出前7</td>
 </tr>
 <tr>
+<td style="white-space:nowrap">2026-04-14</td><td><span class='badge'>中药</span></td><td><span class='badge'>券商</span></td>
+<td style="font-size:12px"><span class='badge'>中药</span>, <span class='badge'>标普消费</span></td>
+<td style="text-align:right">1.7067</td>
+<td style="text-align:right;color:#4ade80">+2.93%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">券商掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-04-09</td><td><span class='badge'>券商</span></td><td><span class='badge'>豆粕</span></td>
+<td style="font-size:12px"><span class='badge'>券商</span>, <span class='badge'>标普消费</span></td>
+<td style="text-align:right">1.6581</td>
+<td style="text-align:right;color:#f87171">-1.59%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">豆粕掉出前7</td>
+</tr>
+<tr>
 <td style="white-space:nowrap">2026-03-26</td><td><span class='badge'>豆粕</span></td><td><span class='badge'>电力</span></td>
 <td style="font-size:12px"><span class='badge'>标普消费</span>, <span class='badge'>豆粕</span></td>
-<td style="text-align:right">2.1171</td>
+<td style="text-align:right">1.6848</td>
 <td style="text-align:right;color:#4ade80">+1.40%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">电力掉出前7</td>
@@ -155,47 +251,31 @@ tr.latest td{background:rgba(56,189,248,0.08);border-color:#38bdf8;font-weight:5
 <tr>
 <td style="white-space:nowrap">2026-03-24</td><td><span class='badge'>标普消费</span></td><td><span class='badge'>自由现金流</span></td>
 <td style="font-size:12px"><span class='badge'>电力</span>, <span class='badge'>标普消费</span></td>
-<td style="text-align:right">2.0878</td>
-<td style="text-align:right;color:#f87171">-0.18%</td>
+<td style="text-align:right">1.6615</td>
+<td style="text-align:right;color:#f87171">-1.28%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">自由现金流掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2026-03-19</td><td><span class='badge'>电力</span></td><td><span class='badge'>中韩半导体</span></td>
+<td style="white-space:nowrap">2026-03-17</td><td><span class='badge'>电力</span></td><td><span class='badge'>银行</span></td>
 <td style="font-size:12px"><span class='badge'>自由现金流</span>, <span class='badge'>电力</span></td>
-<td style="text-align:right">2.0915</td>
-<td style="text-align:right;color:#f87171">-1.96%</td>
-<td style="text-align:right">50.0%</td>
-<td style="font-size:11px;color:#8892a8">中韩半导体掉出前7</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">2026-03-18</td><td><span class='badge'>中韩半导体</span></td><td><span class='badge'>钢铁</span></td>
-<td style="font-size:12px"><span class='badge'>自由现金流</span>, <span class='badge'>中韩半导体</span></td>
-<td style="text-align:right">2.1332</td>
-<td style="text-align:right;color:#f87171">-0.62%</td>
-<td style="text-align:right">50.0%</td>
-<td style="font-size:11px;color:#8892a8">钢铁掉出前7</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">2026-03-17</td><td><span class='badge'>钢铁</span></td><td><span class='badge'>银行</span></td>
-<td style="font-size:12px"><span class='badge'>自由现金流</span>, <span class='badge'>钢铁</span></td>
-<td style="text-align:right">2.1466</td>
-<td style="text-align:right;color:#f87171">-0.23%</td>
+<td style="text-align:right">1.6831</td>
+<td style="text-align:right;color:#4ade80">+0.28%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">银行掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2026-03-11</td><td><span class='badge'>自由现金流</span></td><td><span class='badge'>中韩半导体</span></td>
+<td style="white-space:nowrap">2026-03-06</td><td><span class='badge'>自由现金流</span></td><td><span class='badge'>中韩半导体</span></td>
 <td style="font-size:12px"><span class='badge'>自由现金流</span>, <span class='badge'>银行</span></td>
-<td style="text-align:right">2.1516</td>
-<td style="text-align:right;color:#4ade80">+3.55%</td>
+<td style="text-align:right">1.6784</td>
+<td style="text-align:right;color:#4ade80">+4.57%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">中韩半导体掉出前7</td>
 </tr>
 <tr>
 <td style="white-space:nowrap">2026-03-03</td><td><span class='badge'>中韩半导体</span></td><td><span class='badge'>石油</span></td>
 <td style="font-size:12px"><span class='badge'>银行</span>, <span class='badge'>中韩半导体</span></td>
-<td style="text-align:right">2.0778</td>
+<td style="text-align:right">1.6051</td>
 <td style="text-align:right;color:#4ade80">+4.43%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">石油掉出前7</td>
@@ -203,39 +283,39 @@ tr.latest td{background:rgba(56,189,248,0.08);border-color:#38bdf8;font-weight:5
 <tr>
 <td style="white-space:nowrap">2026-03-02</td><td><span class='badge'>银行</span></td><td><span class='badge'>家电</span></td>
 <td style="font-size:12px"><span class='badge'>银行</span>, <span class='badge'>石油</span></td>
-<td style="text-align:right">1.9896</td>
+<td style="text-align:right">1.5370</td>
 <td style="text-align:right;color:#4ade80">+9.91%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">家电掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2026-02-06</td><td><span class='badge'>石油</span></td><td><span class='badge'>德国</span></td>
+<td style="white-space:nowrap">2026-02-06</td><td><span class='badge'>石油</span></td><td><span class='badge'>银行</span></td>
 <td style="font-size:12px"><span class='badge'>家电</span>, <span class='badge'>石油</span></td>
-<td style="text-align:right">1.8103</td>
-<td style="text-align:right;color:#f87171">-1.04%</td>
+<td style="text-align:right">1.3985</td>
+<td style="text-align:right;color:#4ade80">+0.35%</td>
 <td style="text-align:right">50.0%</td>
-<td style="font-size:11px;color:#8892a8">德国掉出前7</td>
+<td style="font-size:11px;color:#8892a8">银行掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2026-02-04</td><td><span class='badge'>家电</span></td><td><span class='badge'>有色</span></td>
-<td style="font-size:12px"><span class='badge'>家电</span>, <span class='badge'>德国</span></td>
-<td style="text-align:right">1.8293</td>
-<td style="text-align:right;color:#4ade80">+4.77%</td>
+<td style="white-space:nowrap">2026-02-04</td><td><span class='badge'>银行</span></td><td><span class='badge'>有色</span></td>
+<td style="font-size:12px"><span class='badge'>银行</span>, <span class='badge'>家电</span></td>
+<td style="text-align:right">1.3935</td>
+<td style="text-align:right;color:#4ade80">+0.19%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">有色掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2026-02-02</td><td><span class='badge'>德国</span></td><td><span class='badge'>酒</span></td>
-<td style="font-size:12px"><span class='badge'>德国</span>, <span class='badge'>有色</span></td>
-<td style="text-align:right">1.7460</td>
-<td style="text-align:right;color:#f87171">-1.75%</td>
+<td style="white-space:nowrap">2026-01-30</td><td><span class='badge'>家电</span></td><td><span class='badge'>酒</span></td>
+<td style="font-size:12px"><span class='badge'>家电</span>, <span class='badge'>有色</span></td>
+<td style="text-align:right">1.3909</td>
+<td style="text-align:right;color:#4ade80">+1.33%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">酒掉出前7</td>
 </tr>
 <tr>
 <td style="white-space:nowrap">2026-01-08</td><td><span class='badge'>酒</span></td><td><span class='badge'>标普生物科技</span></td>
 <td style="font-size:12px"><span class='badge'>酒</span>, <span class='badge'>有色</span></td>
-<td style="text-align:right">1.7772</td>
+<td style="text-align:right">1.3726</td>
 <td style="text-align:right;color:#4ade80">+6.06%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">标普生物科技掉出前7</td>
@@ -243,31 +323,31 @@ tr.latest td{background:rgba(56,189,248,0.08);border-color:#38bdf8;font-weight:5
 <tr>
 <td style="white-space:nowrap">2025-12-16</td><td><span class='badge'>有色</span></td><td><span class='badge'>石油</span></td>
 <td style="font-size:12px"><span class='badge'>标普生物科技</span>, <span class='badge'>有色</span></td>
-<td style="text-align:right">1.6756</td>
-<td style="text-align:right;color:#f87171">-0.38%</td>
+<td style="text-align:right">1.2941</td>
+<td style="text-align:right;color:#f87171">-1.06%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">石油掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2025-12-02</td><td><span class='badge'>标普生物科技</span></td><td><span class='badge'>有色</span></td>
+<td style="white-space:nowrap">2025-12-03</td><td><span class='badge'>标普生物科技</span></td><td><span class='badge'>标普消费</span></td>
 <td style="font-size:12px"><span class='badge'>石油</span>, <span class='badge'>标普生物科技</span></td>
-<td style="text-align:right">1.6819</td>
-<td style="text-align:right;color:#4ade80">+2.42%</td>
+<td style="text-align:right">1.3079</td>
+<td style="text-align:right;color:#4ade80">+2.02%</td>
 <td style="text-align:right">50.0%</td>
-<td style="font-size:11px;color:#8892a8">有色掉出前7</td>
+<td style="font-size:11px;color:#8892a8">标普消费掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2025-11-27</td><td><span class='badge'>有色</span></td><td><span class='badge'>电力</span></td>
-<td style="font-size:12px"><span class='badge'>石油</span>, <span class='badge'>有色</span></td>
-<td style="text-align:right">1.6422</td>
-<td style="text-align:right;color:#f87171">-0.25%</td>
+<td style="white-space:nowrap">2025-11-28</td><td><span class='badge'>标普消费</span></td><td><span class='badge'>电力</span></td>
+<td style="font-size:12px"><span class='badge'>石油</span>, <span class='badge'>标普消费</span></td>
+<td style="text-align:right">1.2821</td>
+<td style="text-align:right;color:#4ade80">+0.45%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">电力掉出前7</td>
 </tr>
 <tr>
 <td style="white-space:nowrap">2025-11-25</td><td><span class='badge'>石油</span></td><td><span class='badge'>光伏</span></td>
 <td style="font-size:12px"><span class='badge'>电力</span>, <span class='badge'>石油</span></td>
-<td style="text-align:right">1.6463</td>
+<td style="text-align:right">1.2764</td>
 <td style="text-align:right;color:#4ade80">+1.14%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">光伏掉出前7</td>
@@ -275,7 +355,7 @@ tr.latest td{background:rgba(56,189,248,0.08);border-color:#38bdf8;font-weight:5
 <tr>
 <td style="white-space:nowrap">2025-11-21</td><td><span class='badge'>电力</span>, <span class='badge'>光伏</span></td><td><span class='badge'>标普500</span>, <span class='badge'>纳指</span></td>
 <td style="font-size:12px"><span class='badge'>光伏</span>, <span class='badge'>电力</span></td>
-<td style="text-align:right">1.6277</td>
+<td style="text-align:right">1.2620</td>
 <td style="text-align:right;color:#f87171">-3.32%</td>
 <td style="text-align:right">100.0%</td>
 <td style="font-size:11px;color:#8892a8">标普500掉出前7; 纳指掉出前7</td>
@@ -283,7 +363,7 @@ tr.latest td{background:rgba(56,189,248,0.08);border-color:#38bdf8;font-weight:5
 <tr>
 <td style="white-space:nowrap">2025-11-17</td><td><span class='badge'>标普500</span></td><td><span class='badge'>标普消费</span></td>
 <td style="font-size:12px"><span class='badge'>标普500</span>, <span class='badge'>纳指</span></td>
-<td style="text-align:right">1.6836</td>
+<td style="text-align:right">1.3052</td>
 <td style="text-align:right;color:#f87171">-1.38%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">标普消费掉出前7</td>
@@ -291,7 +371,7 @@ tr.latest td{background:rgba(56,189,248,0.08);border-color:#38bdf8;font-weight:5
 <tr>
 <td style="white-space:nowrap">2025-11-10</td><td><span class='badge'>纳指</span></td><td><span class='badge'>标普生物科技</span></td>
 <td style="font-size:12px"><span class='badge'>标普消费</span>, <span class='badge'>纳指</span></td>
-<td style="text-align:right">1.7071</td>
+<td style="text-align:right">1.3235</td>
 <td style="text-align:right;color:#4ade80">+0.15%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">标普生物科技掉出前7</td>
@@ -299,7 +379,7 @@ tr.latest td{background:rgba(56,189,248,0.08);border-color:#38bdf8;font-weight:5
 <tr>
 <td style="white-space:nowrap">2025-11-07</td><td><span class='badge'>标普消费</span></td><td><span class='badge'>中韩半导体</span></td>
 <td style="font-size:12px"><span class='badge'>标普生物科技</span>, <span class='badge'>标普消费</span></td>
-<td style="text-align:right">1.7045</td>
+<td style="text-align:right">1.3214</td>
 <td style="text-align:right;color:#4ade80">+2.13%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">中韩半导体掉出前7</td>
@@ -307,15 +387,15 @@ tr.latest td{background:rgba(56,189,248,0.08);border-color:#38bdf8;font-weight:5
 <tr>
 <td style="white-space:nowrap">2025-11-05</td><td><span class='badge'>标普生物科技</span>, <span class='badge'>中韩半导体</span></td><td><span class='badge'>标普消费</span>, <span class='badge'>黄金</span></td>
 <td style="font-size:12px"><span class='badge'>中韩半导体</span>, <span class='badge'>标普生物科技</span></td>
-<td style="text-align:right">1.6690</td>
-<td style="text-align:right;color:#f87171">-0.53%</td>
+<td style="text-align:right">1.2939</td>
+<td style="text-align:right;color:#f87171">-0.55%</td>
 <td style="text-align:right">100.0%</td>
 <td style="font-size:11px;color:#8892a8">标普消费掉出前7; 黄金掉出前7</td>
 </tr>
 <tr>
 <td style="white-space:nowrap">2025-10-29</td><td><span class='badge'>黄金</span></td><td><span class='badge'>标普500</span></td>
 <td style="font-size:12px"><span class='badge'>标普消费</span>, <span class='badge'>黄金</span></td>
-<td style="text-align:right">1.6778</td>
+<td style="text-align:right">1.3010</td>
 <td style="text-align:right;color:#4ade80">+2.76%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">标普500掉出前7</td>
@@ -323,7 +403,7 @@ tr.latest td{background:rgba(56,189,248,0.08);border-color:#38bdf8;font-weight:5
 <tr>
 <td style="white-space:nowrap">2025-10-21</td><td><span class='badge'>标普消费</span></td><td><span class='badge'>汽车</span></td>
 <td style="font-size:12px"><span class='badge'>标普消费</span>, <span class='badge'>标普500</span></td>
-<td style="text-align:right">1.6327</td>
+<td style="text-align:right">1.2660</td>
 <td style="text-align:right;color:#4ade80">+0.80%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">汽车掉出前7</td>
@@ -331,7 +411,7 @@ tr.latest td{background:rgba(56,189,248,0.08);border-color:#38bdf8;font-weight:5
 <tr>
 <td style="white-space:nowrap">2025-10-14</td><td><span class='badge'>汽车</span></td><td><span class='badge'>锂电池</span></td>
 <td style="font-size:12px"><span class='badge'>汽车</span>, <span class='badge'>标普500</span></td>
-<td style="text-align:right">1.6198</td>
+<td style="text-align:right">1.2561</td>
 <td style="text-align:right;color:#f87171">-2.71%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">锂电池掉出前7</td>
@@ -339,55 +419,55 @@ tr.latest td{background:rgba(56,189,248,0.08);border-color:#38bdf8;font-weight:5
 <tr>
 <td style="white-space:nowrap">2025-10-10</td><td><span class='badge'>锂电池</span></td><td><span class='badge'>黄金</span></td>
 <td style="font-size:12px"><span class='badge'>锂电池</span>, <span class='badge'>标普500</span></td>
-<td style="text-align:right">1.6649</td>
-<td style="text-align:right;color:#4ade80">+1.96%</td>
+<td style="text-align:right">1.2910</td>
+<td style="text-align:right;color:#4ade80">+1.97%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">黄金掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2025-09-30</td><td><span class='badge'>黄金</span>, <span class='badge'>标普500</span></td><td><span class='badge'>酒</span>, <span class='badge'>旅游</span></td>
+<td style="white-space:nowrap">2025-09-30</td><td><span class='badge'>黄金</span></td><td><span class='badge'>旅游</span></td>
 <td style="font-size:12px"><span class='badge'>标普500</span>, <span class='badge'>黄金</span></td>
-<td style="text-align:right">1.6329</td>
-<td style="text-align:right;color:#f87171">-0.40%</td>
-<td style="text-align:right">100.0%</td>
-<td style="font-size:11px;color:#8892a8">酒掉出前7; 旅游掉出前7</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">2025-09-24</td><td><span class='badge'>旅游</span></td><td><span class='badge'>通信</span></td>
-<td style="font-size:12px"><span class='badge'>酒</span>, <span class='badge'>旅游</span></td>
-<td style="text-align:right">1.6394</td>
-<td style="text-align:right;color:#4ade80">+1.00%</td>
+<td style="text-align:right">1.2660</td>
+<td style="text-align:right;color:#4ade80">+0.28%</td>
 <td style="text-align:right">50.0%</td>
-<td style="font-size:11px;color:#8892a8">通信掉出前7</td>
+<td style="font-size:11px;color:#8892a8">旅游掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2025-09-17</td><td><span class='badge'>酒</span></td><td><span class='badge'>家电</span></td>
-<td style="font-size:12px"><span class='badge'>通信</span>, <span class='badge'>酒</span></td>
-<td style="text-align:right">1.6233</td>
-<td style="text-align:right;color:#4ade80">+4.47%</td>
+<td style="white-space:nowrap">2025-09-25</td><td><span class='badge'>标普500</span></td><td><span class='badge'>豆粕</span></td>
+<td style="font-size:12px"><span class='badge'>旅游</span>, <span class='badge'>标普500</span></td>
+<td style="text-align:right">1.2625</td>
+<td style="text-align:right;color:#4ade80">+0.01%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">豆粕掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2025-09-24</td><td><span class='badge'>旅游</span>, <span class='badge'>豆粕</span></td><td><span class='badge'>自由现金流</span>, <span class='badge'>通信</span></td>
+<td style="font-size:12px"><span class='badge'>旅游</span>, <span class='badge'>豆粕</span></td>
+<td style="text-align:right">1.2624</td>
+<td style="text-align:right;color:#4ade80">+0.84%</td>
+<td style="text-align:right">100.0%</td>
+<td style="font-size:11px;color:#8892a8">自由现金流掉出前7; 通信掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2025-09-17</td><td><span class='badge'>通信</span></td><td><span class='badge'>家电</span></td>
+<td style="font-size:12px"><span class='badge'>自由现金流</span>, <span class='badge'>通信</span></td>
+<td style="text-align:right">1.2519</td>
+<td style="text-align:right;color:#4ade80">+3.44%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">家电掉出前7</td>
 </tr>
 <tr>
 <td style="white-space:nowrap">2025-09-05</td><td><span class='badge'>家电</span></td><td><span class='badge'>标普500</span></td>
-<td style="font-size:12px"><span class='badge'>通信</span>, <span class='badge'>家电</span></td>
-<td style="text-align:right">1.5538</td>
-<td style="text-align:right;color:#4ade80">+10.69%</td>
+<td style="font-size:12px"><span class='badge'>自由现金流</span>, <span class='badge'>家电</span></td>
+<td style="text-align:right">1.2102</td>
+<td style="text-align:right;color:#4ade80">+0.85%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">标普500掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2025-08-21</td><td><span class='badge'>通信</span></td><td><span class='badge'>自由现金流</span></td>
-<td style="font-size:12px"><span class='badge'>通信</span>, <span class='badge'>标普500</span></td>
-<td style="text-align:right">1.4037</td>
-<td style="text-align:right;color:#f87171">-0.14%</td>
-<td style="text-align:right">50.0%</td>
-<td style="font-size:11px;color:#8892a8">自由现金流掉出前7</td>
-</tr>
-<tr>
 <td style="white-space:nowrap">2025-08-20</td><td><span class='badge'>自由现金流</span></td><td><span class='badge'>农业</span></td>
 <td style="font-size:12px"><span class='badge'>自由现金流</span>, <span class='badge'>标普500</span></td>
-<td style="text-align:right">1.4057</td>
+<td style="text-align:right">1.2000</td>
 <td style="text-align:right;color:#4ade80">+0.42%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">农业掉出前7</td>
@@ -395,7 +475,7 @@ tr.latest td{background:rgba(56,189,248,0.08);border-color:#38bdf8;font-weight:5
 <tr>
 <td style="white-space:nowrap">2025-08-14</td><td><span class='badge'>农业</span></td><td><span class='badge'>港股创新药</span></td>
 <td style="font-size:12px"><span class='badge'>农业</span>, <span class='badge'>标普500</span></td>
-<td style="text-align:right">1.3998</td>
+<td style="text-align:right">1.1950</td>
 <td style="text-align:right;color:#4ade80">+0.12%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">港股创新药掉出前7</td>
@@ -403,95 +483,103 @@ tr.latest td{background:rgba(56,189,248,0.08);border-color:#38bdf8;font-weight:5
 <tr>
 <td style="white-space:nowrap">2025-08-13</td><td><span class='badge'>港股创新药</span></td><td><span class='badge'>自由现金流</span></td>
 <td style="font-size:12px"><span class='badge'>港股创新药</span>, <span class='badge'>标普500</span></td>
-<td style="text-align:right">1.3981</td>
-<td style="text-align:right;color:#4ade80">+1.47%</td>
+<td style="text-align:right">1.1935</td>
+<td style="text-align:right;color:#4ade80">+1.44%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">自由现金流掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2025-07-30</td><td><span class='badge'>标普500</span></td><td><span class='badge'>纳指科技</span></td>
+<td style="white-space:nowrap">2025-07-28</td><td><span class='badge'>标普500</span></td><td><span class='badge'>银行</span></td>
 <td style="font-size:12px"><span class='badge'>自由现金流</span>, <span class='badge'>标普500</span></td>
-<td style="text-align:right">1.3778</td>
-<td style="text-align:right;color:#4ade80">+0.02%</td>
-<td style="text-align:right">50.0%</td>
-<td style="font-size:11px;color:#8892a8">纳指科技掉出前7</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">2025-07-28</td><td><span class='badge'>自由现金流</span></td><td><span class='badge'>银行</span></td>
-<td style="font-size:12px"><span class='badge'>自由现金流</span>, <span class='badge'>纳指科技</span></td>
-<td style="text-align:right">1.3775</td>
-<td style="text-align:right;color:#4ade80">+0.56%</td>
+<td style="text-align:right">1.1766</td>
+<td style="text-align:right;color:#f87171">-0.85%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">银行掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2025-07-25</td><td><span class='badge'>纳指科技</span></td><td><span class='badge'>香港证券</span></td>
-<td style="font-size:12px"><span class='badge'>银行</span>, <span class='badge'>纳指科技</span></td>
-<td style="text-align:right">1.3698</td>
-<td style="text-align:right;color:#4ade80">+2.11%</td>
+<td style="white-space:nowrap">2025-07-21</td><td><span class='badge'>自由现金流</span></td><td><span class='badge'>有色</span></td>
+<td style="font-size:12px"><span class='badge'>自由现金流</span>, <span class='badge'>银行</span></td>
+<td style="text-align:right">1.1867</td>
+<td style="text-align:right;color:#4ade80">+0.74%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">有色掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2025-07-16</td><td><span class='badge'>有色</span></td><td><span class='badge'>日经</span></td>
+<td style="font-size:12px"><span class='badge'>银行</span>, <span class='badge'>有色</span></td>
+<td style="text-align:right">1.1779</td>
+<td style="text-align:right;color:#f87171">-0.72%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">日经掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2025-07-11</td><td><span class='badge'>日经</span></td><td><span class='badge'>石油</span></td>
+<td style="font-size:12px"><span class='badge'>银行</span>, <span class='badge'>日经</span></td>
+<td style="text-align:right">1.1865</td>
+<td style="text-align:right;color:#4ade80">+0.20%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">石油掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2025-07-09</td><td><span class='badge'>石油</span></td><td><span class='badge'>香港证券</span></td>
+<td style="font-size:12px"><span class='badge'>银行</span>, <span class='badge'>石油</span></td>
+<td style="text-align:right">1.1841</td>
+<td style="text-align:right;color:#4ade80">+4.52%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">香港证券掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2025-07-22</td><td><span class='badge'>香港证券</span></td><td><span class='badge'>酒</span></td>
+<td style="white-space:nowrap">2025-07-01</td><td><span class='badge'>香港证券</span></td><td><span class='badge'>酒</span></td>
 <td style="font-size:12px"><span class='badge'>银行</span>, <span class='badge'>香港证券</span></td>
-<td style="text-align:right">1.3416</td>
-<td style="text-align:right;color:#4ade80">+1.26%</td>
+<td style="text-align:right">1.1329</td>
+<td style="text-align:right;color:#4ade80">+0.52%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">酒掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2025-06-26</td><td><span class='badge'>银行</span></td><td><span class='badge'>电力</span></td>
+<td style="white-space:nowrap">2025-06-27</td><td><span class='badge'>银行</span></td><td><span class='badge'>电力</span></td>
 <td style="font-size:12px"><span class='badge'>银行</span>, <span class='badge'>酒</span></td>
-<td style="text-align:right">1.3248</td>
-<td style="text-align:right;color:#4ade80">+0.72%</td>
+<td style="text-align:right">1.1271</td>
+<td style="text-align:right;color:#4ade80">+0.37%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">电力掉出前7</td>
 </tr>
 <tr>
 <td style="white-space:nowrap">2025-06-16</td><td><span class='badge'>酒</span></td><td><span class='badge'>黄金</span></td>
 <td style="font-size:12px"><span class='badge'>酒</span>, <span class='badge'>电力</span></td>
-<td style="text-align:right">1.3154</td>
-<td style="text-align:right;color:#4ade80">+1.55%</td>
+<td style="text-align:right">1.1229</td>
+<td style="text-align:right;color:#4ade80">+3.21%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">黄金掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2025-05-13</td><td><span class='badge'>电力</span></td><td><span class='badge'>农业</span></td>
+<td style="white-space:nowrap">2025-05-15</td><td><span class='badge'>电力</span></td><td><span class='badge'>农业</span></td>
 <td style="font-size:12px"><span class='badge'>电力</span>, <span class='badge'>黄金</span></td>
-<td style="text-align:right">1.2953</td>
-<td style="text-align:right;color:#f87171">-2.24%</td>
+<td style="text-align:right">1.0880</td>
+<td style="text-align:right;color:#f87171">-2.30%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">农业掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2025-05-06</td><td><span class='badge'>农业</span></td><td><span class='badge'>酒</span></td>
+<td style="white-space:nowrap">2025-04-15</td><td><span class='badge'>农业</span></td><td><span class='badge'>有色</span></td>
 <td style="font-size:12px"><span class='badge'>农业</span>, <span class='badge'>黄金</span></td>
-<td style="text-align:right">1.3250</td>
-<td style="text-align:right;color:#4ade80">+1.23%</td>
-<td style="text-align:right">50.0%</td>
-<td style="font-size:11px;color:#8892a8">酒掉出前7</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">2025-04-15</td><td><span class='badge'>酒</span></td><td><span class='badge'>有色</span></td>
-<td style="font-size:12px"><span class='badge'>酒</span>, <span class='badge'>黄金</span></td>
-<td style="text-align:right">1.3089</td>
-<td style="text-align:right;color:#f87171">-0.39%</td>
+<td style="text-align:right">1.1136</td>
+<td style="text-align:right;color:#f87171">-0.38%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">有色掉出前7</td>
 </tr>
 <tr>
 <td style="white-space:nowrap">2025-04-03</td><td><span class='badge'>有色</span></td><td><span class='badge'>恒生指数</span></td>
 <td style="font-size:12px"><span class='badge'>黄金</span>, <span class='badge'>有色</span></td>
-<td style="text-align:right">1.3140</td>
-<td style="text-align:right;color:#4ade80">+0.44%</td>
+<td style="text-align:right">1.1179</td>
+<td style="text-align:right;color:#4ade80">+0.41%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">恒生指数掉出前7</td>
 </tr>
 <tr>
 <td style="white-space:nowrap">2025-03-24</td><td><span class='badge'>恒生指数</span></td><td><span class='badge'>印度</span></td>
 <td style="font-size:12px"><span class='badge'>恒生指数</span>, <span class='badge'>黄金</span></td>
-<td style="text-align:right">1.3083</td>
+<td style="text-align:right">1.1133</td>
 <td style="text-align:right;color:#4ade80">+7.44%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">印度掉出前7</td>
@@ -499,39 +587,39 @@ tr.latest td{background:rgba(56,189,248,0.08);border-color:#38bdf8;font-weight:5
 <tr>
 <td style="white-space:nowrap">2025-02-28</td><td><span class='badge'>印度</span></td><td><span class='badge'>银行</span></td>
 <td style="font-size:12px"><span class='badge'>印度</span>, <span class='badge'>黄金</span></td>
-<td style="text-align:right">1.2176</td>
-<td style="text-align:right;color:#f87171">-1.94%</td>
+<td style="text-align:right">1.0363</td>
+<td style="text-align:right;color:#f87171">-0.96%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">银行掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2025-02-18</td><td><span class='badge'>黄金</span></td><td><span class='badge'>德国</span></td>
+<td style="white-space:nowrap">2025-02-17</td><td><span class='badge'>黄金</span></td><td><span class='badge'>标普消费</span></td>
 <td style="font-size:12px"><span class='badge'>银行</span>, <span class='badge'>黄金</span></td>
-<td style="text-align:right">1.2418</td>
-<td style="text-align:right;color:#4ade80">+5.59%</td>
+<td style="text-align:right">1.0464</td>
+<td style="text-align:right;color:#4ade80">+0.87%</td>
 <td style="text-align:right">50.0%</td>
-<td style="font-size:11px;color:#8892a8">德国掉出前7</td>
+<td style="font-size:11px;color:#8892a8">标普消费掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2025-02-10</td><td><span class='badge'>德国</span></td><td><span class='badge'>纳指</span></td>
-<td style="font-size:12px"><span class='badge'>银行</span>, <span class='badge'>德国</span></td>
-<td style="text-align:right">1.1760</td>
-<td style="text-align:right;color:#f87171">-0.50%</td>
-<td style="text-align:right">50.0%</td>
-<td style="font-size:11px;color:#8892a8">纳指掉出前7</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">2025-02-07</td><td><span class='badge'>银行</span></td><td><span class='badge'>日经</span></td>
-<td style="font-size:12px"><span class='badge'>银行</span>, <span class='badge'>纳指</span></td>
-<td style="text-align:right">1.1819</td>
-<td style="text-align:right;color:#4ade80">+0.88%</td>
+<td style="white-space:nowrap">2025-02-12</td><td><span class='badge'>标普消费</span></td><td><span class='badge'>日经</span></td>
+<td style="font-size:12px"><span class='badge'>银行</span>, <span class='badge'>标普消费</span></td>
+<td style="text-align:right">1.0374</td>
+<td style="text-align:right;color:#4ade80">+0.51%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">日经掉出前7</td>
 </tr>
 <tr>
+<td style="white-space:nowrap">2025-02-10</td><td><span class='badge'>银行</span></td><td><span class='badge'>纳指</span></td>
+<td style="font-size:12px"><span class='badge'>银行</span>, <span class='badge'>日经</span></td>
+<td style="text-align:right">1.0321</td>
+<td style="text-align:right;color:#4ade80">+0.25%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">纳指掉出前7</td>
+</tr>
+<tr>
 <td style="white-space:nowrap">2025-01-27</td><td><span class='badge'>日经</span></td><td><span class='badge'>标普500</span></td>
 <td style="font-size:12px"><span class='badge'>纳指</span>, <span class='badge'>日经</span></td>
-<td style="text-align:right">1.1716</td>
+<td style="text-align:right">1.0296</td>
 <td style="text-align:right;color:#f87171">-0.83%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">标普500掉出前7</td>
@@ -539,117 +627,213 @@ tr.latest td{background:rgba(56,189,248,0.08);border-color:#38bdf8;font-weight:5
 <tr>
 <td style="white-space:nowrap">2025-01-07</td><td><span class='badge'>纳指</span></td><td><span class='badge'>东南亚科技</span></td>
 <td style="font-size:12px"><span class='badge'>标普500</span>, <span class='badge'>纳指</span></td>
-<td style="text-align:right">1.1814</td>
-<td style="text-align:right;color:#f87171">-0.13%</td>
+<td style="text-align:right">1.0382</td>
+<td style="text-align:right;color:#f87171">-0.08%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">东南亚科技掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2024-12-27</td><td><span class='badge'>标普500</span></td><td><span class='badge'>标普消费</span></td>
+<td style="white-space:nowrap">2024-12-02</td><td><span class='badge'>东南亚科技</span></td><td><span class='badge'>计算机</span></td>
 <td style="font-size:12px"><span class='badge'>东南亚科技</span>, <span class='badge'>标普500</span></td>
-<td style="text-align:right">1.1830</td>
-<td style="text-align:right;color:#4ade80">+5.13%</td>
-<td style="text-align:right">50.0%</td>
-<td style="font-size:11px;color:#8892a8">标普消费掉出前7</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">2024-12-09</td><td><span class='badge'>标普消费</span></td><td><span class='badge'>计算机</span></td>
-<td style="font-size:12px"><span class='badge'>东南亚科技</span>, <span class='badge'>标普消费</span></td>
-<td style="text-align:right">1.1252</td>
-<td style="text-align:right;color:#4ade80">+1.00%</td>
+<td style="text-align:right">1.0390</td>
+<td style="text-align:right;color:#4ade80">+1.95%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">计算机掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2024-11-27</td><td><span class='badge'>东南亚科技</span></td><td><span class='badge'>钢铁</span></td>
-<td style="font-size:12px"><span class='badge'>计算机</span>, <span class='badge'>东南亚科技</span></td>
-<td style="text-align:right">1.1141</td>
-<td style="text-align:right;color:#4ade80">+0.42%</td>
+<td style="white-space:nowrap">2024-11-28</td><td><span class='badge'>标普500</span></td><td><span class='badge'>机器人</span></td>
+<td style="font-size:12px"><span class='badge'>计算机</span>, <span class='badge'>标普500</span></td>
+<td style="text-align:right">1.0191</td>
+<td style="text-align:right;color:#f87171">-0.98%</td>
 <td style="text-align:right">50.0%</td>
-<td style="font-size:11px;color:#8892a8">钢铁掉出前7</td>
+<td style="font-size:11px;color:#8892a8">机器人掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2024-11-25</td><td><span class='badge'>钢铁</span></td><td><span class='badge'>东南亚科技</span></td>
-<td style="font-size:12px"><span class='badge'>计算机</span>, <span class='badge'>钢铁</span></td>
-<td style="text-align:right">1.1095</td>
-<td style="text-align:right;color:#4ade80">+0.12%</td>
+<td style="white-space:nowrap">2024-11-25</td><td><span class='badge'>机器人</span></td><td><span class='badge'>东南亚科技</span></td>
+<td style="font-size:12px"><span class='badge'>计算机</span>, <span class='badge'>机器人</span></td>
+<td style="text-align:right">1.0292</td>
+<td style="text-align:right;color:#4ade80">+0.09%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">东南亚科技掉出前7</td>
 </tr>
 <tr>
 <td style="white-space:nowrap">2024-11-19</td><td><span class='badge'>计算机</span></td><td><span class='badge'>黄金</span></td>
 <td style="font-size:12px"><span class='badge'>计算机</span>, <span class='badge'>东南亚科技</span></td>
-<td style="text-align:right">1.1082</td>
-<td style="text-align:right;color:#4ade80">+1.73%</td>
+<td style="text-align:right">1.0283</td>
+<td style="text-align:right;color:#4ade80">+2.17%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">黄金掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2024-11-11</td><td><span class='badge'>东南亚科技</span></td><td><span class='badge'>德国</span></td>
+<td style="white-space:nowrap">2024-11-05</td><td><span class='badge'>东南亚科技</span></td><td><span class='badge'>港股创新药</span></td>
 <td style="font-size:12px"><span class='badge'>东南亚科技</span>, <span class='badge'>黄金</span></td>
-<td style="text-align:right">1.0893</td>
-<td style="text-align:right;color:#f87171">-0.98%</td>
+<td style="text-align:right">1.0064</td>
+<td style="text-align:right;color:#f87171">-2.01%</td>
 <td style="text-align:right">50.0%</td>
-<td style="font-size:11px;color:#8892a8">德国掉出前7</td>
+<td style="font-size:11px;color:#8892a8">港股创新药掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2024-11-04</td><td><span class='badge'>德国</span></td><td><span class='badge'>恒生指数</span></td>
-<td style="font-size:12px"><span class='badge'>德国</span>, <span class='badge'>黄金</span></td>
-<td style="text-align:right">1.1001</td>
-<td style="text-align:right;color:#f87171">-0.77%</td>
-<td style="text-align:right">50.0%</td>
-<td style="font-size:11px;color:#8892a8">恒生指数掉出前7</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">2024-10-30</td><td><span class='badge'>恒生指数</span></td><td><span class='badge'>中概互联网</span></td>
-<td style="font-size:12px"><span class='badge'>恒生指数</span>, <span class='badge'>黄金</span></td>
-<td style="text-align:right">1.1087</td>
-<td style="text-align:right;color:#4ade80">+1.15%</td>
-<td style="text-align:right">50.0%</td>
-<td style="font-size:11px;color:#8892a8">中概互联网掉出前7</td>
-</tr>
-<tr>
-<td style="white-space:nowrap">2024-10-25</td><td><span class='badge'>中概互联网</span></td><td><span class='badge'>东南亚科技</span></td>
-<td style="font-size:12px"><span class='badge'>中概互联网</span>, <span class='badge'>黄金</span></td>
-<td style="text-align:right">1.0961</td>
-<td style="text-align:right;color:#4ade80">+2.89%</td>
+<td style="white-space:nowrap">2024-10-25</td><td><span class='badge'>港股创新药</span></td><td><span class='badge'>东南亚科技</span></td>
+<td style="font-size:12px"><span class='badge'>港股创新药</span>, <span class='badge'>黄金</span></td>
+<td style="text-align:right">1.0271</td>
+<td style="text-align:right;color:#4ade80">+2.91%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">东南亚科技掉出前7</td>
 </tr>
 <tr>
 <td style="white-space:nowrap">2024-10-15</td><td><span class='badge'>东南亚科技</span></td><td><span class='badge'>电力</span></td>
 <td style="font-size:12px"><span class='badge'>东南亚科技</span>, <span class='badge'>黄金</span></td>
-<td style="text-align:right">1.0652</td>
-<td style="text-align:right;color:#f87171">-2.67%</td>
+<td style="text-align:right">0.9981</td>
+<td style="text-align:right;color:#f87171">-2.68%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">电力掉出前7</td>
 </tr>
 <tr>
 <td style="white-space:nowrap">2024-10-08</td><td><span class='badge'>电力</span></td><td><span class='badge'>钢铁</span></td>
 <td style="font-size:12px"><span class='badge'>电力</span>, <span class='badge'>黄金</span></td>
-<td style="text-align:right">1.0945</td>
-<td style="text-align:right;color:#4ade80">+5.47%</td>
+<td style="text-align:right">1.0255</td>
+<td style="text-align:right;color:#4ade80">+12.46%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">钢铁掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2024-09-27</td><td><span class='badge'>黄金</span></td><td><span class='badge'>豆粕</span></td>
+<td style="white-space:nowrap">2024-09-25</td><td><span class='badge'>黄金</span></td><td><span class='badge'>石油</span></td>
 <td style="font-size:12px"><span class='badge'>钢铁</span>, <span class='badge'>黄金</span></td>
-<td style="text-align:right">1.0377</td>
-<td style="text-align:right;color:#4ade80">+9.15%</td>
+<td style="text-align:right">0.9119</td>
+<td style="text-align:right;color:#4ade80">+1.70%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">石油掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2024-08-27</td><td><span class='badge'>石油</span></td><td><span class='badge'>家电</span></td>
+<td style="font-size:12px"><span class='badge'>钢铁</span>, <span class='badge'>石油</span></td>
+<td style="text-align:right">0.8967</td>
+<td style="text-align:right;color:#f87171">-1.36%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">家电掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2024-08-26</td><td><span class='badge'>家电</span></td><td><span class='badge'>基建</span></td>
+<td style="font-size:12px"><span class='badge'>家电</span>, <span class='badge'>钢铁</span></td>
+<td style="text-align:right">0.9091</td>
+<td style="text-align:right;color:#4ade80">+0.37%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">基建掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2024-08-22</td><td><span class='badge'>钢铁</span></td><td><span class='badge'>豆粕</span></td>
+<td style="font-size:12px"><span class='badge'>钢铁</span>, <span class='badge'>基建</span></td>
+<td style="text-align:right">0.9057</td>
+<td style="text-align:right;color:#f87171">-2.70%</td>
 <td style="text-align:right">50.0%</td>
 <td style="font-size:11px;color:#8892a8">豆粕掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2024-09-11</td><td><span class='badge'>钢铁</span>, <span class='badge'>豆粕</span></td><td><span class='badge'>自由现金流</span>, <span class='badge'>券商</span></td>
-<td style="font-size:12px"><span class='badge'>钢铁</span>, <span class='badge'>豆粕</span></td>
-<td style="text-align:right">0.9507</td>
-<td style="text-align:right;color:#f87171">-4.91%</td>
+<td style="white-space:nowrap">2024-08-07</td><td><span class='badge'>豆粕</span>, <span class='badge'>基建</span></td><td><span class='badge'>标普500</span>, <span class='badge'>东南亚科技</span></td>
+<td style="font-size:12px"><span class='badge'>基建</span>, <span class='badge'>豆粕</span></td>
+<td style="text-align:right">0.9309</td>
+<td style="text-align:right;color:#f87171">-5.23%</td>
+<td style="text-align:right">100.0%</td>
+<td style="font-size:11px;color:#8892a8">标普500掉出前7; 东南亚科技掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2024-07-24</td><td><span class='badge'>标普500</span></td><td><span class='badge'>电力</span></td>
+<td style="font-size:12px"><span class='badge'>东南亚科技</span>, <span class='badge'>标普500</span></td>
+<td style="text-align:right">0.9823</td>
+<td style="text-align:right;color:#4ade80">+3.20%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">电力掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2024-06-25</td><td><span class='badge'>东南亚科技</span></td><td><span class='badge'>银行</span></td>
+<td style="font-size:12px"><span class='badge'>电力</span>, <span class='badge'>东南亚科技</span></td>
+<td style="text-align:right">0.9518</td>
+<td style="text-align:right;color:#f87171">-0.10%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">银行掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2024-06-20</td><td><span class='badge'>电力</span></td><td><span class='badge'>有色</span></td>
+<td style="font-size:12px"><span class='badge'>银行</span>, <span class='badge'>电力</span></td>
+<td style="text-align:right">0.9527</td>
+<td style="text-align:right;color:#f87171">-1.90%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">有色掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2024-06-03</td><td><span class='badge'>银行</span></td><td><span class='badge'>家电</span></td>
+<td style="font-size:12px"><span class='badge'>银行</span>, <span class='badge'>有色</span></td>
+<td style="text-align:right">0.9711</td>
+<td style="text-align:right;color:#f87171">-2.29%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">家电掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2024-05-17</td><td><span class='badge'>家电</span></td><td><span class='badge'>黄金</span></td>
+<td style="font-size:12px"><span class='badge'>家电</span>, <span class='badge'>有色</span></td>
+<td style="text-align:right">0.9938</td>
+<td style="text-align:right;color:#4ade80">+1.94%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">黄金掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2024-05-14</td><td><span class='badge'>有色</span></td><td><span class='badge'>电力</span></td>
+<td style="font-size:12px"><span class='badge'>黄金</span>, <span class='badge'>有色</span></td>
+<td style="text-align:right">0.9749</td>
+<td style="text-align:right;color:#4ade80">+1.70%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">电力掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2024-04-24</td><td><span class='badge'>黄金</span></td><td><span class='badge'>标普500</span></td>
+<td style="font-size:12px"><span class='badge'>电力</span>, <span class='badge'>黄金</span></td>
+<td style="text-align:right">0.9586</td>
+<td style="text-align:right;color:#4ade80">+1.14%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">标普500掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2024-04-22</td><td><span class='badge'>电力</span></td><td><span class='badge'>标普消费</span></td>
+<td style="font-size:12px"><span class='badge'>电力</span>, <span class='badge'>标普500</span></td>
+<td style="text-align:right">0.9478</td>
+<td style="text-align:right;color:#f87171">-0.55%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">标普消费掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2024-04-17</td><td><span class='badge'>标普消费</span></td><td><span class='badge'>法国</span></td>
+<td style="font-size:12px"><span class='badge'>标普消费</span>, <span class='badge'>标普500</span></td>
+<td style="text-align:right">0.9530</td>
+<td style="text-align:right;color:#f87171">-5.24%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">法国掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2024-04-01</td><td><span class='badge'>法国</span></td><td><span class='badge'>电力</span></td>
+<td style="font-size:12px"><span class='badge'>标普500</span>, <span class='badge'>法国</span></td>
+<td style="text-align:right">1.0058</td>
+<td style="text-align:right;color:#4ade80">+1.06%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">电力掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2024-03-28</td><td><span class='badge'>电力</span></td><td><span class='badge'>通信</span></td>
+<td style="font-size:12px"><span class='badge'>电力</span>, <span class='badge'>标普500</span></td>
+<td style="text-align:right">0.9952</td>
+<td style="text-align:right;color:#4ade80">+1.67%</td>
+<td style="text-align:right">50.0%</td>
+<td style="font-size:11px;color:#8892a8">通信掉出前7</td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2024-03-27</td><td><span class='badge'>标普500</span>, <span class='badge'>通信</span></td><td><span class='badge'>自由现金流</span>, <span class='badge'>券商</span></td>
+<td style="font-size:12px"><span class='badge'>通信</span>, <span class='badge'>标普500</span></td>
+<td style="text-align:right">0.9789</td>
+<td style="text-align:right;color:#f87171">-2.09%</td>
 <td style="text-align:right">100.0%</td>
 <td style="font-size:11px;color:#8892a8">自由现金流掉出前7; 券商掉出前7</td>
 </tr>
 <tr>
-<td style="white-space:nowrap">2023-12-29</td><td><span class='badge'>自由现金流</span>, <span class='badge'>券商</span></td><td><span style="color:#64748b">—</span></td>
+<td style="white-space:nowrap">2023-07-14</td><td><span class='badge'>自由现金流</span>, <span class='badge'>券商</span></td><td><span style="color:#64748b">—</span></td>
 <td style="font-size:12px"><span class='badge'>自由现金流</span>, <span class='badge'>券商</span></td>
 <td style="text-align:right">0.9999</td>
 <td style="text-align:right;color:#8892a8"></td>
@@ -663,7 +847,7 @@ tr.latest td{background:rgba(56,189,248,0.08);border-color:#38bdf8;font-weight:5
   </div>
 
   <div id="section-scores" class="section">
-    <div style="margin-bottom:12px;color:#94a3b8;font-size:0.85rem;">评分日期: 2026-08-25 | 按综合得分降序 | 共48只ETF</div>
+    <div style="margin-bottom:12px;color:#94a3b8;font-size:0.85rem;">评分日期: 2026-11-03 | 按综合得分降序 | 共48只ETF</div>
     <div class="table-container" style="max-height:70vh;overflow-y:auto;">
       <table>
         <thead><tr>
@@ -674,628 +858,628 @@ tr.latest td{background:rgba(56,189,248,0.08);border-color:#38bdf8;font-weight:5
         </tr></thead>
         <tbody>
 <tr>
-<td style="text-align:center">1</td><td>159847</td><td>医疗</td>
-<td><span class="badge badge-cat">A股医药</span></td>
-<td style="text-align:right">0.416</td>
-<td style="text-align:right">0.40</td>
-<td style="text-align:right" class="up">+4.63%</td>
-<td style="text-align:right">0.346</td>
-<td style="text-align:right">0.396</td>
-<td style="text-align:right">0.002</td>
-<td style="text-align:right">0.068</td>
-<td style="text-align:right;font-weight:600">1.169</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:69%;background:#22c55e"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">2</td><td>159561</td><td>德国</td>
+<td style="text-align:center">1</td><td>513730</td><td>东南亚科技</td>
 <td><span class="badge badge-cat">跨境</span></td>
-<td style="text-align:right">1.377</td>
-<td style="text-align:right">1.33</td>
-<td style="text-align:right" class="up">+3.32%</td>
-<td style="text-align:right">0.212</td>
+<td style="text-align:right">0.998</td>
+<td style="text-align:right">1.05</td>
+<td style="text-align:right" class="down">-5.07%</td>
+<td style="text-align:right">0.374</td>
 <td style="text-align:right">0.896</td>
-<td style="text-align:right">0.002</td>
-<td style="text-align:right">-0.027</td>
-<td style="text-align:right;font-weight:600">0.906</td>
+<td style="text-align:right">0.000</td>
+<td style="text-align:right">0.315</td>
+<td style="text-align:right;font-weight:600">0.927</td>
 <td><div class="score-bar"><div class="score-bar-fill" style="width:65%;background:#22c55e"></div></div></td>
 </tr>
 <tr>
-<td style="text-align:center">3</td><td>513120</td><td>港股创新药</td>
-<td><span class="badge badge-cat">A股医药</span></td>
-<td style="text-align:right">1.327</td>
-<td style="text-align:right">1.22</td>
-<td style="text-align:right" class="up">+8.74%</td>
-<td style="text-align:right">0.332</td>
-<td style="text-align:right">0.125</td>
-<td style="text-align:right">0.004</td>
-<td style="text-align:right">-0.472</td>
-<td style="text-align:right;font-weight:600">0.827</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:64%;background:#22c55e"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">4</td><td>513650</td><td>标普500</td>
+<td style="text-align:center">2</td><td>513080</td><td>法国</td>
 <td><span class="badge badge-cat">跨境</span></td>
-<td style="text-align:right">2.026</td>
-<td style="text-align:right">1.97</td>
-<td style="text-align:right" class="up">+3.00%</td>
-<td style="text-align:right">0.200</td>
-<td style="text-align:right">0.771</td>
-<td style="text-align:right">0.003</td>
-<td style="text-align:right">-0.050</td>
-<td style="text-align:right;font-weight:600">0.805</td>
+<td style="text-align:right">1.608</td>
+<td style="text-align:right">1.67</td>
+<td style="text-align:right" class="down">-3.75%</td>
+<td style="text-align:right">0.358</td>
+<td style="text-align:right">0.833</td>
+<td style="text-align:right">0.001</td>
+<td style="text-align:right">0.047</td>
+<td style="text-align:right;font-weight:600">0.809</td>
 <td><div class="score-bar"><div class="score-bar-fill" style="width:63%;background:#22c55e"></div></div></td>
 </tr>
 <tr>
-<td style="text-align:center">5</td><td>513080</td><td>法国</td>
+<td style="text-align:center">3</td><td>159561</td><td>德国</td>
 <td><span class="badge badge-cat">跨境</span></td>
-<td style="text-align:right">1.797</td>
-<td style="text-align:right">1.78</td>
-<td style="text-align:right" class="up">+0.85%</td>
-<td style="text-align:right">0.155</td>
+<td style="text-align:right">1.287</td>
+<td style="text-align:right">1.31</td>
+<td style="text-align:right" class="down">-1.65%</td>
+<td style="text-align:right">0.336</td>
+<td style="text-align:right">0.917</td>
+<td style="text-align:right">0.003</td>
+<td style="text-align:right">-0.197</td>
+<td style="text-align:right;font-weight:600">0.804</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:63%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">4</td><td>516310</td><td>银行</td>
+<td><span class="badge badge-cat">A股周期</span></td>
+<td style="text-align:right">1.463</td>
+<td style="text-align:right">1.45</td>
+<td style="text-align:right" class="up">+0.78%</td>
+<td style="text-align:right">0.334</td>
+<td style="text-align:right">0.750</td>
+<td style="text-align:right">0.006</td>
+<td style="text-align:right">-0.307</td>
+<td style="text-align:right;font-weight:600">0.802</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:63%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">5</td><td>164824</td><td>印度</td>
+<td><span class="badge badge-cat">跨境</span></td>
+<td style="text-align:right">1.262</td>
+<td style="text-align:right">1.24</td>
+<td style="text-align:right" class="up">+2.03%</td>
+<td style="text-align:right">0.335</td>
+<td style="text-align:right">1.000</td>
+<td style="text-align:right">0.004</td>
+<td style="text-align:right">-0.838</td>
+<td style="text-align:right;font-weight:600">0.714</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:62%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">6</td><td>159699</td><td>恒生消费</td>
+<td><span class="badge badge-cat">港股</span></td>
+<td style="text-align:right">0.867</td>
+<td style="text-align:right">0.82</td>
+<td style="text-align:right" class="up">+5.77%</td>
+<td style="text-align:right">0.341</td>
+<td style="text-align:right">0.812</td>
+<td style="text-align:right">0.004</td>
+<td style="text-align:right">-0.614</td>
+<td style="text-align:right;font-weight:600">0.664</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:61%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">7</td><td>516970</td><td>基建</td>
+<td><span class="badge badge-cat">A股周期</span></td>
+<td style="text-align:right">1.004</td>
+<td style="text-align:right">1.06</td>
+<td style="text-align:right" class="down">-5.22%</td>
+<td style="text-align:right">0.315</td>
 <td style="text-align:right">0.854</td>
-<td style="text-align:right">0.001</td>
-<td style="text-align:right">0.246</td>
-<td style="text-align:right;font-weight:600">0.618</td>
+<td style="text-align:right">0.000</td>
+<td style="text-align:right">0.183</td>
+<td style="text-align:right;font-weight:600">0.664</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:61%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">8</td><td>513600</td><td>恒生指数</td>
+<td><span class="badge badge-cat">港股</span></td>
+<td style="text-align:right">2.530</td>
+<td style="text-align:right">2.63</td>
+<td style="text-align:right" class="down">-3.88%</td>
+<td style="text-align:right">0.343</td>
+<td style="text-align:right">0.792</td>
+<td style="text-align:right">0.000</td>
+<td style="text-align:right">0.073</td>
+<td style="text-align:right;font-weight:600">0.657</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:61%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">9</td><td>516110</td><td>汽车</td>
+<td><span class="badge badge-cat">A股制造</span></td>
+<td style="text-align:right">1.059</td>
+<td style="text-align:right">1.04</td>
+<td style="text-align:right" class="up">+1.75%</td>
+<td style="text-align:right">0.339</td>
+<td style="text-align:right">0.646</td>
+<td style="text-align:right">0.003</td>
+<td style="text-align:right">-0.157</td>
+<td style="text-align:right;font-weight:600">0.602</td>
 <td><div class="score-bar"><div class="score-bar-fill" style="width:60%;background:#22c55e"></div></div></td>
 </tr>
 <tr>
-<td style="text-align:center">6</td><td>516290</td><td>光伏</td>
+<td style="text-align:center">10</td><td>515210</td><td>钢铁</td>
 <td><span class="badge badge-cat">A股周期</span></td>
-<td style="text-align:right">0.520</td>
-<td style="text-align:right">0.48</td>
-<td style="text-align:right" class="up">+7.72%</td>
-<td style="text-align:right">0.250</td>
-<td style="text-align:right">0.312</td>
-<td style="text-align:right">0.000</td>
-<td style="text-align:right">0.219</td>
-<td style="text-align:right;font-weight:600">0.535</td>
+<td style="text-align:right">1.060</td>
+<td style="text-align:right">1.12</td>
+<td style="text-align:right" class="down">-5.45%</td>
+<td style="text-align:right">0.314</td>
+<td style="text-align:right">0.708</td>
+<td style="text-align:right">0.001</td>
+<td style="text-align:right">0.111</td>
+<td style="text-align:right;font-weight:600">0.534</td>
 <td><div class="score-bar"><div class="score-bar-fill" style="width:59%;background:#22c55e"></div></div></td>
 </tr>
 <tr>
-<td style="text-align:center">7</td><td>159996</td><td>家电</td>
+<td style="text-align:center">11</td><td>159996</td><td>家电</td>
 <td><span class="badge badge-cat">A股消费</span></td>
-<td style="text-align:right">1.430</td>
+<td style="text-align:right">1.344</td>
 <td style="text-align:right">1.38</td>
-<td style="text-align:right" class="up">+3.50%</td>
-<td style="text-align:right">0.170</td>
+<td style="text-align:right" class="down">-2.67%</td>
+<td style="text-align:right">0.284</td>
 <td style="text-align:right">0.875</td>
-<td style="text-align:right">0.000</td>
-<td style="text-align:right">-0.087</td>
-<td style="text-align:right;font-weight:600">0.496</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:58%;background:#22c55e"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">8</td><td>513360</td><td>教育</td>
-<td><span class="badge badge-cat">教育</span></td>
-<td style="text-align:right">0.464</td>
-<td style="text-align:right">0.43</td>
-<td style="text-align:right" class="up">+6.96%</td>
-<td style="text-align:right">0.127</td>
-<td style="text-align:right">0.604</td>
-<td style="text-align:right">0.003</td>
-<td style="text-align:right">0.096</td>
-<td style="text-align:right;font-weight:600">0.449</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:57%;background:#22c55e"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">9</td><td>164824</td><td>印度</td>
-<td><span class="badge badge-cat">跨境</span></td>
-<td style="text-align:right">1.301</td>
-<td style="text-align:right">1.31</td>
-<td style="text-align:right" class="down">-0.55%</td>
-<td style="text-align:right">0.101</td>
-<td style="text-align:right">0.979</td>
-<td style="text-align:right">0.000</td>
-<td style="text-align:right">0.149</td>
-<td style="text-align:right;font-weight:600">0.414</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:57%;background:#22c55e"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">10</td><td>159770</td><td>机器人</td>
-<td><span class="badge badge-cat">A股制造</span></td>
-<td style="text-align:right">0.984</td>
-<td style="text-align:right">1.01</td>
-<td style="text-align:right" class="down">-2.38%</td>
-<td style="text-align:right">0.235</td>
-<td style="text-align:right">0.104</td>
-<td style="text-align:right">-0.001</td>
-<td style="text-align:right">0.525</td>
-<td style="text-align:right;font-weight:600">0.323</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:55%;background:#22c55e"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">11</td><td>159840</td><td>锂电池</td>
-<td><span class="badge badge-cat">A股新能源</span></td>
-<td style="text-align:right">0.759</td>
-<td style="text-align:right">0.73</td>
-<td style="text-align:right" class="up">+4.49%</td>
-<td style="text-align:right">0.206</td>
-<td style="text-align:right">0.229</td>
-<td style="text-align:right">-0.000</td>
-<td style="text-align:right">0.390</td>
-<td style="text-align:right;font-weight:600">0.316</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:55%;background:#22c55e"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">12</td><td>513600</td><td>恒生指数</td>
-<td><span class="badge badge-cat">港股</span></td>
-<td style="text-align:right">1.483</td>
-<td style="text-align:right">1.42</td>
-<td style="text-align:right" class="up">+4.74%</td>
-<td style="text-align:right">0.149</td>
-<td style="text-align:right">0.750</td>
-<td style="text-align:right">0.000</td>
-<td style="text-align:right">-0.171</td>
-<td style="text-align:right;font-weight:600">0.261</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:54%;background:#22c55e"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">13</td><td>515210</td><td>钢铁</td>
-<td><span class="badge badge-cat">A股周期</span></td>
-<td style="text-align:right">1.385</td>
-<td style="text-align:right">1.30</td>
-<td style="text-align:right" class="up">+6.81%</td>
-<td style="text-align:right">0.120</td>
-<td style="text-align:right">0.833</td>
-<td style="text-align:right">-0.000</td>
-<td style="text-align:right">0.030</td>
-<td style="text-align:right;font-weight:600">0.259</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:54%;background:#22c55e"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">14</td><td>560080</td><td>中药</td>
-<td><span class="badge badge-cat">A股医药</span></td>
-<td style="text-align:right">0.959</td>
-<td style="text-align:right">0.98</td>
-<td style="text-align:right" class="down">-2.41%</td>
-<td style="text-align:right">0.196</td>
-<td style="text-align:right">0.479</td>
-<td style="text-align:right">-0.003</td>
-<td style="text-align:right">0.527</td>
-<td style="text-align:right;font-weight:600">0.233</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:54%;background:#22c55e"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">15</td><td>159825</td><td>农业</td>
-<td><span class="badge badge-cat">A股周期</span></td>
-<td style="text-align:right">0.728</td>
-<td style="text-align:right">0.69</td>
-<td style="text-align:right" class="up">+6.20%</td>
-<td style="text-align:right">0.160</td>
-<td style="text-align:right">0.521</td>
-<td style="text-align:right">0.000</td>
-<td style="text-align:right">-0.019</td>
-<td style="text-align:right;font-weight:600">0.188</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:53%;background:#22c55e"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">16</td><td>515880</td><td>通信</td>
-<td><span class="badge badge-cat">A股科技</span></td>
-<td style="text-align:right">3.984</td>
-<td style="text-align:right">4.01</td>
-<td style="text-align:right" class="down">-0.73%</td>
-<td style="text-align:right">0.243</td>
-<td style="text-align:right">0.042</td>
-<td style="text-align:right">0.000</td>
-<td style="text-align:right">0.037</td>
-<td style="text-align:right;font-weight:600">0.172</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:53%;background:#22c55e"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">17</td><td>512690</td><td>酒</td>
-<td><span class="badge badge-cat">A股消费</span></td>
-<td style="text-align:right">1.552</td>
-<td style="text-align:right">1.51</td>
-<td style="text-align:right" class="up">+2.49%</td>
-<td style="text-align:right">0.067</td>
-<td style="text-align:right">0.938</td>
-<td style="text-align:right">-0.000</td>
-<td style="text-align:right">0.163</td>
-<td style="text-align:right;font-weight:600">0.167</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:53%;background:#22c55e"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">18</td><td>159227</td><td>航空航天</td>
-<td><span class="badge badge-cat">A股科技</span></td>
-<td style="text-align:right">0.979</td>
-<td style="text-align:right">0.93</td>
-<td style="text-align:right" class="up">+5.64%</td>
-<td style="text-align:right">0.220</td>
-<td style="text-align:right">0.188</td>
-<td style="text-align:right">-0.001</td>
-<td style="text-align:right">0.157</td>
-<td style="text-align:right;font-weight:600">0.148</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:52%;background:#22c55e"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">19</td><td>516970</td><td>基建</td>
-<td><span class="badge badge-cat">A股周期</span></td>
-<td style="text-align:right">1.105</td>
-<td style="text-align:right">1.07</td>
-<td style="text-align:right" class="up">+3.38%</td>
-<td style="text-align:right">0.119</td>
-<td style="text-align:right">0.688</td>
-<td style="text-align:right">-0.001</td>
-<td style="text-align:right">0.105</td>
-<td style="text-align:right;font-weight:600">0.146</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:52%;background:#22c55e"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">20</td><td>159980</td><td>有色</td>
-<td><span class="badge badge-cat">A股周期</span></td>
-<td style="text-align:right">2.151</td>
-<td style="text-align:right">2.09</td>
-<td style="text-align:right" class="up">+3.11%</td>
-<td style="text-align:right">0.053</td>
-<td style="text-align:right">0.958</td>
-<td style="text-align:right">0.000</td>
-<td style="text-align:right">-0.032</td>
-<td style="text-align:right;font-weight:600">0.093</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:52%;background:#22c55e"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">21</td><td>159699</td><td>恒生消费</td>
-<td><span class="badge badge-cat">港股</span></td>
-<td style="text-align:right">0.904</td>
-<td style="text-align:right">0.88</td>
-<td style="text-align:right" class="up">+2.75%</td>
-<td style="text-align:right">0.086</td>
-<td style="text-align:right">0.792</td>
-<td style="text-align:right">-0.000</td>
-<td style="text-align:right">0.048</td>
-<td style="text-align:right;font-weight:600">0.089</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:51%;background:#22c55e"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">22</td><td>561560</td><td>电力</td>
-<td><span class="badge badge-cat">A股周期</span></td>
-<td style="text-align:right">1.255</td>
-<td style="text-align:right">1.21</td>
-<td style="text-align:right" class="up">+3.79%</td>
-<td style="text-align:right">0.132</td>
-<td style="text-align:right">0.625</td>
-<td style="text-align:right">-0.002</td>
-<td style="text-align:right">0.213</td>
-<td style="text-align:right;font-weight:600">0.041</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:51%;background:#22c55e"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">23</td><td>159502</td><td>标普生物科技</td>
-<td><span class="badge badge-cat">跨境</span></td>
-<td style="text-align:right">1.664</td>
-<td style="text-align:right">1.69</td>
-<td style="text-align:right" class="down">-1.53%</td>
-<td style="text-align:right">0.158</td>
-<td style="text-align:right">0.167</td>
-<td style="text-align:right">0.004</td>
-<td style="text-align:right">-0.475</td>
-<td style="text-align:right;font-weight:600">0.036</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:51%;background:#22c55e"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">24</td><td>516310</td><td>银行</td>
-<td><span class="badge badge-cat">A股周期</span></td>
-<td style="text-align:right">1.363</td>
-<td style="text-align:right">1.32</td>
-<td style="text-align:right" class="up">+3.47%</td>
-<td style="text-align:right">0.135</td>
-<td style="text-align:right">0.812</td>
 <td style="text-align:right">0.001</td>
-<td style="text-align:right">-0.742</td>
-<td style="text-align:right;font-weight:600">0.010</td>
+<td style="text-align:right">-0.083</td>
+<td style="text-align:right;font-weight:600">0.529</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:59%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">12</td><td>159766</td><td>旅游</td>
+<td><span class="badge badge-cat">A股消费</span></td>
+<td style="text-align:right">0.549</td>
+<td style="text-align:right">0.54</td>
+<td style="text-align:right" class="up">+1.64%</td>
+<td style="text-align:right">0.298</td>
+<td style="text-align:right">0.667</td>
+<td style="text-align:right">0.003</td>
+<td style="text-align:right">-0.367</td>
+<td style="text-align:right;font-weight:600">0.438</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:57%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">13</td><td>159842</td><td>券商</td>
+<td><span class="badge badge-cat">A股周期</span></td>
+<td style="text-align:right">0.970</td>
+<td style="text-align:right">0.97</td>
+<td style="text-align:right" class="down">-0.47%</td>
+<td style="text-align:right">0.311</td>
+<td style="text-align:right">0.625</td>
+<td style="text-align:right">0.002</td>
+<td style="text-align:right">-0.243</td>
+<td style="text-align:right;font-weight:600">0.426</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:57%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">14</td><td>159329</td><td>沙特</td>
+<td><span class="badge badge-cat">跨境</span></td>
+<td style="text-align:right">0.816</td>
+<td style="text-align:right">0.87</td>
+<td style="text-align:right" class="down">-5.93%</td>
+<td style="text-align:right">0.284</td>
+<td style="text-align:right">0.771</td>
+<td style="text-align:right">-0.001</td>
+<td style="text-align:right">0.196</td>
+<td style="text-align:right;font-weight:600">0.409</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:57%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">15</td><td>513050</td><td>中概互联网</td>
+<td><span class="badge badge-cat">跨境</span></td>
+<td style="text-align:right">0.963</td>
+<td style="text-align:right">0.97</td>
+<td style="text-align:right" class="down">-0.35%</td>
+<td style="text-align:right">0.358</td>
+<td style="text-align:right">0.333</td>
+<td style="text-align:right">0.000</td>
+<td style="text-align:right">-0.018</td>
+<td style="text-align:right;font-weight:600">0.284</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:55%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">16</td><td>159980</td><td>有色</td>
+<td><span class="badge badge-cat">A股周期</span></td>
+<td style="text-align:right">2.066</td>
+<td style="text-align:right">2.16</td>
+<td style="text-align:right" class="down">-4.50%</td>
+<td style="text-align:right">0.109</td>
+<td style="text-align:right">0.979</td>
+<td style="text-align:right">0.000</td>
+<td style="text-align:right">0.763</td>
+<td style="text-align:right;font-weight:600">0.262</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:54%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">17</td><td>516290</td><td>光伏</td>
+<td><span class="badge badge-cat">A股周期</span></td>
+<td style="text-align:right">0.432</td>
+<td style="text-align:right">0.46</td>
+<td style="text-align:right" class="down">-5.17%</td>
+<td style="text-align:right">0.352</td>
+<td style="text-align:right">0.438</td>
+<td style="text-align:right">-0.002</td>
+<td style="text-align:right">0.060</td>
+<td style="text-align:right;font-weight:600">0.249</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:54%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">18</td><td>512720</td><td>计算机</td>
+<td><span class="badge badge-cat">A股科技</span></td>
+<td style="text-align:right">0.970</td>
+<td style="text-align:right">1.04</td>
+<td style="text-align:right" class="down">-6.77%</td>
+<td style="text-align:right">0.346</td>
+<td style="text-align:right">0.250</td>
+<td style="text-align:right">-0.002</td>
+<td style="text-align:right">0.415</td>
+<td style="text-align:right;font-weight:600">0.209</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:53%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">19</td><td>159840</td><td>锂电池</td>
+<td><span class="badge badge-cat">A股新能源</span></td>
+<td style="text-align:right">0.612</td>
+<td style="text-align:right">0.64</td>
+<td style="text-align:right" class="down">-3.84%</td>
+<td style="text-align:right">0.362</td>
+<td style="text-align:right">0.354</td>
+<td style="text-align:right">-0.002</td>
+<td style="text-align:right">-0.024</td>
+<td style="text-align:right;font-weight:600">0.191</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:53%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">20</td><td>159129</td><td>化工</td>
+<td><span class="badge badge-cat">A股周期</span></td>
+<td style="text-align:right">0.907</td>
+<td style="text-align:right">0.97</td>
+<td style="text-align:right" class="down">-6.77%</td>
+<td style="text-align:right">0.326</td>
+<td style="text-align:right">0.396</td>
+<td style="text-align:right">-0.002</td>
+<td style="text-align:right">0.031</td>
+<td style="text-align:right;font-weight:600">0.147</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:52%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">21</td><td>561560</td><td>电力</td>
+<td><span class="badge badge-cat">A股周期</span></td>
+<td style="text-align:right">1.253</td>
+<td style="text-align:right">1.26</td>
+<td style="text-align:right" class="down">-0.50%</td>
+<td style="text-align:right">0.128</td>
+<td style="text-align:right">0.958</td>
+<td style="text-align:right">0.002</td>
+<td style="text-align:right">-0.003</td>
+<td style="text-align:right;font-weight:600">0.145</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:52%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">22</td><td>513090</td><td>香港证券</td>
+<td><span class="badge badge-cat">港股</span></td>
+<td style="text-align:right">1.624</td>
+<td style="text-align:right">1.73</td>
+<td style="text-align:right" class="down">-6.32%</td>
+<td style="text-align:right">0.279</td>
+<td style="text-align:right">0.521</td>
+<td style="text-align:right">-0.001</td>
+<td style="text-align:right">0.040</td>
+<td style="text-align:right;font-weight:600">0.137</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:52%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">23</td><td>159201</td><td>自由现金流</td>
+<td><span class="badge badge-cat">A股制造</span></td>
+<td style="text-align:right">1.181</td>
+<td style="text-align:right">1.18</td>
+<td style="text-align:right" class="down">-0.06%</td>
+<td style="text-align:right">0.129</td>
+<td style="text-align:right">0.938</td>
+<td style="text-align:right">0.003</td>
+<td style="text-align:right">-0.224</td>
+<td style="text-align:right;font-weight:600">0.117</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:52%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">24</td><td>518850</td><td>黄金</td>
+<td><span class="badge badge-cat">商品</span></td>
+<td style="text-align:right">8.080</td>
+<td style="text-align:right">8.88</td>
+<td style="text-align:right" class="down">-9.05%</td>
+<td style="text-align:right">0.228</td>
+<td style="text-align:right">0.562</td>
+<td style="text-align:right">-0.001</td>
+<td style="text-align:right">0.361</td>
+<td style="text-align:right;font-weight:600">0.091</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:52%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">25</td><td>513360</td><td>教育</td>
+<td><span class="badge badge-cat">教育</span></td>
+<td style="text-align:right">0.404</td>
+<td style="text-align:right">0.46</td>
+<td style="text-align:right" class="down">-13.12%</td>
+<td style="text-align:right">0.226</td>
+<td style="text-align:right">0.542</td>
+<td style="text-align:right">-0.004</td>
+<td style="text-align:right">0.721</td>
+<td style="text-align:right;font-weight:600">0.058</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:51%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">26</td><td>159770</td><td>机器人</td>
+<td><span class="badge badge-cat">A股制造</span></td>
+<td style="text-align:right">0.861</td>
+<td style="text-align:right">0.87</td>
+<td style="text-align:right" class="down">-1.25%</td>
+<td style="text-align:right">0.310</td>
+<td style="text-align:right">0.167</td>
+<td style="text-align:right">0.001</td>
+<td style="text-align:right">0.110</td>
+<td style="text-align:right;font-weight:600">0.044</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:51%;background:#22c55e"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">27</td><td>159509</td><td>纳指科技</td>
+<td><span class="badge badge-cat">跨境</span></td>
+<td style="text-align:right">2.869</td>
+<td style="text-align:right">3.15</td>
+<td style="text-align:right" class="down">-8.78%</td>
+<td style="text-align:right">0.229</td>
+<td style="text-align:right">0.208</td>
+<td style="text-align:right">0.002</td>
+<td style="text-align:right">0.547</td>
+<td style="text-align:right;font-weight:600">0.003</td>
 <td><div class="score-bar"><div class="score-bar-fill" style="width:50%;background:#22c55e"></div></div></td>
 </tr>
 <tr>
-<td style="text-align:center">25</td><td>159985</td><td>豆粕</td>
-<td><span class="badge badge-cat">商品</span></td>
-<td style="text-align:right">2.189</td>
-<td style="text-align:right">2.17</td>
-<td style="text-align:right" class="up">+1.03%</td>
-<td style="text-align:right">0.181</td>
-<td style="text-align:right">0.583</td>
-<td style="text-align:right">-0.002</td>
-<td style="text-align:right">-0.334</td>
-<td style="text-align:right;font-weight:600">-0.046</td>
+<td style="text-align:center">28</td><td>159529</td><td>标普消费</td>
+<td><span class="badge badge-cat">跨境</span></td>
+<td style="text-align:right">1.377</td>
+<td style="text-align:right">1.30</td>
+<td style="text-align:right" class="up">+5.63%</td>
+<td style="text-align:right">0.103</td>
+<td style="text-align:right">0.688</td>
+<td style="text-align:right">0.005</td>
+<td style="text-align:right">-0.256</td>
+<td style="text-align:right;font-weight:600">-0.068</td>
 <td><div class="score-bar"><div class="score-bar-fill" style="width:49%;background:#fbbf24"></div></div></td>
 </tr>
 <tr>
-<td style="text-align:center">26</td><td>516110</td><td>汽车</td>
-<td><span class="badge badge-cat">A股制造</span></td>
-<td style="text-align:right">1.113</td>
-<td style="text-align:right">1.06</td>
-<td style="text-align:right" class="up">+5.01%</td>
-<td style="text-align:right">0.104</td>
-<td style="text-align:right">0.562</td>
-<td style="text-align:right">-0.001</td>
-<td style="text-align:right">0.089</td>
-<td style="text-align:right;font-weight:600">-0.109</td>
+<td style="text-align:center">29</td><td>512980</td><td>传媒</td>
+<td><span class="badge badge-cat">A股消费</span></td>
+<td style="text-align:right">0.798</td>
+<td style="text-align:right">0.81</td>
+<td style="text-align:right" class="down">-1.00%</td>
+<td style="text-align:right">0.232</td>
+<td style="text-align:right">0.146</td>
+<td style="text-align:right">0.004</td>
+<td style="text-align:right">-0.122</td>
+<td style="text-align:right;font-weight:600">-0.127</td>
 <td><div class="score-bar"><div class="score-bar-fill" style="width:48%;background:#fbbf24"></div></div></td>
 </tr>
 <tr>
-<td style="text-align:center">27</td><td>518850</td><td>黄金</td>
-<td><span class="badge badge-cat">商品</span></td>
-<td style="text-align:right">2.400</td>
-<td style="text-align:right">2.15</td>
-<td style="text-align:right" class="up">+11.87%</td>
-<td style="text-align:right">0.008</td>
-<td style="text-align:right">0.667</td>
-<td style="text-align:right">0.003</td>
-<td style="text-align:right">-0.211</td>
-<td style="text-align:right;font-weight:600">-0.140</td>
+<td style="text-align:center">30</td><td>513100</td><td>纳指</td>
+<td><span class="badge badge-cat">跨境</span></td>
+<td style="text-align:right">2.200</td>
+<td style="text-align:right">2.33</td>
+<td style="text-align:right" class="down">-5.50%</td>
+<td style="text-align:right">0.120</td>
+<td style="text-align:right">0.583</td>
+<td style="text-align:right">0.001</td>
+<td style="text-align:right">0.412</td>
+<td style="text-align:right;font-weight:600">-0.136</td>
 <td><div class="score-bar"><div class="score-bar-fill" style="width:48%;background:#fbbf24"></div></div></td>
 </tr>
 <tr>
-<td style="text-align:center">28</td><td>159201</td><td>自由现金流</td>
-<td><span class="badge badge-cat">A股制造</span></td>
-<td style="text-align:right">1.184</td>
-<td style="text-align:right">1.10</td>
-<td style="text-align:right" class="up">+8.11%</td>
-<td style="text-align:right">0.041</td>
-<td style="text-align:right">0.729</td>
-<td style="text-align:right">0.000</td>
-<td style="text-align:right">-0.062</td>
-<td style="text-align:right;font-weight:600">-0.175</td>
+<td style="text-align:center">31</td><td>560080</td><td>中药</td>
+<td><span class="badge badge-cat">A股医药</span></td>
+<td style="text-align:right">0.977</td>
+<td style="text-align:right">0.93</td>
+<td style="text-align:right" class="up">+4.77%</td>
+<td style="text-align:right">0.129</td>
+<td style="text-align:right">0.604</td>
+<td style="text-align:right">0.004</td>
+<td style="text-align:right">-0.500</td>
+<td style="text-align:right;font-weight:600">-0.200</td>
 <td><div class="score-bar"><div class="score-bar-fill" style="width:47%;background:#fbbf24"></div></div></td>
 </tr>
 <tr>
-<td style="text-align:center">29</td><td>561360</td><td>石油</td>
-<td><span class="badge badge-cat">A股周期</span></td>
-<td style="text-align:right">1.472</td>
-<td style="text-align:right">1.34</td>
-<td style="text-align:right" class="up">+9.77%</td>
-<td style="text-align:right">0.047</td>
-<td style="text-align:right">0.500</td>
-<td style="text-align:right">0.002</td>
-<td style="text-align:right">-0.128</td>
-<td style="text-align:right;font-weight:600">-0.205</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:47%;background:#fbbf24"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">30</td><td>588790</td><td>科创AI</td>
+<td style="text-align:center">32</td><td>588790</td><td>科创AI</td>
 <td><span class="badge badge-cat">A股科技</span></td>
-<td style="text-align:right">1.556</td>
-<td style="text-align:right">1.69</td>
-<td style="text-align:right" class="down">-7.87%</td>
-<td style="text-align:right">0.177</td>
-<td style="text-align:right">0.083</td>
+<td style="text-align:right">0.620</td>
+<td style="text-align:right">0.68</td>
+<td style="text-align:right" class="down">-8.95%</td>
+<td style="text-align:right">0.288</td>
+<td style="text-align:right">0.062</td>
 <td style="text-align:right">-0.004</td>
-<td style="text-align:right">0.532</td>
-<td style="text-align:right;font-weight:600">-0.230</td>
+<td style="text-align:right">0.551</td>
+<td style="text-align:right;font-weight:600">-0.245</td>
 <td><div class="score-bar"><div class="score-bar-fill" style="width:46%;background:#fbbf24"></div></div></td>
 </tr>
 <tr>
-<td style="text-align:center">31</td><td>513730</td><td>东南亚科技</td>
+<td style="text-align:center">33</td><td>513650</td><td>标普500</td>
 <td><span class="badge badge-cat">跨境</span></td>
-<td style="text-align:right">1.163</td>
-<td style="text-align:right">1.14</td>
-<td style="text-align:right" class="up">+2.00%</td>
+<td style="text-align:right">1.942</td>
+<td style="text-align:right">2.04</td>
+<td style="text-align:right" class="down">-5.02%</td>
+<td style="text-align:right">0.034</td>
+<td style="text-align:right">0.729</td>
 <td style="text-align:right">0.001</td>
-<td style="text-align:right">0.708</td>
-<td style="text-align:right">0.001</td>
-<td style="text-align:right">0.102</td>
-<td style="text-align:right;font-weight:600">-0.235</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:46%;background:#fbbf24"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">32</td><td>159529</td><td>标普消费</td>
-<td><span class="badge badge-cat">跨境</span></td>
-<td style="text-align:right">1.321</td>
-<td style="text-align:right">1.27</td>
-<td style="text-align:right" class="up">+3.67%</td>
-<td style="text-align:right">0.002</td>
-<td style="text-align:right">0.917</td>
-<td style="text-align:right">0.001</td>
-<td style="text-align:right">-0.444</td>
-<td style="text-align:right;font-weight:600">-0.251</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:46%;background:#fbbf24"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">33</td><td>159129</td><td>化工</td>
-<td><span class="badge badge-cat">A股周期</span></td>
-<td style="text-align:right">1.042</td>
-<td style="text-align:right">1.02</td>
-<td style="text-align:right" class="up">+1.86%</td>
-<td style="text-align:right">0.037</td>
-<td style="text-align:right">0.333</td>
-<td style="text-align:right">0.001</td>
-<td style="text-align:right">0.442</td>
-<td style="text-align:right;font-weight:600">-0.264</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:46%;background:#fbbf24"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">34</td><td>513090</td><td>香港证券</td>
-<td><span class="badge badge-cat">港股</span></td>
-<td style="text-align:right">1.826</td>
-<td style="text-align:right">1.84</td>
-<td style="text-align:right" class="down">-0.92%</td>
-<td style="text-align:right">0.096</td>
-<td style="text-align:right">0.458</td>
-<td style="text-align:right">-0.002</td>
-<td style="text-align:right">0.003</td>
-<td style="text-align:right;font-weight:600">-0.329</td>
+<td style="text-align:right">0.371</td>
+<td style="text-align:right;font-weight:600">-0.284</td>
 <td><div class="score-bar"><div class="score-bar-fill" style="width:45%;background:#fbbf24"></div></div></td>
 </tr>
 <tr>
-<td style="text-align:center">35</td><td>560710</td><td>船舶</td>
-<td><span class="badge badge-cat">A股制造</span></td>
-<td style="text-align:right">0.900</td>
-<td style="text-align:right">0.82</td>
-<td style="text-align:right" class="up">+9.96%</td>
-<td style="text-align:right">0.061</td>
-<td style="text-align:right">0.375</td>
+<td style="text-align:center">34</td><td>512690</td><td>酒</td>
+<td><span class="badge badge-cat">A股消费</span></td>
+<td style="text-align:right">0.450</td>
+<td style="text-align:right">0.41</td>
+<td style="text-align:right" class="up">+8.52%</td>
+<td style="text-align:right">0.117</td>
+<td style="text-align:right">0.458</td>
+<td style="text-align:right">0.007</td>
+<td style="text-align:right">-0.771</td>
+<td style="text-align:right;font-weight:600">-0.295</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:45%;background:#fbbf24"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">35</td><td>159825</td><td>农业</td>
+<td><span class="badge badge-cat">A股周期</span></td>
+<td style="text-align:right">0.720</td>
+<td style="text-align:right">0.74</td>
+<td style="text-align:right" class="down">-2.51%</td>
+<td style="text-align:right">0.123</td>
+<td style="text-align:right">0.479</td>
 <td style="text-align:right">0.001</td>
+<td style="text-align:right">-0.238</td>
+<td style="text-align:right;font-weight:600">-0.380</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:44%;background:#fbbf24"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">36</td><td>159100</td><td>巴西</td>
+<td><span class="badge badge-cat">跨境</span></td>
+<td style="text-align:right">0.979</td>
+<td style="text-align:right">1.23</td>
+<td style="text-align:right" class="down">-20.72%</td>
+<td style="text-align:right">0.057</td>
+<td style="text-align:right">0.083</td>
 <td style="text-align:right">-0.004</td>
-<td style="text-align:right;font-weight:600">-0.331</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:44%;background:#fbbf24"></div></div></td>
+<td style="text-align:right">2.258</td>
+<td style="text-align:right;font-weight:600">-0.450</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:43%;background:#fbbf24"></div></div></td>
 </tr>
 <tr>
-<td style="text-align:center">36</td><td>159732</td><td>消费电子</td>
+<td style="text-align:center">37</td><td>159732</td><td>消费电子</td>
 <td><span class="badge badge-cat">A股消费</span></td>
-<td style="text-align:right">1.342</td>
-<td style="text-align:right">1.50</td>
-<td style="text-align:right" class="down">-10.36%</td>
-<td style="text-align:right">0.173</td>
-<td style="text-align:right">0.062</td>
-<td style="text-align:right">-0.003</td>
-<td style="text-align:right">0.267</td>
-<td style="text-align:right;font-weight:600">-0.343</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:44%;background:#fbbf24"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">37</td><td>159509</td><td>纳指科技</td>
-<td><span class="badge badge-cat">跨境</span></td>
-<td style="text-align:right">2.776</td>
-<td style="text-align:right">2.69</td>
-<td style="text-align:right" class="up">+3.12%</td>
-<td style="text-align:right">0.021</td>
-<td style="text-align:right">0.354</td>
-<td style="text-align:right">0.002</td>
-<td style="text-align:right">0.089</td>
-<td style="text-align:right;font-weight:600">-0.370</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:44%;background:#fbbf24"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">38</td><td>513520</td><td>日经</td>
-<td><span class="badge badge-cat">跨境</span></td>
-<td style="text-align:right">2.273</td>
-<td style="text-align:right">2.34</td>
-<td style="text-align:right" class="down">-2.71%</td>
-<td style="text-align:right">0.068</td>
-<td style="text-align:right">0.146</td>
-<td style="text-align:right">0.001</td>
-<td style="text-align:right">0.168</td>
-<td style="text-align:right;font-weight:600">-0.398</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:43%;background:#fbbf24"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">39</td><td>513050</td><td>中概互联网</td>
-<td><span class="badge badge-cat">跨境</span></td>
-<td style="text-align:right">1.072</td>
-<td style="text-align:right">1.08</td>
-<td style="text-align:right" class="down">-0.30%</td>
-<td style="text-align:right">0.079</td>
-<td style="text-align:right">0.271</td>
-<td style="text-align:right">-0.002</td>
-<td style="text-align:right">0.312</td>
-<td style="text-align:right;font-weight:600">-0.401</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:43%;background:#fbbf24"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">40</td><td>513100</td><td>纳指</td>
-<td><span class="badge badge-cat">跨境</span></td>
-<td style="text-align:right">11.060</td>
-<td style="text-align:right">10.93</td>
-<td style="text-align:right" class="up">+1.20%</td>
-<td style="text-align:right">0.001</td>
-<td style="text-align:right">0.438</td>
-<td style="text-align:right">0.001</td>
-<td style="text-align:right">0.118</td>
-<td style="text-align:right;font-weight:600">-0.401</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:43%;background:#fbbf24"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">41</td><td>513310</td><td>中韩半导体</td>
-<td><span class="badge badge-cat">跨境</span></td>
-<td style="text-align:right">4.719</td>
-<td style="text-align:right">5.12</td>
-<td style="text-align:right" class="down">-7.81%</td>
-<td style="text-align:right">0.228</td>
-<td style="text-align:right">0.021</td>
-<td style="text-align:right">-0.005</td>
-<td style="text-align:right">0.144</td>
-<td style="text-align:right;font-weight:600">-0.416</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:43%;background:#fbbf24"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">42</td><td>159766</td><td>旅游</td>
-<td><span class="badge badge-cat">A股消费</span></td>
-<td style="text-align:right">0.562</td>
-<td style="text-align:right">0.53</td>
-<td style="text-align:right" class="up">+5.90%</td>
-<td style="text-align:right">0.040</td>
-<td style="text-align:right">0.542</td>
-<td style="text-align:right">-0.001</td>
-<td style="text-align:right">0.009</td>
-<td style="text-align:right;font-weight:600">-0.431</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:43%;background:#fbbf24"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">43</td><td>159329</td><td>沙特</td>
-<td><span class="badge badge-cat">跨境</span></td>
-<td style="text-align:right">0.928</td>
-<td style="text-align:right">0.88</td>
-<td style="text-align:right" class="up">+4.88%</td>
-<td style="text-align:right">0.025</td>
-<td style="text-align:right">1.000</td>
-<td style="text-align:right">0.001</td>
-<td style="text-align:right">-1.030</td>
-<td style="text-align:right;font-weight:600">-0.435</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:43%;background:#fbbf24"></div></div></td>
-</tr>
-<tr>
-<td style="text-align:center">44</td><td>512980</td><td>传媒</td>
-<td><span class="badge badge-cat">A股消费</span></td>
-<td style="text-align:right">0.807</td>
-<td style="text-align:right">0.77</td>
-<td style="text-align:right" class="up">+4.77%</td>
-<td style="text-align:right">0.006</td>
-<td style="text-align:right">0.250</td>
-<td style="text-align:right">0.001</td>
-<td style="text-align:right">0.250</td>
-<td style="text-align:right;font-weight:600">-0.502</td>
+<td style="text-align:right">0.962</td>
+<td style="text-align:right">1.13</td>
+<td style="text-align:right" class="down">-15.08%</td>
+<td style="text-align:right">0.293</td>
+<td style="text-align:right">0.104</td>
+<td style="text-align:right">-0.009</td>
+<td style="text-align:right">0.462</td>
+<td style="text-align:right;font-weight:600">-0.477</td>
 <td><div class="score-bar"><div class="score-bar-fill" style="width:42%;background:#fbbf24"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">38</td><td>159227</td><td>航空航天</td>
+<td><span class="badge badge-cat">A股科技</span></td>
+<td style="text-align:right">0.929</td>
+<td style="text-align:right">0.99</td>
+<td style="text-align:right" class="down">-6.34%</td>
+<td style="text-align:right">0.144</td>
+<td style="text-align:right">0.229</td>
+<td style="text-align:right">-0.000</td>
+<td style="text-align:right">0.169</td>
+<td style="text-align:right;font-weight:600">-0.488</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:42%;background:#fbbf24"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">39</td><td>561360</td><td>石油</td>
+<td><span class="badge badge-cat">A股周期</span></td>
+<td style="text-align:right">1.410</td>
+<td style="text-align:right">1.49</td>
+<td style="text-align:right" class="down">-5.50%</td>
+<td style="text-align:right">0.059</td>
+<td style="text-align:right">0.417</td>
+<td style="text-align:right">0.001</td>
+<td style="text-align:right">0.011</td>
+<td style="text-align:right;font-weight:600">-0.593</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:40%;background:#fbbf24"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">40</td><td>159847</td><td>医疗</td>
+<td><span class="badge badge-cat">A股医药</span></td>
+<td style="text-align:right">0.403</td>
+<td style="text-align:right">0.41</td>
+<td style="text-align:right" class="down">-1.50%</td>
+<td style="text-align:right">0.107</td>
+<td style="text-align:right">0.292</td>
+<td style="text-align:right">0.001</td>
+<td style="text-align:right">-0.275</td>
+<td style="text-align:right;font-weight:600">-0.604</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:40%;background:#fbbf24"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">41</td><td>513520</td><td>日经</td>
+<td><span class="badge badge-cat">跨境</span></td>
+<td style="text-align:right">2.143</td>
+<td style="text-align:right">2.27</td>
+<td style="text-align:right" class="down">-5.42%</td>
+<td style="text-align:right">0.057</td>
+<td style="text-align:right">0.375</td>
+<td style="text-align:right">-0.001</td>
+<td style="text-align:right">0.340</td>
+<td style="text-align:right;font-weight:600">-0.613</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:40%;background:#fbbf24"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">42</td><td>513310</td><td>中韩半导体</td>
+<td><span class="badge badge-cat">跨境</span></td>
+<td style="text-align:right">3.671</td>
+<td style="text-align:right">4.14</td>
+<td style="text-align:right" class="down">-11.33%</td>
+<td style="text-align:right">0.250</td>
+<td style="text-align:right">0.042</td>
+<td style="text-align:right">-0.006</td>
+<td style="text-align:right">0.126</td>
+<td style="text-align:right;font-weight:600">-0.631</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:39%;background:#fbbf24"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">43</td><td>159985</td><td>豆粕</td>
+<td><span class="badge badge-cat">商品</span></td>
+<td style="text-align:right">2.159</td>
+<td style="text-align:right">2.35</td>
+<td style="text-align:right" class="down">-8.22%</td>
+<td style="text-align:right">0.002</td>
+<td style="text-align:right">0.500</td>
+<td style="text-align:right">-0.001</td>
+<td style="text-align:right">0.264</td>
+<td style="text-align:right;font-weight:600">-0.725</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:38%;background:#fbbf24"></div></div></td>
+</tr>
+<tr>
+<td style="text-align:center">44</td><td>159502</td><td>标普生物科技</td>
+<td><span class="badge badge-cat">跨境</span></td>
+<td style="text-align:right">1.557</td>
+<td style="text-align:right">1.60</td>
+<td style="text-align:right" class="down">-2.56%</td>
+<td style="text-align:right">0.019</td>
+<td style="text-align:right">0.188</td>
+<td style="text-align:right">0.002</td>
+<td style="text-align:right">0.024</td>
+<td style="text-align:right;font-weight:600">-0.836</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:36%;background:#fbbf24"></div></div></td>
 </tr>
 <tr>
 <td style="text-align:center">45</td><td>515220</td><td>煤炭</td>
 <td><span class="badge badge-cat">A股周期</span></td>
-<td style="text-align:right">2.876</td>
-<td style="text-align:right">2.63</td>
-<td style="text-align:right" class="up">+9.50%</td>
-<td style="text-align:right">0.000</td>
-<td style="text-align:right">0.292</td>
-<td style="text-align:right">0.002</td>
-<td style="text-align:right">-0.108</td>
-<td style="text-align:right;font-weight:600">-0.571</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:40%;background:#fbbf24"></div></div></td>
+<td style="text-align:right">1.220</td>
+<td style="text-align:right">1.31</td>
+<td style="text-align:right" class="down">-7.05%</td>
+<td style="text-align:right">0.027</td>
+<td style="text-align:right">0.271</td>
+<td style="text-align:right">-0.000</td>
+<td style="text-align:right">0.160</td>
+<td style="text-align:right;font-weight:600">-0.849</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:36%;background:#fbbf24"></div></div></td>
 </tr>
 <tr>
-<td style="text-align:center">46</td><td>159842</td><td>券商</td>
-<td><span class="badge badge-cat">A股周期</span></td>
-<td style="text-align:right">1.015</td>
-<td style="text-align:right">1.08</td>
-<td style="text-align:right" class="down">-6.14%</td>
-<td style="text-align:right">0.016</td>
-<td style="text-align:right">0.417</td>
-<td style="text-align:right">-0.003</td>
-<td style="text-align:right">0.250</td>
-<td style="text-align:right;font-weight:600">-0.686</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:39%;background:#fbbf24"></div></div></td>
+<td style="text-align:center">46</td><td>513120</td><td>港股创新药</td>
+<td><span class="badge badge-cat">A股医药</span></td>
+<td style="text-align:right">1.113</td>
+<td style="text-align:right">1.32</td>
+<td style="text-align:right" class="down">-15.49%</td>
+<td style="text-align:right">0.044</td>
+<td style="text-align:right">0.125</td>
+<td style="text-align:right">-0.005</td>
+<td style="text-align:right">0.867</td>
+<td style="text-align:right;font-weight:600">-0.941</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:34%;background:#fbbf24"></div></div></td>
 </tr>
 <tr>
-<td style="text-align:center">47</td><td>512720</td><td>计算机</td>
+<td style="text-align:center">47</td><td>515880</td><td>通信</td>
 <td><span class="badge badge-cat">A股科技</span></td>
-<td style="text-align:right">1.259</td>
-<td style="text-align:right">1.29</td>
-<td style="text-align:right" class="down">-2.16%</td>
-<td style="text-align:right">0.005</td>
-<td style="text-align:right">0.208</td>
-<td style="text-align:right">-0.002</td>
-<td style="text-align:right">0.594</td>
-<td style="text-align:right;font-weight:600">-0.691</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:38%;background:#fbbf24"></div></div></td>
+<td style="text-align:right">0.400</td>
+<td style="text-align:right">0.58</td>
+<td style="text-align:right" class="down">-30.59%</td>
+<td style="text-align:right">0.229</td>
+<td style="text-align:right">0.021</td>
+<td style="text-align:right">-0.015</td>
+<td style="text-align:right">0.788</td>
+<td style="text-align:right;font-weight:600">-0.976</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:34%;background:#fbbf24"></div></div></td>
 </tr>
 <tr>
-<td style="text-align:center">48</td><td>159100</td><td>巴西</td>
-<td><span class="badge badge-cat">跨境</span></td>
-<td style="text-align:right">1.075</td>
-<td style="text-align:right">1.07</td>
-<td style="text-align:right" class="up">+0.62%</td>
-<td style="text-align:right">0.001</td>
-<td style="text-align:right">0.646</td>
-<td style="text-align:right">-0.003</td>
-<td style="text-align:right">-0.053</td>
-<td style="text-align:right;font-weight:600">-0.739</td>
-<td><div class="score-bar"><div class="score-bar-fill" style="width:38%;background:#fbbf24"></div></div></td>
+<td style="text-align:center">48</td><td>560710</td><td>船舶</td>
+<td><span class="badge badge-cat">A股制造</span></td>
+<td style="text-align:right">0.886</td>
+<td style="text-align:right">0.97</td>
+<td style="text-align:right" class="down">-8.20%</td>
+<td style="text-align:right">0.000</td>
+<td style="text-align:right">0.312</td>
+<td style="text-align:right">-0.002</td>
+<td style="text-align:right">0.158</td>
+<td style="text-align:right;font-weight:600">-1.000</td>
+<td><div class="score-bar"><div class="score-bar-fill" style="width:33%;background:#fbbf24"></div></div></td>
 </tr>
 
         </tbody>
@@ -1354,9 +1538,9 @@ function switchTab(tabName) {
   document.querySelector('.tab[data-tab="'+tabName+'"]').classList.add('active');
   document.getElementById('section-'+tabName).classList.add('active');
 }
-const navDates = ["2023-12-28", "2023-12-29", "2024-01-02", "2024-01-03", "2024-01-04", "2024-01-05", "2024-01-08", "2024-01-09", "2024-01-10", "2024-01-11", "2024-01-12", "2024-01-15", "2024-01-16", "2024-01-17", "2024-01-18", "2024-01-19", "2024-01-22", "2024-01-23", "2024-01-24", "2024-01-25", "2024-01-26", "2024-01-29", "2024-01-30", "2024-01-31", "2024-02-01", "2024-02-02", "2024-02-05", "2024-02-06", "2024-02-07", "2024-02-08", "2024-02-19", "2024-02-20", "2024-02-21", "2024-02-22", "2024-02-23", "2024-02-26", "2024-02-27", "2024-02-28", "2024-02-29", "2024-03-01", "2024-03-04", "2024-03-05", "2024-03-06", "2024-03-07", "2024-03-08", "2024-03-11", "2024-03-12", "2024-03-13", "2024-03-14", "2024-03-15", "2024-03-18", "2024-03-19", "2024-03-20", "2024-03-21", "2024-03-22", "2024-03-25", "2024-03-26", "2024-03-27", "2024-03-28", "2024-03-29", "2024-04-01", "2024-04-02", "2024-04-03", "2024-04-08", "2024-04-09", "2024-04-10", "2024-04-11", "2024-04-12", "2024-04-15", "2024-04-16", "2024-04-17", "2024-04-18", "2024-04-19", "2024-04-22", "2024-04-23", "2024-04-24", "2024-04-25", "2024-04-26", "2024-04-29", "2024-04-30", "2024-05-06", "2024-05-07", "2024-05-08", "2024-05-09", "2024-05-10", "2024-05-13", "2024-05-14", "2024-05-15", "2024-05-16", "2024-05-17", "2024-05-20", "2024-05-21", "2024-05-22", "2024-05-23", "2024-05-24", "2024-05-27", "2024-05-28", "2024-05-29", "2024-05-30", "2024-05-31", "2024-06-03", "2024-06-04", "2024-06-05", "2024-06-06", "2024-06-07", "2024-06-11", "2024-06-12", "2024-06-13", "2024-06-14", "2024-06-17", "2024-06-18", "2024-06-19", "2024-06-20", "2024-06-21", "2024-06-24", "2024-06-25", "2024-06-26", "2024-06-27", "2024-06-28", "2024-07-01", "2024-07-02", "2024-07-03", "2024-07-04", "2024-07-05", "2024-07-08", "2024-07-09", "2024-07-10", "2024-07-11", "2024-07-12", "2024-07-15", "2024-07-16", "2024-07-17", "2024-07-18", "2024-07-19", "2024-07-22", "2024-07-23", "2024-07-24", "2024-07-25", "2024-07-26", "2024-07-29", "2024-07-30", "2024-07-31", "2024-08-01", "2024-08-02", "2024-08-05", "2024-08-06", "2024-08-07", "2024-08-08", "2024-08-09", "2024-08-12", "2024-08-13", "2024-08-14", "2024-08-15", "2024-08-16", "2024-08-19", "2024-08-20", "2024-08-21", "2024-08-22", "2024-08-23", "2024-08-26", "2024-08-27", "2024-08-28", "2024-08-29", "2024-08-30", "2024-09-02", "2024-09-03", "2024-09-04", "2024-09-05", "2024-09-06", "2024-09-09", "2024-09-10", "2024-09-11", "2024-09-12", "2024-09-13", "2024-09-18", "2024-09-19", "2024-09-20", "2024-09-23", "2024-09-24", "2024-09-25", "2024-09-26", "2024-09-27", "2024-09-30", "2024-10-08", "2024-10-09", "2024-10-10", "2024-10-11", "2024-10-14", "2024-10-15", "2024-10-16", "2024-10-17", "2024-10-18", "2024-10-21", "2024-10-22", "2024-10-23", "2024-10-24", "2024-10-25", "2024-10-28", "2024-10-29", "2024-10-30", "2024-10-31", "2024-11-01", "2024-11-04", "2024-11-05", "2024-11-06", "2024-11-07", "2024-11-08", "2024-11-11", "2024-11-12", "2024-11-13", "2024-11-14", "2024-11-15", "2024-11-18", "2024-11-19", "2024-11-20", "2024-11-21", "2024-11-22", "2024-11-25", "2024-11-26", "2024-11-27", "2024-11-28", "2024-11-29", "2024-12-02", "2024-12-03", "2024-12-04", "2024-12-05", "2024-12-06", "2024-12-09", "2024-12-10", "2024-12-11", "2024-12-12", "2024-12-13", "2024-12-16", "2024-12-17", "2024-12-18", "2024-12-19", "2024-12-20", "2024-12-23", "2024-12-24", "2024-12-25", "2024-12-26", "2024-12-27", "2024-12-30", "2024-12-31", "2025-01-02", "2025-01-03", "2025-01-06", "2025-01-07", "2025-01-08", "2025-01-09", "2025-01-10", "2025-01-13", "2025-01-14", "2025-01-15", "2025-01-16", "2025-01-17", "2025-01-20", "2025-01-21", "2025-01-22", "2025-01-23", "2025-01-24", "2025-01-27", "2025-02-05", "2025-02-06", "2025-02-07", "2025-02-10", "2025-02-11", "2025-02-12", "2025-02-13", "2025-02-14", "2025-02-17", "2025-02-18", "2025-02-19", "2025-02-20", "2025-02-21", "2025-02-24", "2025-02-25", "2025-02-26", "2025-02-27", "2025-02-28", "2025-03-03", "2025-03-04", "2025-03-05", "2025-03-06", "2025-03-07", "2025-03-10", "2025-03-11", "2025-03-12", "2025-03-13", "2025-03-14", "2025-03-17", "2025-03-18", "2025-03-19", "2025-03-20", "2025-03-21", "2025-03-24", "2025-03-25", "2025-03-26", "2025-03-27", "2025-03-28", "2025-03-31", "2025-04-01", "2025-04-02", "2025-04-03", "2025-04-07", "2025-04-08", "2025-04-09", "2025-04-10", "2025-04-11", "2025-04-14", "2025-04-15", "2025-04-16", "2025-04-17", "2025-04-18", "2025-04-21", "2025-04-22", "2025-04-23", "2025-04-24", "2025-04-25", "2025-04-28", "2025-04-29", "2025-04-30", "2025-05-06", "2025-05-07", "2025-05-08", "2025-05-09", "2025-05-12", "2025-05-13", "2025-05-14", "2025-05-15", "2025-05-16", "2025-05-19", "2025-05-20", "2025-05-21", "2025-05-22", "2025-05-23", "2025-05-26", "2025-05-27", "2025-05-28", "2025-05-29", "2025-05-30", "2025-06-03", "2025-06-04", "2025-06-05", "2025-06-06", "2025-06-09", "2025-06-10", "2025-06-11", "2025-06-12", "2025-06-13", "2025-06-16", "2025-06-17", "2025-06-18", "2025-06-19", "2025-06-20", "2025-06-23", "2025-06-24", "2025-06-25", "2025-06-26", "2025-06-27", "2025-06-30", "2025-07-01", "2025-07-02", "2025-07-03", "2025-07-04", "2025-07-07", "2025-07-08", "2025-07-09", "2025-07-10", "2025-07-11", "2025-07-14", "2025-07-15", "2025-07-16", "2025-07-17", "2025-07-18", "2025-07-21", "2025-07-22", "2025-07-23", "2025-07-24", "2025-07-25", "2025-07-28", "2025-07-29", "2025-07-30", "2025-07-31", "2025-08-01", "2025-08-04", "2025-08-05", "2025-08-06", "2025-08-07", "2025-08-08", "2025-08-11", "2025-08-12", "2025-08-13", "2025-08-14", "2025-08-15", "2025-08-18", "2025-08-19", "2025-08-20", "2025-08-21", "2025-08-22", "2025-08-25", "2025-08-26", "2025-08-27", "2025-08-28", "2025-08-29", "2025-09-01", "2025-09-02", "2025-09-03", "2025-09-04", "2025-09-05", "2025-09-08", "2025-09-09", "2025-09-10", "2025-09-11", "2025-09-12", "2025-09-15", "2025-09-16", "2025-09-17", "2025-09-18", "2025-09-19", "2025-09-22", "2025-09-23", "2025-09-24", "2025-09-25", "2025-09-26", "2025-09-29", "2025-09-30", "2025-10-09", "2025-10-10", "2025-10-13", "2025-10-14", "2025-10-15", "2025-10-16", "2025-10-17", "2025-10-20", "2025-10-21", "2025-10-22", "2025-10-23", "2025-10-24", "2025-10-27", "2025-10-28", "2025-10-29", "2025-10-30", "2025-10-31", "2025-11-03", "2025-11-04", "2025-11-05", "2025-11-06", "2025-11-07", "2025-11-10", "2025-11-11", "2025-11-12", "2025-11-13", "2025-11-14", "2025-11-17", "2025-11-18", "2025-11-19", "2025-11-20", "2025-11-21", "2025-11-24", "2025-11-25", "2025-11-26", "2025-11-27", "2025-11-28", "2025-12-01", "2025-12-02", "2025-12-03", "2025-12-04", "2025-12-05", "2025-12-08", "2025-12-09", "2025-12-10", "2025-12-11", "2025-12-12", "2025-12-15", "2025-12-16", "2025-12-17", "2025-12-18", "2025-12-19", "2025-12-22", "2025-12-23", "2025-12-24", "2025-12-25", "2025-12-26", "2025-12-29", "2025-12-30", "2025-12-31", "2026-01-05", "2026-01-06", "2026-01-07", "2026-01-08", "2026-01-09", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-19", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27", "2026-03-30", "2026-03-31", "2026-04-01", "2026-04-02", "2026-04-03", "2026-04-07", "2026-04-08", "2026-04-09", "2026-04-10", "2026-04-13", "2026-04-14", "2026-04-15", "2026-04-16", "2026-04-17", "2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-18", "2026-05-19", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-25", "2026-05-26", "2026-05-27", "2026-05-28", "2026-05-29", "2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05", "2026-06-08", "2026-06-09", "2026-06-10", "2026-06-11", "2026-06-12", "2026-06-15", "2026-06-16", "2026-06-17", "2026-06-18", "2026-06-22", "2026-06-23", "2026-06-24", "2026-06-25", "2026-06-26", "2026-06-29", "2026-06-30", "2026-07-01", "2026-07-02", "2026-07-03", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25"];
-const navData = [1.0, 0.99985, 0.994057, 0.995805, 0.991152, 0.987061, 0.977085, 0.975899, 0.972931, 0.977694, 0.972954, 0.972359, 0.978317, 0.969434, 0.976008, 0.970665, 0.959323, 0.968384, 0.991128, 0.994638, 0.994055, 0.984721, 0.978832, 0.974684, 0.972899, 0.963361, 0.952523, 0.979929, 0.985261, 0.989386, 0.985279, 0.991171, 0.995272, 0.999939, 1.0011, 0.99646, 1.005201, 0.997113, 1.00818, 1.01106, 1.004166, 1.001853, 1.001853, 0.995475, 0.996642, 1.003053, 1.00537, 1.000747, 0.995523, 0.997857, 1.008919, 0.999705, 1.002611, 1.00377, 0.996245, 0.981079, 0.982264, 0.974572, 0.974572, 0.976958, 0.985287, 0.980567, 0.978196, 0.968687, 0.969888, 0.961496, 0.959077, 0.951196, 0.959143, 0.949442, 0.960468, 0.96289, 0.95987, 0.961082, 0.960477, 0.961082, 0.960477, 0.989546, 0.99484, 0.987233, 0.990182, 0.98783, 0.980167, 0.984326, 0.98965, 0.990826, 0.991414, 0.979667, 0.979073, 0.985616, 0.985616, 0.982662, 0.98444, 0.974382, 0.968404, 0.973216, 0.96783, 0.969033, 0.968432, 0.967831, 0.961812, 0.965446, 0.962429, 0.958192, 0.953936, 0.954546, 0.954546, 0.953326, 0.965548, 0.963738, 0.96797, 0.96195, 0.957104, 0.959539, 0.954074, 0.946744, 0.951669, 0.947382, 0.936924, 0.936924, 0.934435, 0.936306, 0.927591, 0.928219, 0.915031, 0.924589, 0.92522, 0.933413, 0.930914, 0.930914, 0.935299, 0.93717, 0.940281, 0.946484, 0.949565, 0.938509, 0.932915, 0.939168, 0.947243, 0.943547, 0.944784, 0.969484, 0.967076, 0.958021, 0.954973, 0.955585, 0.953752, 0.954976, 0.951919, 0.949466, 0.955615, 0.951338, 0.957476, 0.955036, 0.954425, 0.948919, 0.947688, 0.940294, 0.944641, 0.944641, 0.940314, 0.940314, 0.942798, 0.955806, 0.943584, 0.946679, 0.946679, 0.950382, 0.952841, 0.951615, 0.950387, 0.950716, 0.948513, 0.952194, 0.960053, 0.957057, 0.954421, 0.95623, 0.98874, 0.989262, 1.022597, 1.037719, 1.074165, 1.094491, 1.054731, 1.072942, 1.066568, 1.076426, 1.065221, 1.06465, 1.074909, 1.078433, 1.088534, 1.097555, 1.102365, 1.095371, 1.096057, 1.102326, 1.111425, 1.108664, 1.104956, 1.101414, 1.100084, 1.098132, 1.098136, 1.083062, 1.092272, 1.089307, 1.093356, 1.097598, 1.082845, 1.077938, 1.086985, 1.108193, 1.128022, 1.1283, 1.118615, 1.109517, 1.093106, 1.114122, 1.124791, 1.135914, 1.120678, 1.122444, 1.115904, 1.12969, 1.132298, 1.125234, 1.123205, 1.125628, 1.132825, 1.130039, 1.129701, 1.156692, 1.180306, 1.127376, 1.114816, 1.146059, 1.162413, 1.20144, 1.207802, 1.182966, 1.175832, 1.166198, 1.166764, 1.157189, 1.173661, 1.181375, 1.173498, 1.1699, 1.166301, 1.143265, 1.155514, 1.152653, 1.175716, 1.173564, 1.183294, 1.182569, 1.190863, 1.184025, 1.18727, 1.171585, 1.174872, 1.186276, 1.18187, 1.175993, 1.207224, 1.192328, 1.199076, 1.213458, 1.20066, 1.241778, 1.243316, 1.244501, 1.231377, 1.228155, 1.221866, 1.220185, 1.225576, 1.217647, 1.220625, 1.220528, 1.247489, 1.246306, 1.249654, 1.246628, 1.23269, 1.230936, 1.241081, 1.250657, 1.254644, 1.268861, 1.277229, 1.287722, 1.29791, 1.308287, 1.296728, 1.301674, 1.30988, 1.313714, 1.31333, 1.322682, 1.317361, 1.314039, 1.246727, 1.253812, 1.254261, 1.288522, 1.29822, 1.311782, 1.30885, 1.326451, 1.336387, 1.333619, 1.342044, 1.364505, 1.322171, 1.326215, 1.32218, 1.315023, 1.315301, 1.31158, 1.324983, 1.332923, 1.319947, 1.315714, 1.299622, 1.29534, 1.292212, 1.274427, 1.28165, 1.289267, 1.294782, 1.316694, 1.312971, 1.306675, 1.309307, 1.302749, 1.30157, 1.297299, 1.300942, 1.306763, 1.305529, 1.305088, 1.306987, 1.300791, 1.300915, 1.304278, 1.307392, 1.318159, 1.315386, 1.321166, 1.325052, 1.31428, 1.320836, 1.314613, 1.319788, 1.325598, 1.324836, 1.30454, 1.304398, 1.311513, 1.317566, 1.318295, 1.331606, 1.333143, 1.335923, 1.340402, 1.350342, 1.344062, 1.347267, 1.333645, 1.3341, 1.332528, 1.341756, 1.335762, 1.341555, 1.362834, 1.375223, 1.369802, 1.377479, 1.378128, 1.377794, 1.369015, 1.361254, 1.356432, 1.371237, 1.372152, 1.373378, 1.37684, 1.385066, 1.387691, 1.398092, 1.399784, 1.408104, 1.405841, 1.404153, 1.405651, 1.403748, 1.427779, 1.484608, 1.466745, 1.489278, 1.558293, 1.557683, 1.59907, 1.55391, 1.566952, 1.496575, 1.553777, 1.531246, 1.505767, 1.536758, 1.624391, 1.597795, 1.588048, 1.605494, 1.623259, 1.629576, 1.64012, 1.641024, 1.645078, 1.639417, 1.631664, 1.621377, 1.634605, 1.632932, 1.680037, 1.664874, 1.664625, 1.61982, 1.644075, 1.643007, 1.595377, 1.620715, 1.6327, 1.641907, 1.63379, 1.647075, 1.669121, 1.661365, 1.677838, 1.675345, 1.68524, 1.686216, 1.67885, 1.668961, 1.709116, 1.704478, 1.707097, 1.711213, 1.719616, 1.720052, 1.690597, 1.683577, 1.625518, 1.621525, 1.678505, 1.627739, 1.625105, 1.646311, 1.637103, 1.642248, 1.658244, 1.689796, 1.681931, 1.693518, 1.723993, 1.732295, 1.716401, 1.71035, 1.69501, 1.687446, 1.701456, 1.709917, 1.67562, 1.679139, 1.659689, 1.678521, 1.727584, 1.736353, 1.758877, 1.752686, 1.769296, 1.748132, 1.751419, 1.734398, 1.773944, 1.786308, 1.785318, 1.777206, 1.783771, 1.814107, 1.798926, 1.820117, 1.816287, 1.785302, 1.779486, 1.787474, 1.788178, 1.776508, 1.7888, 1.784906, 1.787153, 1.793751, 1.882527, 1.803795, 1.746039, 1.823834, 1.829335, 1.81857, 1.810279, 1.83283, 1.843951, 1.844324, 1.863757, 1.822424, 1.88649, 1.897615, 1.89521, 1.911041, 1.989592, 2.077826, 2.068518, 2.161802, 2.173016, 2.130274, 2.167658, 2.1516, 2.163667, 2.158696, 2.147307, 2.146555, 2.133226, 2.091515, 2.083513, 2.028576, 2.087795, 2.13274, 2.117092, 2.097988, 2.091052, 2.058378, 2.073552, 2.084331, 2.046317, 2.044825, 2.058435, 2.06559, 2.084257, 2.081779, 2.088188, 2.087859, 2.105607, 2.090153, 2.085008, 2.082198, 2.085315, 2.09534, 2.095532, 2.077982, 2.083251, 2.093715, 2.093119, 2.080141, 2.083491, 2.08725, 2.092236, 2.07425, 2.061229, 2.059048, 2.030566, 2.013, 2.019493, 2.016998, 2.00524, 1.986438, 1.991441, 1.984341, 1.994534, 1.969397, 2.01222, 2.018363, 1.998886, 1.983367, 1.955928, 1.960143, 1.937511, 1.928299, 1.941919, 1.931001, 1.951819, 1.947211, 1.92479, 1.903607, 1.886049, 1.889801, 1.888252, 1.864375, 1.861482, 1.828286, 1.882839, 1.854004, 1.892973, 1.897446, 1.896391, 1.90169, 1.886703, 1.88565, 1.878838, 1.894686, 1.886438, 1.891304, 1.910303, 1.913137, 1.899036, 1.924839, 1.919497, 1.925689, 1.926045, 1.914862, 1.920936, 1.928026, 1.938411, 1.929209, 1.938141, 1.953685, 1.95323, 1.961446, 1.954088, 1.947031, 1.958229, 1.949354, 1.955299, 1.937686, 1.946208, 1.956463, 1.958597, 1.922807, 1.931133, 1.929482, 1.891115, 1.932254];
-const benchData = [1.0, 1.001128, 0.99767, 0.993466, 0.990549, 0.983495, 0.97379, 0.980639, 0.976447, 0.985257, 0.980618, 0.983557, 0.980844, 0.963642, 0.967385, 0.965382, 0.951942, 0.961044, 0.967489, 0.977619, 0.971526, 0.966291, 0.958082, 0.942412, 0.941999, 0.935731, 0.926903, 0.950867, 0.958911, 0.968485, 0.982007, 0.982755, 0.987794, 0.99647, 1.001991, 1.000472, 1.010388, 1.000862, 1.013239, 1.01908, 1.024819, 1.018962, 1.020967, 1.014154, 1.023485, 1.028292, 1.03311, 1.031912, 1.030952, 1.030433, 1.037799, 1.030715, 1.033991, 1.03908, 1.029838, 1.020892, 1.022372, 1.012972, 1.01926, 1.023224, 1.034979, 1.030948, 1.025175, 1.019544, 1.022959, 1.019301, 1.018361, 1.016848, 1.017213, 0.99783, 1.009334, 1.011444, 1.001708, 1.00177, 1.001408, 1.013307, 1.010367, 1.024691, 1.03268, 1.02982, 1.043129, 1.043116, 1.036649, 1.043399, 1.047157, 1.046542, 1.048338, 1.044776, 1.04916, 1.054008, 1.059424, 1.053144, 1.055113, 1.044766, 1.032713, 1.042096, 1.03869, 1.035791, 1.028264, 1.029603, 1.030503, 1.034506, 1.030888, 1.030878, 1.030963, 1.026856, 1.029201, 1.029226, 1.03118, 1.027827, 1.03137, 1.028541, 1.023564, 1.020287, 1.009709, 1.007007, 1.018482, 1.008268, 1.011761, 1.015672, 1.011457, 1.013067, 1.008905, 1.009835, 1.001244, 1.010907, 1.007645, 1.019727, 1.017611, 1.016712, 1.018421, 1.0206, 1.018412, 1.013758, 1.011228, 0.999043, 0.989643, 0.981673, 0.98944, 0.992205, 0.986281, 1.005033, 1.00291, 0.986186, 0.959951, 0.970804, 0.973386, 0.971455, 0.973779, 0.974928, 0.977907, 0.975014, 0.980889, 0.98769, 0.985584, 0.983651, 0.980831, 0.977948, 0.976806, 0.979569, 0.975053, 0.974178, 0.974041, 0.985347, 0.97421, 0.978424, 0.966366, 0.96953, 0.963672, 0.957082, 0.958433, 0.957247, 0.960079, 0.958518, 0.960407, 0.970128, 0.971576, 0.972675, 0.994415, 0.998688, 1.02685, 1.05848, 1.112061, 1.13922, 1.09849, 1.106127, 1.084722, 1.098962, 1.085203, 1.080864, 1.077732, 1.10123, 1.104607, 1.109089, 1.11127, 1.10227, 1.110568, 1.118887, 1.112005, 1.10927, 1.108307, 1.100678, 1.111592, 1.127292, 1.132508, 1.152366, 1.148797, 1.157215, 1.148498, 1.145434, 1.129076, 1.116774, 1.110181, 1.120082, 1.126814, 1.124935, 1.104819, 1.108438, 1.105543, 1.1199, 1.114469, 1.123517, 1.130777, 1.133449, 1.129993, 1.133412, 1.141353, 1.141613, 1.146752, 1.147961, 1.156004, 1.141255, 1.135123, 1.132095, 1.137007, 1.129865, 1.126394, 1.125984, 1.133132, 1.133047, 1.136584, 1.13505, 1.133076, 1.119488, 1.105531, 1.094271, 1.098439, 1.10415, 1.10369, 1.110758, 1.099259, 1.087395, 1.111388, 1.108454, 1.119505, 1.12308, 1.131322, 1.136312, 1.135283, 1.137221, 1.14796, 1.13561, 1.139654, 1.154331, 1.161665, 1.162888, 1.161022, 1.167057, 1.166489, 1.172626, 1.173646, 1.170651, 1.178859, 1.176173, 1.185906, 1.182777, 1.170759, 1.18127, 1.181018, 1.149721, 1.15426, 1.153606, 1.157836, 1.173409, 1.166658, 1.163261, 1.155089, 1.158056, 1.155508, 1.173012, 1.175503, 1.182619, 1.179641, 1.178233, 1.166477, 1.16936, 1.167276, 1.166793, 1.165387, 1.159088, 1.144893, 1.15105, 1.150597, 1.1393, 1.048557, 1.057605, 1.060266, 1.094647, 1.09633, 1.107311, 1.104736, 1.097446, 1.100985, 1.10139, 1.107664, 1.109206, 1.119329, 1.113928, 1.120981, 1.118028, 1.118027, 1.121755, 1.136321, 1.135267, 1.138463, 1.134031, 1.144576, 1.148087, 1.159649, 1.146863, 1.148649, 1.148054, 1.156129, 1.15738, 1.151237, 1.145747, 1.145863, 1.144462, 1.142301, 1.154304, 1.145339, 1.147438, 1.155414, 1.160244, 1.160806, 1.169119, 1.165061, 1.171972, 1.170643, 1.158508, 1.164325, 1.162297, 1.160525, 1.1516, 1.14778, 1.150757, 1.167739, 1.180237, 1.17721, 1.180219, 1.188978, 1.187664, 1.186331, 1.191613, 1.190286, 1.187338, 1.197753, 1.195568, 1.202088, 1.206342, 1.205194, 1.20957, 1.208395, 1.218578, 1.223954, 1.231877, 1.238002, 1.239756, 1.250083, 1.245581, 1.248182, 1.251143, 1.24761, 1.236496, 1.231022, 1.234664, 1.244078, 1.248387, 1.248287, 1.24592, 1.254745, 1.257267, 1.270786, 1.264983, 1.276542, 1.287088, 1.284575, 1.290628, 1.289309, 1.303703, 1.323404, 1.316697, 1.303704, 1.312566, 1.315961, 1.319027, 1.310416, 1.299956, 1.286578, 1.309328, 1.318003, 1.313425, 1.31681, 1.331816, 1.333141, 1.335193, 1.341392, 1.346902, 1.33865, 1.338449, 1.342181, 1.337877, 1.349032, 1.351387, 1.339502, 1.353776, 1.362435, 1.38161, 1.365373, 1.354683, 1.340411, 1.357958, 1.360268, 1.336668, 1.350631, 1.364675, 1.360161, 1.361479, 1.371521, 1.386248, 1.378913, 1.393841, 1.382542, 1.379174, 1.387155, 1.370001, 1.368275, 1.382408, 1.375921, 1.386833, 1.38213, 1.383498, 1.392203, 1.372129, 1.368727, 1.351506, 1.350557, 1.34988, 1.317258, 1.326925, 1.337751, 1.345159, 1.345925, 1.351616, 1.358724, 1.352147, 1.348784, 1.352982, 1.361408, 1.363162, 1.351216, 1.35465, 1.343006, 1.353525, 1.346701, 1.331339, 1.344392, 1.338978, 1.349416, 1.360309, 1.357249, 1.364551, 1.368419, 1.373679, 1.367633, 1.36878, 1.366543, 1.390955, 1.409753, 1.411646, 1.407274, 1.419029, 1.438977, 1.433112, 1.437774, 1.432447, 1.42667, 1.425315, 1.419846, 1.423736, 1.434399, 1.445071, 1.438708, 1.440899, 1.4512, 1.458401, 1.443987, 1.399897, 1.430886, 1.437949, 1.421692, 1.415099, 1.440008, 1.44384, 1.44498, 1.45102, 1.440484, 1.451571, 1.459218, 1.460308, 1.465466, 1.454755, 1.426457, 1.40745, 1.422415, 1.433486, 1.417113, 1.433619, 1.436455, 1.431538, 1.420012, 1.418194, 1.404603, 1.413603, 1.385297, 1.370543, 1.318849, 1.347569, 1.36598, 1.349147, 1.357875, 1.349712, 1.335703, 1.366799, 1.347712, 1.338393, 1.342948, 1.391776, 1.378777, 1.391848, 1.389782, 1.403916, 1.405453, 1.422125, 1.416029, 1.424341, 1.425717, 1.429157, 1.420387, 1.41171, 1.417547, 1.411389, 1.423151, 1.420722, 1.444027, 1.456907, 1.453814, 1.463262, 1.452458, 1.464984, 1.445634, 1.430114, 1.418137, 1.424841, 1.417597, 1.409062, 1.418448, 1.429237, 1.426455, 1.416383, 1.408826, 1.411372, 1.41611, 1.416127, 1.412539, 1.399734, 1.389031, 1.356877, 1.373046, 1.359024, 1.34887, 1.367098, 1.394192, 1.388345, 1.388455, 1.384027, 1.398218, 1.369894, 1.375231, 1.377723, 1.350566, 1.368139, 1.373533, 1.382339, 1.366212, 1.388116, 1.387955, 1.370199, 1.362324, 1.370502, 1.374364, 1.347389, 1.357721, 1.369433, 1.358093, 1.316618, 1.326714, 1.347876, 1.345325, 1.354467, 1.32652, 1.346544, 1.325868, 1.339755, 1.32928, 1.353099, 1.352911, 1.365808, 1.384606, 1.38018, 1.38887, 1.398547, 1.389661, 1.392269, 1.386013, 1.385742, 1.399822, 1.394817, 1.365588, 1.378082, 1.373294, 1.366507, 1.374156];
+const navDates = ["2023-07-13", "2023-07-14", "2023-07-17", "2023-07-18", "2023-07-19", "2023-07-20", "2023-07-21", "2023-07-24", "2023-07-25", "2023-07-26", "2023-07-27", "2023-07-28", "2023-07-31", "2023-08-01", "2023-08-02", "2023-08-03", "2023-08-04", "2023-08-07", "2023-08-08", "2023-08-09", "2023-08-10", "2023-08-11", "2023-08-14", "2023-08-15", "2023-08-16", "2023-08-17", "2023-08-18", "2023-08-21", "2023-08-22", "2023-08-23", "2023-08-24", "2023-08-25", "2023-08-28", "2023-08-29", "2023-08-30", "2023-08-31", "2023-09-01", "2023-09-04", "2023-09-05", "2023-09-06", "2023-09-07", "2023-09-08", "2023-09-11", "2023-09-12", "2023-09-13", "2023-09-14", "2023-09-15", "2023-09-18", "2023-09-19", "2023-09-20", "2023-09-21", "2023-09-22", "2023-09-25", "2023-09-26", "2023-09-27", "2023-09-28", "2023-10-09", "2023-10-10", "2023-10-11", "2023-10-12", "2023-10-13", "2023-10-16", "2023-10-17", "2023-10-18", "2023-10-19", "2023-10-20", "2023-10-23", "2023-10-24", "2023-10-25", "2023-10-26", "2023-10-27", "2023-10-30", "2023-10-31", "2023-11-01", "2023-11-02", "2023-11-03", "2023-11-06", "2023-11-07", "2023-11-08", "2023-11-09", "2023-11-10", "2023-11-13", "2023-11-14", "2023-11-15", "2023-11-16", "2023-11-17", "2023-11-20", "2023-11-21", "2023-11-22", "2023-11-23", "2023-11-24", "2023-11-27", "2023-11-28", "2023-11-29", "2023-11-30", "2023-12-01", "2023-12-04", "2023-12-05", "2023-12-06", "2023-12-07", "2023-12-08", "2023-12-11", "2023-12-12", "2023-12-13", "2023-12-14", "2023-12-15", "2023-12-18", "2023-12-19", "2023-12-20", "2023-12-21", "2023-12-22", "2023-12-25", "2023-12-26", "2023-12-27", "2023-12-28", "2023-12-29", "2024-01-02", "2024-01-03", "2024-01-04", "2024-01-05", "2024-01-08", "2024-01-09", "2024-01-10", "2024-01-11", "2024-01-12", "2024-01-15", "2024-01-16", "2024-01-17", "2024-01-18", "2024-01-19", "2024-01-22", "2024-01-23", "2024-01-24", "2024-01-25", "2024-01-26", "2024-01-29", "2024-01-30", "2024-01-31", "2024-02-01", "2024-02-02", "2024-02-05", "2024-02-06", "2024-02-07", "2024-02-08", "2024-02-19", "2024-02-20", "2024-02-21", "2024-02-22", "2024-02-23", "2024-02-26", "2024-02-27", "2024-02-28", "2024-02-29", "2024-03-01", "2024-03-04", "2024-03-05", "2024-03-06", "2024-03-07", "2024-03-08", "2024-03-11", "2024-03-12", "2024-03-13", "2024-03-14", "2024-03-15", "2024-03-18", "2024-03-19", "2024-03-20", "2024-03-21", "2024-03-22", "2024-03-25", "2024-03-26", "2024-03-27", "2024-03-28", "2024-03-29", "2024-04-01", "2024-04-02", "2024-04-03", "2024-04-08", "2024-04-09", "2024-04-10", "2024-04-11", "2024-04-12", "2024-04-15", "2024-04-16", "2024-04-17", "2024-04-18", "2024-04-19", "2024-04-22", "2024-04-23", "2024-04-24", "2024-04-25", "2024-04-26", "2024-04-29", "2024-04-30", "2024-05-06", "2024-05-07", "2024-05-08", "2024-05-09", "2024-05-10", "2024-05-13", "2024-05-14", "2024-05-15", "2024-05-16", "2024-05-17", "2024-05-20", "2024-05-21", "2024-05-22", "2024-05-23", "2024-05-24", "2024-05-27", "2024-05-28", "2024-05-29", "2024-05-30", "2024-05-31", "2024-06-03", "2024-06-04", "2024-06-05", "2024-06-06", "2024-06-07", "2024-06-11", "2024-06-12", "2024-06-13", "2024-06-14", "2024-06-17", "2024-06-18", "2024-06-19", "2024-06-20", "2024-06-21", "2024-06-24", "2024-06-25", "2024-06-26", "2024-06-27", "2024-06-28", "2024-07-01", "2024-07-02", "2024-07-03", "2024-07-04", "2024-07-05", "2024-07-08", "2024-07-09", "2024-07-10", "2024-07-11", "2024-07-12", "2024-07-15", "2024-07-16", "2024-07-17", "2024-07-18", "2024-07-19", "2024-07-22", "2024-07-23", "2024-07-24", "2024-07-25", "2024-07-26", "2024-07-29", "2024-07-30", "2024-07-31", "2024-08-01", "2024-08-02", "2024-08-05", "2024-08-06", "2024-08-07", "2024-08-08", "2024-08-09", "2024-08-12", "2024-08-13", "2024-08-14", "2024-08-15", "2024-08-16", "2024-08-19", "2024-08-20", "2024-08-21", "2024-08-22", "2024-08-23", "2024-08-26", "2024-08-27", "2024-08-28", "2024-08-29", "2024-08-30", "2024-09-02", "2024-09-03", "2024-09-04", "2024-09-05", "2024-09-06", "2024-09-09", "2024-09-10", "2024-09-11", "2024-09-12", "2024-09-13", "2024-09-18", "2024-09-19", "2024-09-20", "2024-09-23", "2024-09-24", "2024-09-25", "2024-09-26", "2024-09-27", "2024-09-30", "2024-10-08", "2024-10-09", "2024-10-10", "2024-10-11", "2024-10-14", "2024-10-15", "2024-10-16", "2024-10-17", "2024-10-18", "2024-10-21", "2024-10-22", "2024-10-23", "2024-10-24", "2024-10-25", "2024-10-28", "2024-10-29", "2024-10-30", "2024-10-31", "2024-11-01", "2024-11-04", "2024-11-05", "2024-11-06", "2024-11-07", "2024-11-08", "2024-11-11", "2024-11-12", "2024-11-13", "2024-11-14", "2024-11-15", "2024-11-18", "2024-11-19", "2024-11-20", "2024-11-21", "2024-11-22", "2024-11-25", "2024-11-26", "2024-11-27", "2024-11-28", "2024-11-29", "2024-12-02", "2024-12-03", "2024-12-04", "2024-12-05", "2024-12-06", "2024-12-09", "2024-12-10", "2024-12-11", "2024-12-12", "2024-12-13", "2024-12-16", "2024-12-17", "2024-12-18", "2024-12-19", "2024-12-20", "2024-12-23", "2024-12-24", "2024-12-25", "2024-12-26", "2024-12-27", "2024-12-30", "2024-12-31", "2025-01-02", "2025-01-03", "2025-01-06", "2025-01-07", "2025-01-08", "2025-01-09", "2025-01-10", "2025-01-13", "2025-01-14", "2025-01-15", "2025-01-16", "2025-01-17", "2025-01-20", "2025-01-21", "2025-01-22", "2025-01-23", "2025-01-24", "2025-01-27", "2025-02-05", "2025-02-06", "2025-02-07", "2025-02-10", "2025-02-11", "2025-02-12", "2025-02-13", "2025-02-14", "2025-02-17", "2025-02-18", "2025-02-19", "2025-02-20", "2025-02-21", "2025-02-24", "2025-02-25", "2025-02-26", "2025-02-27", "2025-02-28", "2025-03-03", "2025-03-04", "2025-03-05", "2025-03-06", "2025-03-07", "2025-03-10", "2025-03-11", "2025-03-12", "2025-03-13", "2025-03-14", "2025-03-17", "2025-03-18", "2025-03-19", "2025-03-20", "2025-03-21", "2025-03-24", "2025-03-25", "2025-03-26", "2025-03-27", "2025-03-28", "2025-03-31", "2025-04-01", "2025-04-02", "2025-04-03", "2025-04-07", "2025-04-08", "2025-04-09", "2025-04-10", "2025-04-11", "2025-04-14", "2025-04-15", "2025-04-16", "2025-04-17", "2025-04-18", "2025-04-21", "2025-04-22", "2025-04-23", "2025-04-24", "2025-04-25", "2025-04-28", "2025-04-29", "2025-04-30", "2025-05-06", "2025-05-07", "2025-05-08", "2025-05-09", "2025-05-12", "2025-05-13", "2025-05-14", "2025-05-15", "2025-05-16", "2025-05-19", "2025-05-20", "2025-05-21", "2025-05-22", "2025-05-23", "2025-05-26", "2025-05-27", "2025-05-28", "2025-05-29", "2025-05-30", "2025-06-03", "2025-06-04", "2025-06-05", "2025-06-06", "2025-06-09", "2025-06-10", "2025-06-11", "2025-06-12", "2025-06-13", "2025-06-16", "2025-06-17", "2025-06-18", "2025-06-19", "2025-06-20", "2025-06-23", "2025-06-24", "2025-06-25", "2025-06-26", "2025-06-27", "2025-06-30", "2025-07-01", "2025-07-02", "2025-07-03", "2025-07-04", "2025-07-07", "2025-07-08", "2025-07-09", "2025-07-10", "2025-07-11", "2025-07-14", "2025-07-15", "2025-07-16", "2025-07-17", "2025-07-18", "2025-07-21", "2025-07-22", "2025-07-23", "2025-07-24", "2025-07-25", "2025-07-28", "2025-07-29", "2025-07-30", "2025-07-31", "2025-08-01", "2025-08-04", "2025-08-05", "2025-08-06", "2025-08-07", "2025-08-08", "2025-08-11", "2025-08-12", "2025-08-13", "2025-08-14", "2025-08-15", "2025-08-18", "2025-08-19", "2025-08-20", "2025-08-21", "2025-08-22", "2025-08-25", "2025-08-26", "2025-08-27", "2025-08-28", "2025-08-29", "2025-09-01", "2025-09-02", "2025-09-03", "2025-09-04", "2025-09-05", "2025-09-08", "2025-09-09", "2025-09-10", "2025-09-11", "2025-09-12", "2025-09-15", "2025-09-16", "2025-09-17", "2025-09-18", "2025-09-19", "2025-09-22", "2025-09-23", "2025-09-24", "2025-09-25", "2025-09-26", "2025-09-29", "2025-09-30", "2025-10-09", "2025-10-10", "2025-10-13", "2025-10-14", "2025-10-15", "2025-10-16", "2025-10-17", "2025-10-20", "2025-10-21", "2025-10-22", "2025-10-23", "2025-10-24", "2025-10-27", "2025-10-28", "2025-10-29", "2025-10-30", "2025-10-31", "2025-11-03", "2025-11-04", "2025-11-05", "2025-11-06", "2025-11-07", "2025-11-10", "2025-11-11", "2025-11-12", "2025-11-13", "2025-11-14", "2025-11-17", "2025-11-18", "2025-11-19", "2025-11-20", "2025-11-21", "2025-11-24", "2025-11-25", "2025-11-26", "2025-11-27", "2025-11-28", "2025-12-01", "2025-12-02", "2025-12-03", "2025-12-04", "2025-12-05", "2025-12-08", "2025-12-09", "2025-12-10", "2025-12-11", "2025-12-12", "2025-12-15", "2025-12-16", "2025-12-17", "2025-12-18", "2025-12-19", "2025-12-22", "2025-12-23", "2025-12-24", "2025-12-25", "2025-12-26", "2025-12-29", "2025-12-30", "2025-12-31", "2026-01-05", "2026-01-06", "2026-01-07", "2026-01-08", "2026-01-09", "2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-19", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27", "2026-03-30", "2026-03-31", "2026-04-01", "2026-04-02", "2026-04-03", "2026-04-07", "2026-04-08", "2026-04-09", "2026-04-10", "2026-04-13", "2026-04-14", "2026-04-15", "2026-04-16", "2026-04-17", "2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-18", "2026-05-19", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-25", "2026-05-26", "2026-05-27", "2026-05-28", "2026-05-29", "2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05", "2026-06-08", "2026-06-09", "2026-06-10", "2026-06-11", "2026-06-12", "2026-06-15", "2026-06-16", "2026-06-17", "2026-06-18", "2026-06-22", "2026-06-23", "2026-06-24", "2026-06-25", "2026-06-26", "2026-06-29", "2026-06-30", "2026-07-01", "2026-07-02", "2026-07-03", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-07", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-28", "2026-09-29", "2026-09-30", "2026-10-08", "2026-10-09", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-26", "2026-10-27", "2026-10-28", "2026-10-29", "2026-10-30", "2026-11-02", "2026-11-03"];
+const navData = [1.0, 0.99985, 0.996947, 0.998694, 1.0016, 0.998123, 0.998704, 0.99696, 1.023748, 1.023748, 1.01864, 1.065409, 1.060492, 1.057747, 1.06325, 1.081866, 1.088324, 1.088859, 1.083511, 1.081899, 1.093203, 1.068696, 1.064334, 1.074189, 1.075817, 1.07365, 1.067136, 1.04966, 1.057435, 1.043101, 1.052045, 1.054262, 1.067537, 1.065352, 1.048381, 1.040034, 1.041156, 1.044518, 1.039491, 1.037807, 1.034434, 1.037254, 1.044566, 1.039539, 1.033365, 1.035623, 1.033933, 1.032804, 1.033369, 1.030546, 1.027715, 1.042478, 1.03128, 1.030714, 1.032413, 1.028455, 1.021644, 1.020502, 1.018785, 1.024515, 1.019957, 1.018812, 1.025688, 1.02455, 1.02398, 1.02341, 1.012001, 1.027002, 1.026433, 1.026433, 1.029847, 1.026445, 1.028151, 1.027015, 1.023035, 1.027602, 1.048063, 1.049735, 1.044169, 1.042491, 1.043051, 1.04081, 1.04867, 1.048113, 1.044768, 1.045327, 1.04365, 1.04421, 1.038614, 1.039739, 1.035243, 1.027905, 1.027336, 1.022786, 1.023928, 1.027353, 1.026784, 1.020523, 1.01766, 1.019957, 1.018238, 1.024552, 1.023981, 1.017132, 1.015408, 1.015983, 1.014258, 1.013681, 0.999843, 1.001012, 0.998676, 0.994578, 0.989876, 0.993419, 1.004601, 1.004601, 0.998781, 1.000537, 0.995862, 0.991751, 0.981728, 0.980536, 0.977554, 0.98234, 0.977577, 0.976979, 0.982966, 0.97404, 0.980646, 0.975278, 0.963881, 0.972986, 0.995837, 0.999364, 0.998779, 0.989401, 0.983483, 0.979316, 0.977522, 0.967939, 0.957049, 0.984586, 0.989943, 0.994088, 0.989961, 0.995881, 1.000001, 1.004691, 1.005858, 1.001196, 1.009978, 1.001852, 1.01297, 1.015865, 1.008938, 1.006613, 1.006613, 1.000206, 1.001378, 1.00782, 1.010147, 1.005503, 1.000254, 1.002599, 1.013713, 1.004455, 1.007375, 1.00854, 1.000979, 0.985741, 0.986932, 0.978909, 0.995227, 1.006907, 1.005769, 0.998338, 0.984155, 0.984155, 0.988545, 0.98705, 0.974522, 0.979787, 0.969227, 0.950399, 0.953028, 0.953495, 0.944145, 0.947791, 0.941936, 0.958589, 0.95514, 0.958428, 0.956502, 0.957532, 0.961073, 0.956196, 0.953647, 0.955424, 0.971514, 0.976684, 0.97492, 0.979658, 0.985295, 0.993838, 0.999566, 0.996891, 0.993403, 0.975767, 0.976621, 0.9848, 0.985035, 0.989423, 0.975334, 0.97426, 0.971088, 0.976209, 0.959309, 0.964696, 0.97078, 0.953095, 0.953014, 0.948557, 0.951647, 0.937986, 0.94024, 0.950144, 0.95268, 0.951913, 0.952201, 0.951775, 0.952546, 0.94831, 0.968309, 0.97608, 0.974991, 0.977464, 0.97903, 0.975208, 0.98426, 0.994201, 0.986295, 0.99566, 0.989543, 0.995262, 0.995137, 0.994577, 0.991307, 0.996607, 0.983502, 0.975616, 0.982267, 0.96142, 0.969443, 0.986778, 0.984933, 0.986979, 0.996584, 0.972272, 0.907381, 0.921181, 0.93085, 0.931583, 0.931311, 0.922588, 0.910275, 0.90642, 0.91639, 0.911439, 0.91103, 0.909058, 0.908547, 0.905749, 0.904782, 0.909064, 0.896664, 0.89633, 0.892354, 0.901889, 0.89122, 0.887738, 0.873834, 0.873126, 0.863644, 0.846679, 0.846125, 0.835341, 0.838092, 0.837178, 0.836978, 0.849467, 0.847431, 0.85411, 0.90005, 0.911877, 0.941629, 0.961449, 1.00273, 1.025535, 0.988173, 1.005393, 0.99926, 1.008725, 0.998062, 0.997736, 1.007154, 1.010555, 1.019867, 1.028319, 1.032924, 1.026308, 1.027122, 1.024892, 1.022037, 1.010208, 1.00307, 0.996476, 1.002379, 1.006429, 1.017176, 1.009117, 1.00942, 1.010757, 1.014608, 1.018602, 1.004716, 1.000261, 1.008751, 1.028257, 1.047284, 1.048163, 1.037654, 1.029175, 1.001917, 1.028929, 1.019137, 1.035644, 1.038983, 1.050969, 1.05027, 1.059274, 1.053633, 1.055199, 1.053973, 1.053363, 1.060449, 1.059534, 1.061744, 1.057782, 1.054546, 1.028487, 1.022179, 1.038177, 1.03649, 1.043761, 1.041598, 1.039556, 1.033287, 1.024821, 1.025318, 1.016903, 1.031379, 1.038157, 1.031235, 1.028073, 1.024911, 1.004668, 1.015432, 1.012917, 1.033185, 1.031294, 1.039844, 1.039207, 1.046496, 1.040486, 1.043338, 1.029555, 1.032443, 1.042464, 1.038749, 1.032109, 1.037334, 1.037378, 1.046526, 1.05146, 1.046359, 1.056687, 1.058017, 1.059161, 1.047863, 1.045009, 1.039876, 1.038223, 1.042992, 1.036285, 1.038757, 1.038706, 1.061681, 1.060494, 1.063476, 1.060704, 1.048993, 1.047627, 1.056061, 1.06436, 1.067763, 1.079821, 1.086868, 1.095754, 1.104341, 1.113341, 1.103393, 1.107214, 1.114415, 1.117771, 1.11745, 1.125325, 1.120733, 1.117889, 1.060727, 1.066681, 1.067148, 1.096174, 1.104299, 1.115892, 1.113616, 1.125785, 1.129675, 1.125224, 1.138245, 1.163754, 1.12054, 1.12893, 1.12344, 1.113414, 1.118983, 1.113937, 1.129454, 1.136202, 1.125108, 1.121318, 1.107611, 1.104248, 1.105867, 1.087989, 1.09419, 1.100713, 1.105395, 1.124094, 1.120932, 1.115416, 1.117677, 1.11209, 1.110959, 1.107373, 1.110631, 1.115409, 1.114339, 1.114053, 1.11574, 1.110354, 1.110552, 1.113391, 1.115989, 1.125369, 1.122877, 1.128213, 1.132738, 1.121928, 1.132341, 1.124268, 1.130279, 1.135648, 1.135166, 1.127056, 1.128122, 1.132926, 1.132574, 1.143153, 1.158704, 1.165336, 1.186216, 1.184108, 1.197845, 1.186523, 1.186979, 1.184508, 1.177946, 1.175216, 1.183071, 1.186698, 1.190164, 1.18795, 1.183563, 1.178032, 1.176632, 1.17612, 1.176201, 1.168706, 1.162081, 1.157964, 1.170603, 1.171384, 1.172431, 1.175386, 1.182409, 1.18465, 1.193529, 1.194973, 1.202075, 1.200144, 1.198702, 1.199982, 1.198536, 1.200505, 1.220182, 1.216206, 1.207888, 1.210237, 1.209155, 1.209854, 1.21166, 1.204629, 1.196043, 1.210173, 1.223507, 1.21432, 1.210244, 1.223693, 1.222629, 1.226435, 1.234297, 1.251855, 1.256562, 1.261674, 1.264221, 1.267539, 1.262418, 1.262516, 1.255767, 1.262981, 1.266029, 1.302796, 1.290997, 1.290803, 1.25606, 1.274868, 1.27404, 1.237106, 1.256754, 1.266048, 1.273187, 1.266893, 1.277195, 1.29429, 1.288275, 1.301049, 1.299068, 1.306508, 1.307273, 1.301803, 1.293911, 1.325042, 1.321446, 1.323476, 1.326668, 1.333182, 1.33352, 1.310685, 1.305242, 1.26023, 1.257134, 1.30131, 1.261952, 1.25991, 1.276351, 1.269212, 1.273392, 1.282089, 1.299779, 1.309679, 1.307926, 1.331462, 1.337874, 1.325599, 1.320925, 1.309078, 1.303237, 1.314057, 1.320591, 1.294103, 1.29682, 1.281799, 1.296343, 1.334235, 1.341007, 1.358403, 1.353622, 1.36645, 1.350105, 1.352643, 1.339498, 1.37004, 1.379589, 1.378824, 1.372559, 1.37812, 1.404507, 1.390293, 1.405186, 1.399709, 1.374302, 1.368814, 1.377489, 1.373517, 1.363525, 1.371934, 1.367389, 1.36493, 1.369969, 1.46567, 1.390882, 1.331915, 1.381285, 1.393542, 1.404463, 1.398464, 1.415885, 1.424476, 1.424764, 1.439777, 1.407846, 1.457338, 1.465933, 1.464074, 1.476304, 1.536986, 1.605148, 1.597957, 1.67002, 1.678431, 1.673243, 1.673341, 1.687065, 1.696527, 1.692629, 1.683699, 1.683109, 1.679991, 1.66447, 1.658101, 1.614381, 1.661509, 1.697277, 1.684824, 1.669621, 1.664101, 1.638098, 1.650422, 1.649605, 1.637315, 1.638095, 1.656161, 1.658089, 1.692643, 1.69542, 1.706665, 1.731071, 1.742122, 1.720446, 1.726025, 1.725212, 1.721956, 1.713418, 1.713216, 1.708694, 1.707112, 1.710557, 1.717773, 1.720028, 1.740076, 1.74441, 1.74417, 1.731854, 1.72473, 1.710435, 1.690072, 1.6687, 1.673041, 1.666015, 1.653684, 1.643909, 1.636627, 1.635807, 1.623072, 1.609047, 1.649967, 1.669761, 1.660774, 1.639515, 1.617427, 1.615533, 1.588905, 1.585213, 1.576592, 1.56551, 1.582161, 1.607768, 1.597764, 1.585582, 1.575764, 1.576177, 1.566287, 1.56218, 1.553424, 1.5225, 1.561729, 1.544311, 1.575885, 1.581952, 1.590332, 1.60031, 1.58504, 1.58198, 1.575039, 1.584241, 1.575064, 1.597015, 1.604564, 1.592115, 1.583337, 1.616518, 1.612964, 1.61906, 1.626462, 1.613036, 1.62748, 1.624838, 1.642878, 1.649799, 1.693684, 1.713807, 1.723689, 1.73704, 1.733029, 1.7305, 1.735991, 1.742886, 1.740706, 1.733203, 1.735837, 1.747001, 1.756032, 1.69923, 1.701031, 1.704259, 1.68612, 1.722799, 1.719599, 1.725301, 1.717871, 1.710746, 1.706986, 1.685567, 1.690608, 1.704133, 1.696581, 1.705151, 1.70959, 1.698627, 1.689962, 1.686173, 1.682536, 1.680242, 1.679138, 1.693373, 1.709366, 1.712096, 1.7026, 1.69066, 1.683208, 1.68789, 1.703658, 1.721767, 1.711085, 1.738125, 1.731848, 1.73358, 1.692596, 1.717551, 1.720911, 1.700043, 1.670913, 1.634011, 1.622242, 1.640651, 1.643674, 1.633623, 1.60392, 1.635714, 1.65158, 1.690072];
+const benchData = [1.0, 0.999282, 0.99639, 0.995018, 0.996107, 0.989613, 0.988514, 0.987445, 1.000054, 0.998468, 0.999376, 1.009802, 1.015474, 1.014187, 1.007758, 1.009842, 1.012855, 1.008639, 1.005932, 1.00267, 1.003874, 0.993707, 0.99138, 0.990881, 0.983416, 0.987031, 0.976096, 0.970956, 0.976475, 0.967872, 0.975714, 0.966195, 0.974074, 0.985045, 0.986847, 0.984144, 0.986353, 0.994645, 0.99067, 0.988708, 0.979356, 0.977276, 0.983251, 0.984001, 0.97818, 0.979275, 0.979968, 0.979142, 0.975416, 0.971331, 0.963374, 0.973463, 0.970405, 0.966627, 0.969503, 0.969019, 0.966816, 0.964606, 0.969291, 0.976458, 0.969029, 0.962925, 0.965779, 0.959538, 0.949051, 0.94356, 0.934376, 0.940268, 0.944283, 0.941634, 0.951725, 0.957036, 0.952692, 0.952146, 0.95142, 0.960133, 0.971909, 0.969499, 0.969484, 0.971099, 0.965706, 0.968975, 0.971561, 0.97922, 0.973657, 0.973807, 0.97556, 0.975125, 0.967794, 0.972505, 0.968346, 0.966325, 0.967993, 0.962507, 0.96425, 0.964985, 0.961249, 0.947435, 0.952471, 0.949632, 0.952871, 0.957051, 0.959199, 0.952741, 0.954271, 0.953924, 0.949262, 0.949783, 0.945408, 0.947252, 0.942191, 0.944939, 0.941583, 0.945671, 0.956168, 0.957192, 0.953859, 0.949861, 0.946845, 0.939982, 0.930482, 0.937027, 0.932918, 0.941522, 0.936923, 0.939711, 0.937045, 0.920209, 0.923859, 0.921844, 0.908581, 0.917351, 0.923821, 0.933912, 0.928073, 0.923032, 0.914786, 0.899529, 0.899159, 0.893014, 0.884353, 0.907882, 0.915929, 0.925185, 0.938432, 0.939046, 0.944275, 0.952777, 0.958147, 0.956453, 0.966175, 0.956846, 0.968933, 0.974677, 0.980154, 0.974541, 0.976409, 0.969889, 0.978815, 0.983502, 0.988409, 0.987135, 0.986172, 0.985819, 0.992858, 0.986221, 0.989288, 0.994258, 0.98518, 0.97645, 0.977824, 0.96863, 0.974727, 0.978656, 0.990199, 0.986216, 0.980776, 0.975055, 0.978362, 0.974705, 0.973884, 0.972366, 0.972989, 0.954088, 0.965343, 0.967443, 0.957953, 0.958, 0.957559, 0.969121, 0.966208, 0.980155, 0.987982, 0.985137, 0.998277, 0.998281, 0.992003, 0.998475, 1.002109, 1.001303, 1.002982, 0.999505, 1.003824, 1.008653, 1.014019, 1.007876, 1.009782, 0.9996, 0.987822, 0.996956, 0.993554, 0.990839, 0.983384, 0.984791, 0.985466, 0.989355, 0.985676, 0.985577, 0.985612, 0.981515, 0.983831, 0.98373, 0.985629, 0.98232, 0.985649, 0.982841, 0.977992, 0.974647, 0.964367, 0.96169, 0.972853, 0.962893, 0.966034, 0.969957, 0.965969, 0.96742, 0.963196, 0.964018, 0.955482, 0.964853, 0.961569, 0.973465, 0.971486, 0.970617, 0.972286, 0.974416, 0.972298, 0.968076, 0.965355, 0.953264, 0.94415, 0.936446, 0.94399, 0.946467, 0.940777, 0.959157, 0.95689, 0.940749, 0.9157, 0.926148, 0.928698, 0.926973, 0.929052, 0.930144, 0.932947, 0.929941, 0.93563, 0.942139, 0.940061, 0.937893, 0.935064, 0.932062, 0.931011, 0.93364, 0.929275, 0.928269, 0.928326, 0.939568, 0.928508, 0.932683, 0.921032, 0.924058, 0.918157, 0.911618, 0.912981, 0.911758, 0.91426, 0.912607, 0.914357, 0.923978, 0.925408, 0.92658, 0.948236, 0.952564, 0.98068, 1.012192, 1.064846, 1.091399, 1.050943, 1.05845, 1.037358, 1.05138, 1.037684, 1.033505, 1.030216, 1.05322, 1.056501, 1.060885, 1.063101, 1.054192, 1.062326, 1.070851, 1.063775, 1.061063, 1.060197, 1.053027, 1.063561, 1.079184, 1.084123, 1.104144, 1.100435, 1.108446, 1.099921, 1.096957, 1.080959, 1.068995, 1.062654, 1.072104, 1.078693, 1.076898, 1.057068, 1.060593, 1.057692, 1.071764, 1.066383, 1.075316, 1.082472, 1.08494, 1.081589, 1.084915, 1.092795, 1.093012, 1.098123, 1.099428, 1.107354, 1.092742, 1.086639, 1.08369, 1.08851, 1.081435, 1.077987, 1.077373, 1.08444, 1.084224, 1.087675, 1.086169, 1.084278, 1.071039, 1.057227, 1.046231, 1.049957, 1.055546, 1.054959, 1.061645, 1.050365, 1.039061, 1.062578, 1.059631, 1.070223, 1.073722, 1.081658, 1.086287, 1.085084, 1.087021, 1.097385, 1.085556, 1.089357, 1.103562, 1.110871, 1.112077, 1.110233, 1.116166, 1.115845, 1.121754, 1.122719, 1.119611, 1.127574, 1.12493, 1.134409, 1.131529, 1.119831, 1.130316, 1.130133, 1.099899, 1.104263, 1.103529, 1.10759, 1.122802, 1.116527, 1.113269, 1.105681, 1.10845, 1.106139, 1.123356, 1.125738, 1.132449, 1.12948, 1.127966, 1.116514, 1.119324, 1.117391, 1.116908, 1.115462, 1.109292, 1.095477, 1.101471, 1.100987, 1.090364, 1.00216, 1.011218, 1.013983, 1.047055, 1.048576, 1.059111, 1.056582, 1.049611, 1.053152, 1.053451, 1.059422, 1.060819, 1.070497, 1.065249, 1.07206, 1.069199, 1.069177, 1.072711, 1.086848, 1.085859, 1.088977, 1.084662, 1.094858, 1.098256, 1.109465, 1.097018, 1.098648, 1.098001, 1.105744, 1.107026, 1.100993, 1.095651, 1.095616, 1.094248, 1.092225, 1.103797, 1.095073, 1.09695, 1.10465, 1.109348, 1.109929, 1.117811, 1.113821, 1.120538, 1.119008, 1.107106, 1.112778, 1.110841, 1.109178, 1.100378, 1.09696, 1.09975, 1.116109, 1.12825, 1.125205, 1.128106, 1.136564, 1.135333, 1.134246, 1.139249, 1.138037, 1.13524, 1.145381, 1.143304, 1.149711, 1.153976, 1.152828, 1.156782, 1.155755, 1.165605, 1.170912, 1.178738, 1.185265, 1.186795, 1.196965, 1.19239, 1.194646, 1.197634, 1.194329, 1.183246, 1.177911, 1.181455, 1.190669, 1.194958, 1.194861, 1.192493, 1.201149, 1.203561, 1.216524, 1.210824, 1.221997, 1.232257, 1.229887, 1.23604, 1.234763, 1.248685, 1.268132, 1.261624, 1.248677, 1.257097, 1.260626, 1.263528, 1.255093, 1.244738, 1.231839, 1.253829, 1.262358, 1.257922, 1.261179, 1.275769, 1.276982, 1.278972, 1.284974, 1.290244, 1.282014, 1.281907, 1.285317, 1.281063, 1.291853, 1.294033, 1.282497, 1.296404, 1.304702, 1.32326, 1.307719, 1.297395, 1.284004, 1.300936, 1.303232, 1.280392, 1.293875, 1.307361, 1.302884, 1.304358, 1.313706, 1.328003, 1.320832, 1.335169, 1.324359, 1.321254, 1.329099, 1.312468, 1.310857, 1.324505, 1.318242, 1.329168, 1.324563, 1.325835, 1.334381, 1.314892, 1.311681, 1.294911, 1.293911, 1.293138, 1.261449, 1.270644, 1.281085, 1.288177, 1.288893, 1.294435, 1.301359, 1.294873, 1.291519, 1.295329, 1.303504, 1.304985, 1.293225, 1.296614, 1.285277, 1.295403, 1.28898, 1.27412, 1.286659, 1.281512, 1.291655, 1.302074, 1.299008, 1.306052, 1.309847, 1.314865, 1.308978, 1.310003, 1.307731, 1.33143, 1.349661, 1.35155, 1.347355, 1.358721, 1.378225, 1.372336, 1.376725, 1.371462, 1.365743, 1.364493, 1.359419, 1.362985, 1.37329, 1.383549, 1.377415, 1.379243, 1.389326, 1.397449, 1.382974, 1.340417, 1.370315, 1.377716, 1.361993, 1.355428, 1.379429, 1.382969, 1.384134, 1.389801, 1.379528, 1.390159, 1.397703, 1.398631, 1.403849, 1.393411, 1.366184, 1.347563, 1.361921, 1.37271, 1.357015, 1.372836, 1.375561, 1.371027, 1.36002, 1.358283, 1.345103, 1.353652, 1.326207, 1.311851, 1.261784, 1.289525, 1.307297, 1.290916, 1.299493, 1.291669, 1.278071, 1.308034, 1.289726, 1.280537, 1.284945, 1.332013, 1.319324, 1.331862, 1.32994, 1.343524, 1.34496, 1.361087, 1.354986, 1.362947, 1.364275, 1.367646, 1.359454, 1.351196, 1.35652, 1.350707, 1.362247, 1.359816, 1.382085, 1.394285, 1.391282, 1.400342, 1.38972, 1.401541, 1.382916, 1.367711, 1.356187, 1.362637, 1.355656, 1.347197, 1.355936, 1.366454, 1.363657, 1.354195, 1.346756, 1.349567, 1.354362, 1.354089, 1.350605, 1.338055, 1.327732, 1.296558, 1.311876, 1.29844, 1.288637, 1.306313, 1.332116, 1.32619, 1.325951, 1.321367, 1.335213, 1.307678, 1.312433, 1.314887, 1.288382, 1.305559, 1.310529, 1.319305, 1.303806, 1.324809, 1.32493, 1.3074, 1.29997, 1.307429, 1.311664, 1.285625, 1.295792, 1.30771, 1.296894, 1.256815, 1.267316, 1.287382, 1.285231, 1.293945, 1.266647, 1.286022, 1.266468, 1.280062, 1.270444, 1.293376, 1.293027, 1.305155, 1.323096, 1.318926, 1.32722, 1.336891, 1.328186, 1.330825, 1.324839, 1.324446, 1.337647, 1.332995, 1.304623, 1.316637, 1.314195, 1.303825, 1.311882, 1.320933, 1.330109, 1.328786, 1.328348, 1.32836, 1.311469, 1.316333, 1.321904, 1.32469, 1.327, 1.325977, 1.313554, 1.297596, 1.292964, 1.286133, 1.291827, 1.289967, 1.30282, 1.313876, 1.316856, 1.313207, 1.294309, 1.275871, 1.277714, 1.285913, 1.275286, 1.285793, 1.276126, 1.271526, 1.265128, 1.238682, 1.246359, 1.252735, 1.249132, 1.243178, 1.217626, 1.233789, 1.227857, 1.212563, 1.225947, 1.213692, 1.200368, 1.214405, 1.209263];
 try {
   new Chart(document.getElementById('navChart'), {
     type: 'line',
